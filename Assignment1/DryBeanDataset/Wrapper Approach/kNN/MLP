@@ -1,0 +1,337 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.MultilayerPerceptron -L 0.3 -M 0.2 -N 500 -V 0 -S 0 -E 20 -H t
+Relation:     Dry_Beans_Dataset-weka.filters.unsupervised.attribute.Normalize-S1.0-T0.0-weka.filters.unsupervised.attribute.Remove-V-R2,6,10-11,13-14,16-17
+Instances:    13611
+Attributes:   8
+              Perimeter
+              Eccentricity
+              Solidity
+              roundness
+              ShapeFactor1
+              ShapeFactor2
+              ShapeFactor4
+              Class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Sigmoid Node 0
+    Inputs    Weights
+    Threshold    -6.3906251318525635
+    Node 7    5.301775481935144
+    Node 8    1.965518097829772
+    Node 9    0.9318825769392238
+    Node 10    -3.673662392763861
+    Node 11    -1.6145410182436013
+    Node 12    -5.082784344416629
+    Node 13    3.6633181265470633
+    Node 14    -3.18768403846527
+    Node 15    -1.4259576655243063
+    Node 16    -2.382400887263683
+    Node 17    -3.909971944961252
+    Node 18    -0.6653508977872967
+    Node 19    4.291854027590283
+    Node 20    -0.9187539459650836
+Sigmoid Node 1
+    Inputs    Weights
+    Threshold    -8.98832900590568
+    Node 7    1.8904033055026712
+    Node 8    -0.9770752709235991
+    Node 9    -3.222583065959041
+    Node 10    -3.7133324457254324
+    Node 11    8.081651682493456
+    Node 12    -1.2414222231129775
+    Node 13    -6.612174710504265
+    Node 14    -3.412151109791859
+    Node 15    7.91804792887879
+    Node 16    -1.8499944775711807
+    Node 17    -6.701470596417692
+    Node 18    3.657207817371379
+    Node 19    -7.466750631122995
+    Node 20    -5.0298710753547065
+Sigmoid Node 2
+    Inputs    Weights
+    Threshold    -3.7811967143116427
+    Node 7    1.8489347454511906
+    Node 8    -10.907448705256098
+    Node 9    4.3607339697324425
+    Node 10    3.1052253013455364
+    Node 11    -6.922890817884423
+    Node 12    0.9999492647334715
+    Node 13    -1.7012332613867995
+    Node 14    -1.862103284101439
+    Node 15    -0.898174426800677
+    Node 16    1.837791048239648
+    Node 17    -2.3685036258170515
+    Node 18    1.0071038700434145
+    Node 19    5.256838087031028
+    Node 20    -3.2938504070633123
+Sigmoid Node 3
+    Inputs    Weights
+    Threshold    -17.758297781655216
+    Node 7    -2.5041386112636532
+    Node 8    10.56339037029891
+    Node 9    1.7115977225795558
+    Node 10    2.2599795993234455
+    Node 11    -6.900583161497423
+    Node 12    2.677345904294517
+    Node 13    -2.8749385892457906
+    Node 14    -2.507986501761638
+    Node 15    1.9678645786396567
+    Node 16    -3.8208572174573994
+    Node 17    -9.041604566595899
+    Node 18    3.654184869211858
+    Node 19    3.500054703081861
+    Node 20    -4.982138692796839
+Sigmoid Node 4
+    Inputs    Weights
+    Threshold    -5.153628251610094
+    Node 7    -3.7076530362329363
+    Node 8    0.7074499187817611
+    Node 9    -2.4514849287160216
+    Node 10    3.1150110462676786
+    Node 11    -2.4982009518390136
+    Node 12    1.3935380766038623
+    Node 13    -5.5695433055705355
+    Node 14    -0.8129922430122477
+    Node 15    2.372430625731724
+    Node 16    4.05870945441447
+    Node 17    1.4158206111640275
+    Node 18    -5.840908504633753
+    Node 19    -3.8460999578707966
+    Node 20    5.014197609806549
+Sigmoid Node 5
+    Inputs    Weights
+    Threshold    1.2129752073634457
+    Node 7    -2.054603935377102
+    Node 8    2.984510236057093
+    Node 9    2.374761285796677
+    Node 10    -2.8280525974842594
+    Node 11    -3.0664723592493726
+    Node 12    -5.009971740135346
+    Node 13    -3.8126020984339273
+    Node 14    -4.845999988797911
+    Node 15    -1.7408764876012233
+    Node 16    1.7756372309315382
+    Node 17    -2.3581191454704906
+    Node 18    -3.425891258881819
+    Node 19    -3.4851821670288734
+    Node 20    -4.222658431861101
+Sigmoid Node 6
+    Inputs    Weights
+    Threshold    -3.4105992935125276
+    Node 7    -7.810823604930488
+    Node 8    -0.46707299235200467
+    Node 9    -2.5441435260307825
+    Node 10    -3.9042489513755525
+    Node 11    3.068906920640068
+    Node 12    -5.806192481230177
+    Node 13    3.1760934137109404
+    Node 14    4.496545984796884
+    Node 15    -16.940751535608896
+    Node 16    -1.4571090421595616
+    Node 17    2.2389295289533284
+    Node 18    -9.707898241440661
+    Node 19    -1.8092374879187443
+    Node 20    -1.6575694499963656
+Sigmoid Node 7
+    Inputs    Weights
+    Threshold    -8.538725131034777
+    Attrib Perimeter    10.78931300442188
+    Attrib Eccentricity    -17.929460229309697
+    Attrib Solidity    -0.5973832024085395
+    Attrib roundness    -12.53998244790651
+    Attrib ShapeFactor1    -18.91805545861191
+    Attrib ShapeFactor2    5.4168931606363815
+    Attrib ShapeFactor4    31.73809848190861
+Sigmoid Node 8
+    Inputs    Weights
+    Threshold    -0.3703940653707781
+    Attrib Perimeter    -7.508462795997173
+    Attrib Eccentricity    9.004284333301996
+    Attrib Solidity    1.4692237531676018
+    Attrib roundness    3.728632990791599
+    Attrib ShapeFactor1    11.574248104630543
+    Attrib ShapeFactor2    -1.2380388152694075
+    Attrib ShapeFactor4    -1.1167718043389392
+Sigmoid Node 9
+    Inputs    Weights
+    Threshold    -0.2589554680117385
+    Attrib Perimeter    -2.8367091132121303
+    Attrib Eccentricity    6.548106677155705
+    Attrib Solidity    -2.808750164401031
+    Attrib roundness    20.48197986992812
+    Attrib ShapeFactor1    -3.411064707123792
+    Attrib ShapeFactor2    -8.759117573277532
+    Attrib ShapeFactor4    -22.037957670277912
+Sigmoid Node 10
+    Inputs    Weights
+    Threshold    -13.662467188753112
+    Attrib Perimeter    6.57745058745079
+    Attrib Eccentricity    10.57580826602693
+    Attrib Solidity    13.227159883377166
+    Attrib roundness    -4.488873177085202
+    Attrib ShapeFactor1    5.714430252690758
+    Attrib ShapeFactor2    -21.198924126397646
+    Attrib ShapeFactor4    -13.885869253365124
+Sigmoid Node 11
+    Inputs    Weights
+    Threshold    12.415165376667614
+    Attrib Perimeter    -8.638553552773148
+    Attrib Eccentricity    -6.743178469251733
+    Attrib Solidity    -12.253294818234158
+    Attrib roundness    -29.91381977952261
+    Attrib ShapeFactor1    -15.4612476287454
+    Attrib ShapeFactor2    14.210818543568374
+    Attrib ShapeFactor4    15.678651996419022
+Sigmoid Node 12
+    Inputs    Weights
+    Threshold    6.784188194353369
+    Attrib Perimeter    10.451837841332303
+    Attrib Eccentricity    -4.5221164540594225
+    Attrib Solidity    4.137516555666896
+    Attrib roundness    -5.864475006011251
+    Attrib ShapeFactor1    -20.465094042756576
+    Attrib ShapeFactor2    -9.111670967464331
+    Attrib ShapeFactor4    -8.79318469335074
+Sigmoid Node 13
+    Inputs    Weights
+    Threshold    -26.89582035705715
+    Attrib Perimeter    6.409300306701239
+    Attrib Eccentricity    -3.8774095628689587
+    Attrib Solidity    0.14650703434306442
+    Attrib roundness    35.03684008112038
+    Attrib ShapeFactor1    24.610299087909798
+    Attrib ShapeFactor2    -4.540616612773608
+    Attrib ShapeFactor4    9.255771325834484
+Sigmoid Node 14
+    Inputs    Weights
+    Threshold    -3.3596152166717204
+    Attrib Perimeter    -7.690127835125069
+    Attrib Eccentricity    3.830418048353534
+    Attrib Solidity    -0.12714206126914918
+    Attrib roundness    3.6880641286542972
+    Attrib ShapeFactor1    21.724572361059224
+    Attrib ShapeFactor2    8.663425936335164
+    Attrib ShapeFactor4    -15.142383728400398
+Sigmoid Node 15
+    Inputs    Weights
+    Threshold    0.5877605451968152
+    Attrib Perimeter    9.616254036685092
+    Attrib Eccentricity    -2.0309166786106907
+    Attrib Solidity    -0.6854399053892383
+    Attrib roundness    -0.9839772748828676
+    Attrib ShapeFactor1    -11.043644505448514
+    Attrib ShapeFactor2    -11.192666816290055
+    Attrib ShapeFactor4    2.5211588515780385
+Sigmoid Node 16
+    Inputs    Weights
+    Threshold    0.8027499189176147
+    Attrib Perimeter    -1.2174153187644567
+    Attrib Eccentricity    -0.7989218115714799
+    Attrib Solidity    8.441493853187295
+    Attrib roundness    -0.4981212926540433
+    Attrib ShapeFactor1    5.558086146377394
+    Attrib ShapeFactor2    -0.19257091618257757
+    Attrib ShapeFactor4    -16.6811996016596
+Sigmoid Node 17
+    Inputs    Weights
+    Threshold    -8.542271428804497
+    Attrib Perimeter    -10.452494282189662
+    Attrib Eccentricity    7.117655665519252
+    Attrib Solidity    -4.318456029738083
+    Attrib roundness    11.158762557196397
+    Attrib ShapeFactor1    32.031497345756385
+    Attrib ShapeFactor2    4.836784505730668
+    Attrib ShapeFactor4    -9.370062132534784
+Sigmoid Node 18
+    Inputs    Weights
+    Threshold    -0.3961467847169374
+    Attrib Perimeter    14.922696661424302
+    Attrib Eccentricity    -3.5562646358589367
+    Attrib Solidity    -7.215932191087344
+    Attrib roundness    9.5523584851165
+    Attrib ShapeFactor1    -31.360039279025763
+    Attrib ShapeFactor2    -4.711045435051217
+    Attrib ShapeFactor4    4.086838011263717
+Sigmoid Node 19
+    Inputs    Weights
+    Threshold    -9.522556068411395
+    Attrib Perimeter    12.766919681498015
+    Attrib Eccentricity    -12.793753394897076
+    Attrib Solidity    11.479637068440177
+    Attrib roundness    -3.5644023857438727
+    Attrib ShapeFactor1    -4.20653338576766
+    Attrib ShapeFactor2    10.395772168578956
+    Attrib ShapeFactor4    16.068587594697767
+Sigmoid Node 20
+    Inputs    Weights
+    Threshold    -12.334947733332688
+    Attrib Perimeter    2.2946639098871784
+    Attrib Eccentricity    7.98139976753668
+    Attrib Solidity    10.254075392552075
+    Attrib roundness    -10.93342401482174
+    Attrib ShapeFactor1    18.853113852517613
+    Attrib ShapeFactor2    -14.492380945705115
+    Attrib ShapeFactor4    -8.593732649218186
+Class SEKER
+    Input
+    Node 0
+Class BARBUNYA
+    Input
+    Node 1
+Class BOMBAY
+    Input
+    Node 2
+Class CALI
+    Input
+    Node 3
+Class HOROZ
+    Input
+    Node 4
+Class SIRA
+    Input
+    Node 5
+Class DERMASON
+    Input
+    Node 6
+
+
+Time taken to build model: 13.25 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       12596               92.5428 %
+Incorrectly Classified Instances      1015                7.4572 %
+Kappa statistic                          0.9098
+Mean absolute error                      0.0296
+Root mean squared error                  0.1265
+Relative absolute error                 12.5373 %
+Root relative squared error             36.8027 %
+Total Number of Instances            13611     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,952    0,008    0,954      0,952    0,953      0,944    0,996     0,983     SEKER
+                 0,911    0,006    0,944      0,911    0,927      0,920    0,995     0,974     BARBUNYA
+                 1,000    0,000    0,998      1,000    0,999      0,999    1,000     1,000     BOMBAY
+                 0,936    0,009    0,933      0,936    0,934      0,925    0,995     0,979     CALI
+                 0,952    0,008    0,953      0,952    0,953      0,945    0,995     0,983     HOROZ
+                 0,863    0,029    0,876      0,863    0,869      0,838    0,983     0,937     SIRA
+                 0,932    0,032    0,911      0,932    0,921      0,893    0,991     0,976     DERMASON
+Weighted Avg.    0,925    0,018    0,925      0,925    0,925      0,908    0,992     0,972     
+
+=== Confusion Matrix ===
+
+    a    b    c    d    e    f    g   <-- classified as
+ 1929    6    0    0    1   56   35 |    a = SEKER
+   14 1205    0   74    6   22    1 |    b = BARBUNYA
+    0    0  522    0    0    0    0 |    c = BOMBAY
+    3   51    1 1525   36   14    0 |    d = CALI
+    0    7    0   29 1836   41   15 |    e = HOROZ
+   33    8    0    7   41 2274  273 |    f = SIRA
+   44    0    0    0    7  190 3305 |    g = DERMASON
+

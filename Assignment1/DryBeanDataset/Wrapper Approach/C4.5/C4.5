@@ -1,0 +1,511 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     Dry_Beans_Dataset-weka.filters.unsupervised.attribute.Normalize-S1.0-T0.0-weka.filters.unsupervised.attribute.Remove-V-R1,7-8,10-12,14,16-17
+Instances:    13611
+Attributes:   9
+              Area
+              ConvexArea
+              EquivDiameter
+              Solidity
+              roundness
+              Compactness
+              ShapeFactor2
+              ShapeFactor4
+              Class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+ShapeFactor2 <= 0.277716
+|   Compactness <= 0.252968
+|   |   ConvexArea <= 0.203762
+|   |   |   Compactness <= 0.184191: HOROZ (1147.0)
+|   |   |   Compactness > 0.184191
+|   |   |   |   ConvexArea <= 0.162151: HOROZ (447.0/8.0)
+|   |   |   |   ConvexArea > 0.162151
+|   |   |   |   |   Compactness <= 0.240111
+|   |   |   |   |   |   ConvexArea <= 0.191556: HOROZ (106.0/8.0)
+|   |   |   |   |   |   ConvexArea > 0.191556
+|   |   |   |   |   |   |   ConvexArea <= 0.194672: CALI (3.0)
+|   |   |   |   |   |   |   ConvexArea > 0.194672
+|   |   |   |   |   |   |   |   Area <= 0.204256: HOROZ (4.0)
+|   |   |   |   |   |   |   |   Area > 0.204256: CALI (3.0/1.0)
+|   |   |   |   |   Compactness > 0.240111
+|   |   |   |   |   |   ShapeFactor4 <= 0.884167
+|   |   |   |   |   |   |   roundness <= 0.602349: HOROZ (3.0)
+|   |   |   |   |   |   |   roundness > 0.602349
+|   |   |   |   |   |   |   |   Area <= 0.182766
+|   |   |   |   |   |   |   |   |   Area <= 0.168765: CALI (2.0)
+|   |   |   |   |   |   |   |   |   Area > 0.168765: HOROZ (2.0)
+|   |   |   |   |   |   |   |   Area > 0.182766: CALI (4.0)
+|   |   |   |   |   |   ShapeFactor4 > 0.884167
+|   |   |   |   |   |   |   Compactness <= 0.246545: BARBUNYA (2.0)
+|   |   |   |   |   |   |   Compactness > 0.246545: HOROZ (2.0)
+|   |   ConvexArea > 0.203762
+|   |   |   Area <= 0.511934
+|   |   |   |   Compactness <= 0.181964: HOROZ (19.0/1.0)
+|   |   |   |   Compactness > 0.181964
+|   |   |   |   |   roundness <= 0.615407
+|   |   |   |   |   |   ShapeFactor4 <= 0.91742
+|   |   |   |   |   |   |   Area <= 0.209214: HOROZ (3.0/1.0)
+|   |   |   |   |   |   |   Area > 0.209214
+|   |   |   |   |   |   |   |   Solidity <= 0.856656: CALI (8.0)
+|   |   |   |   |   |   |   |   Solidity > 0.856656
+|   |   |   |   |   |   |   |   |   roundness <= 0.597709: HOROZ (5.0/1.0)
+|   |   |   |   |   |   |   |   |   roundness > 0.597709: CALI (3.0)
+|   |   |   |   |   |   ShapeFactor4 > 0.91742: BARBUNYA (5.0/1.0)
+|   |   |   |   |   roundness > 0.615407: CALI (78.0/1.0)
+|   |   |   Area > 0.511934: BOMBAY (7.0)
+|   Compactness > 0.252968
+|   |   Area <= 0.412535
+|   |   |   Area <= 0.16078
+|   |   |   |   roundness <= 0.689263
+|   |   |   |   |   Compactness <= 0.358667
+|   |   |   |   |   |   Compactness <= 0.352384
+|   |   |   |   |   |   |   ShapeFactor4 <= 0.769274: HOROZ (39.0/1.0)
+|   |   |   |   |   |   |   ShapeFactor4 > 0.769274
+|   |   |   |   |   |   |   |   Solidity <= 0.836561
+|   |   |   |   |   |   |   |   |   roundness <= 0.623555: BARBUNYA (4.0/1.0)
+|   |   |   |   |   |   |   |   |   roundness > 0.623555: SIRA (5.0/1.0)
+|   |   |   |   |   |   |   |   Solidity > 0.836561
+|   |   |   |   |   |   |   |   |   ShapeFactor2 <= 0.195389: HOROZ (11.0)
+|   |   |   |   |   |   |   |   |   ShapeFactor2 > 0.195389
+|   |   |   |   |   |   |   |   |   |   Solidity <= 0.917159
+|   |   |   |   |   |   |   |   |   |   |   ConvexArea <= 0.146263
+|   |   |   |   |   |   |   |   |   |   |   |   ShapeFactor4 <= 0.830008
+|   |   |   |   |   |   |   |   |   |   |   |   |   Area <= 0.114391: HOROZ (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Area > 0.114391: SIRA (6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   ShapeFactor4 > 0.830008: HOROZ (38.0/6.0)
+|   |   |   |   |   |   |   |   |   |   |   ConvexArea > 0.146263: SIRA (6.0/2.0)
+|   |   |   |   |   |   |   |   |   |   Solidity > 0.917159: SIRA (4.0/1.0)
+|   |   |   |   |   |   Compactness > 0.352384: CALI (4.0/1.0)
+|   |   |   |   |   Compactness > 0.358667: BARBUNYA (19.0/1.0)
+|   |   |   |   roundness > 0.689263
+|   |   |   |   |   ConvexArea <= 0.147186
+|   |   |   |   |   |   Compactness <= 0.295216
+|   |   |   |   |   |   |   ConvexArea <= 0.088063: HOROZ (7.0/1.0)
+|   |   |   |   |   |   |   ConvexArea > 0.088063
+|   |   |   |   |   |   |   |   ConvexArea <= 0.137383: SIRA (26.0/9.0)
+|   |   |   |   |   |   |   |   ConvexArea > 0.137383: HOROZ (6.0/2.0)
+|   |   |   |   |   |   Compactness > 0.295216
+|   |   |   |   |   |   |   ShapeFactor4 <= 0.788542
+|   |   |   |   |   |   |   |   Compactness <= 0.325831: SIRA (5.0)
+|   |   |   |   |   |   |   |   Compactness > 0.325831: HOROZ (7.0/2.0)
+|   |   |   |   |   |   |   ShapeFactor4 > 0.788542: SIRA (198.0/11.0)
+|   |   |   |   |   ConvexArea > 0.147186
+|   |   |   |   |   |   ShapeFactor4 <= 0.895216
+|   |   |   |   |   |   |   roundness <= 0.734737
+|   |   |   |   |   |   |   |   ConvexArea <= 0.151486: HOROZ (3.0)
+|   |   |   |   |   |   |   |   ConvexArea > 0.151486
+|   |   |   |   |   |   |   |   |   roundness <= 0.7192
+|   |   |   |   |   |   |   |   |   |   Area <= 0.156992: SIRA (2.0)
+|   |   |   |   |   |   |   |   |   |   Area > 0.156992: CALI (3.0)
+|   |   |   |   |   |   |   |   |   roundness > 0.7192
+|   |   |   |   |   |   |   |   |   |   Solidity <= 0.837357: SIRA (3.0)
+|   |   |   |   |   |   |   |   |   |   Solidity > 0.837357: HOROZ (2.0)
+|   |   |   |   |   |   |   roundness > 0.734737: CALI (5.0/1.0)
+|   |   |   |   |   |   ShapeFactor4 > 0.895216
+|   |   |   |   |   |   |   ShapeFactor2 <= 0.263349
+|   |   |   |   |   |   |   |   Solidity <= 0.934457
+|   |   |   |   |   |   |   |   |   roundness <= 0.717287: CALI (2.0)
+|   |   |   |   |   |   |   |   |   roundness > 0.717287
+|   |   |   |   |   |   |   |   |   |   Compactness <= 0.342578: CALI (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   Compactness > 0.342578: BARBUNYA (4.0/1.0)
+|   |   |   |   |   |   |   |   Solidity > 0.934457: SIRA (6.0)
+|   |   |   |   |   |   |   ShapeFactor2 > 0.263349: CALI (3.0)
+|   |   |   Area > 0.16078
+|   |   |   |   roundness <= 0.634389
+|   |   |   |   |   Compactness <= 0.315324
+|   |   |   |   |   |   Area <= 0.188492
+|   |   |   |   |   |   |   roundness <= 0.582152: BARBUNYA (4.0/1.0)
+|   |   |   |   |   |   |   roundness > 0.582152: HOROZ (8.0)
+|   |   |   |   |   |   Area > 0.188492
+|   |   |   |   |   |   |   ShapeFactor4 <= 0.892035
+|   |   |   |   |   |   |   |   roundness <= 0.535893: BARBUNYA (5.0/1.0)
+|   |   |   |   |   |   |   |   roundness > 0.535893: CALI (38.0/2.0)
+|   |   |   |   |   |   |   ShapeFactor4 > 0.892035
+|   |   |   |   |   |   |   |   Solidity <= 0.885811: BARBUNYA (20.0)
+|   |   |   |   |   |   |   |   Solidity > 0.885811: CALI (3.0)
+|   |   |   |   |   Compactness > 0.315324
+|   |   |   |   |   |   Compactness <= 0.340847
+|   |   |   |   |   |   |   roundness <= 0.621767: BARBUNYA (30.0/1.0)
+|   |   |   |   |   |   |   roundness > 0.621767: CALI (5.0/1.0)
+|   |   |   |   |   |   Compactness > 0.340847: BARBUNYA (439.0)
+|   |   |   |   roundness > 0.634389
+|   |   |   |   |   ShapeFactor2 <= 0.2283
+|   |   |   |   |   |   Area <= 0.172787
+|   |   |   |   |   |   |   ShapeFactor2 <= 0.18978: HOROZ (9.0)
+|   |   |   |   |   |   |   ShapeFactor2 > 0.18978
+|   |   |   |   |   |   |   |   Area <= 0.166732
+|   |   |   |   |   |   |   |   |   ConvexArea <= 0.159611: HOROZ (2.0)
+|   |   |   |   |   |   |   |   |   ConvexArea > 0.159611: CALI (9.0)
+|   |   |   |   |   |   |   |   Area > 0.166732
+|   |   |   |   |   |   |   |   |   ShapeFactor4 <= 0.896158: HOROZ (7.0/1.0)
+|   |   |   |   |   |   |   |   |   ShapeFactor4 > 0.896158: CALI (2.0/1.0)
+|   |   |   |   |   |   Area > 0.172787
+|   |   |   |   |   |   |   ShapeFactor4 <= 0.904032
+|   |   |   |   |   |   |   |   ConvexArea <= 0.190546
+|   |   |   |   |   |   |   |   |   ShapeFactor2 <= 0.186743
+|   |   |   |   |   |   |   |   |   |   Solidity <= 0.767156: HOROZ (3.0)
+|   |   |   |   |   |   |   |   |   |   Solidity > 0.767156: CALI (17.0/4.0)
+|   |   |   |   |   |   |   |   |   ShapeFactor2 > 0.186743: CALI (47.0/3.0)
+|   |   |   |   |   |   |   |   ConvexArea > 0.190546
+|   |   |   |   |   |   |   |   |   ShapeFactor2 <= 0.191667: CALI (865.0/1.0)
+|   |   |   |   |   |   |   |   |   ShapeFactor2 > 0.191667
+|   |   |   |   |   |   |   |   |   |   roundness <= 0.693726
+|   |   |   |   |   |   |   |   |   |   |   Solidity <= 0.855264
+|   |   |   |   |   |   |   |   |   |   |   |   Solidity <= 0.835933: CALI (13.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Solidity > 0.835933
+|   |   |   |   |   |   |   |   |   |   |   |   |   Area <= 0.221836: HOROZ (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Area > 0.221836: CALI (2.0)
+|   |   |   |   |   |   |   |   |   |   |   Solidity > 0.855264
+|   |   |   |   |   |   |   |   |   |   |   |   ShapeFactor2 <= 0.207133
+|   |   |   |   |   |   |   |   |   |   |   |   |   ShapeFactor2 <= 0.193028: BARBUNYA (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   ShapeFactor2 > 0.193028: CALI (7.0)
+|   |   |   |   |   |   |   |   |   |   |   |   ShapeFactor2 > 0.207133: BARBUNYA (6.0)
+|   |   |   |   |   |   |   |   |   |   roundness > 0.693726: CALI (188.0/3.0)
+|   |   |   |   |   |   |   ShapeFactor4 > 0.904032
+|   |   |   |   |   |   |   |   Solidity <= 0.906873
+|   |   |   |   |   |   |   |   |   Compactness <= 0.331793
+|   |   |   |   |   |   |   |   |   |   Solidity <= 0.872364: BARBUNYA (2.0)
+|   |   |   |   |   |   |   |   |   |   Solidity > 0.872364
+|   |   |   |   |   |   |   |   |   |   |   ShapeFactor4 <= 0.956437: CALI (4.0)
+|   |   |   |   |   |   |   |   |   |   |   ShapeFactor4 > 0.956437: BARBUNYA (2.0)
+|   |   |   |   |   |   |   |   |   Compactness > 0.331793: BARBUNYA (48.0)
+|   |   |   |   |   |   |   |   Solidity > 0.906873
+|   |   |   |   |   |   |   |   |   ShapeFactor4 <= 0.928228: CALI (107.0/6.0)
+|   |   |   |   |   |   |   |   |   ShapeFactor4 > 0.928228
+|   |   |   |   |   |   |   |   |   |   Solidity <= 0.932243
+|   |   |   |   |   |   |   |   |   |   |   Compactness <= 0.354169
+|   |   |   |   |   |   |   |   |   |   |   |   Solidity <= 0.922781: BARBUNYA (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Solidity > 0.922781: CALI (4.0)
+|   |   |   |   |   |   |   |   |   |   |   Compactness > 0.354169: BARBUNYA (18.0)
+|   |   |   |   |   |   |   |   |   |   Solidity > 0.932243: CALI (82.0/11.0)
+|   |   |   |   |   ShapeFactor2 > 0.2283
+|   |   |   |   |   |   roundness <= 0.704008
+|   |   |   |   |   |   |   Solidity <= 0.78467
+|   |   |   |   |   |   |   |   Solidity <= 0.636242: HOROZ (2.0)
+|   |   |   |   |   |   |   |   Solidity > 0.636242
+|   |   |   |   |   |   |   |   |   Compactness <= 0.418383: CALI (3.0)
+|   |   |   |   |   |   |   |   |   Compactness > 0.418383: BARBUNYA (4.0/1.0)
+|   |   |   |   |   |   |   Solidity > 0.78467: BARBUNYA (100.0/3.0)
+|   |   |   |   |   |   roundness > 0.704008
+|   |   |   |   |   |   |   ShapeFactor4 <= 0.892925
+|   |   |   |   |   |   |   |   Area <= 0.204551: CALI (49.0)
+|   |   |   |   |   |   |   |   Area > 0.204551
+|   |   |   |   |   |   |   |   |   Solidity <= 0.868764: CALI (7.0)
+|   |   |   |   |   |   |   |   |   Solidity > 0.868764
+|   |   |   |   |   |   |   |   |   |   roundness <= 0.757058: BARBUNYA (5.0)
+|   |   |   |   |   |   |   |   |   |   roundness > 0.757058
+|   |   |   |   |   |   |   |   |   |   |   Solidity <= 0.917395: CALI (5.0)
+|   |   |   |   |   |   |   |   |   |   |   Solidity > 0.917395: BARBUNYA (3.0/1.0)
+|   |   |   |   |   |   |   ShapeFactor4 > 0.892925
+|   |   |   |   |   |   |   |   Solidity <= 0.935761
+|   |   |   |   |   |   |   |   |   Compactness <= 0.422487
+|   |   |   |   |   |   |   |   |   |   Area <= 0.174926: BARBUNYA (10.0)
+|   |   |   |   |   |   |   |   |   |   Area > 0.174926
+|   |   |   |   |   |   |   |   |   |   |   ShapeFactor4 <= 0.96531: CALI (15.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   ShapeFactor4 > 0.96531: BARBUNYA (2.0)
+|   |   |   |   |   |   |   |   |   Compactness > 0.422487: BARBUNYA (47.0/4.0)
+|   |   |   |   |   |   |   |   Solidity > 0.935761: CALI (34.0/8.0)
+|   |   Area > 0.412535: BOMBAY (513.0)
+ShapeFactor2 > 0.277716
+|   Compactness <= 0.634907
+|   |   ConvexArea <= 0.082353
+|   |   |   Area <= 0.065612
+|   |   |   |   ShapeFactor2 <= 0.411623
+|   |   |   |   |   ShapeFactor2 <= 0.355689
+|   |   |   |   |   |   Area <= 0.053208: DERMASON (8.0)
+|   |   |   |   |   |   Area > 0.053208
+|   |   |   |   |   |   |   Area <= 0.060889
+|   |   |   |   |   |   |   |   ShapeFactor4 <= 0.936853: HOROZ (8.0)
+|   |   |   |   |   |   |   |   ShapeFactor4 > 0.936853
+|   |   |   |   |   |   |   |   |   Area <= 0.057772: DERMASON (2.0)
+|   |   |   |   |   |   |   |   |   Area > 0.057772: HOROZ (2.0)
+|   |   |   |   |   |   |   Area > 0.060889: DERMASON (7.0/1.0)
+|   |   |   |   |   ShapeFactor2 > 0.355689: DERMASON (140.0/15.0)
+|   |   |   |   ShapeFactor2 > 0.411623: DERMASON (2444.0/47.0)
+|   |   |   Area > 0.065612
+|   |   |   |   Compactness <= 0.584198
+|   |   |   |   |   roundness <= 0.821688
+|   |   |   |   |   |   ShapeFactor2 <= 0.355204
+|   |   |   |   |   |   |   Compactness <= 0.291508: HOROZ (3.0)
+|   |   |   |   |   |   |   Compactness > 0.291508
+|   |   |   |   |   |   |   |   ConvexArea <= 0.074978
+|   |   |   |   |   |   |   |   |   Solidity <= 0.853686: SIRA (3.0)
+|   |   |   |   |   |   |   |   |   Solidity > 0.853686
+|   |   |   |   |   |   |   |   |   |   ShapeFactor2 <= 0.332915: DERMASON (14.0/1.0)
+|   |   |   |   |   |   |   |   |   |   ShapeFactor2 > 0.332915
+|   |   |   |   |   |   |   |   |   |   |   Compactness <= 0.38548
+|   |   |   |   |   |   |   |   |   |   |   |   ShapeFactor2 <= 0.346503
+|   |   |   |   |   |   |   |   |   |   |   |   |   Solidity <= 0.89861: HOROZ (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Solidity > 0.89861: SIRA (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   ShapeFactor2 > 0.346503: DERMASON (4.0)
+|   |   |   |   |   |   |   |   |   |   |   Compactness > 0.38548: HOROZ (2.0)
+|   |   |   |   |   |   |   |   ConvexArea > 0.074978
+|   |   |   |   |   |   |   |   |   Solidity <= 0.910042
+|   |   |   |   |   |   |   |   |   |   ConvexArea <= 0.080568: SIRA (19.0)
+|   |   |   |   |   |   |   |   |   |   ConvexArea > 0.080568
+|   |   |   |   |   |   |   |   |   |   |   Solidity <= 0.860168: HOROZ (2.0)
+|   |   |   |   |   |   |   |   |   |   |   Solidity > 0.860168: SIRA (3.0/1.0)
+|   |   |   |   |   |   |   |   |   Solidity > 0.910042
+|   |   |   |   |   |   |   |   |   |   ShapeFactor4 <= 0.892456: HOROZ (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   ShapeFactor4 > 0.892456: DERMASON (16.0/6.0)
+|   |   |   |   |   |   ShapeFactor2 > 0.355204
+|   |   |   |   |   |   |   Compactness <= 0.471328
+|   |   |   |   |   |   |   |   roundness <= 0.790972
+|   |   |   |   |   |   |   |   |   Compactness <= 0.415005: DERMASON (33.0/11.0)
+|   |   |   |   |   |   |   |   |   Compactness > 0.415005
+|   |   |   |   |   |   |   |   |   |   ShapeFactor4 <= 0.946438
+|   |   |   |   |   |   |   |   |   |   |   Compactness <= 0.465324
+|   |   |   |   |   |   |   |   |   |   |   |   Compactness <= 0.432041
+|   |   |   |   |   |   |   |   |   |   |   |   |   Compactness <= 0.429662
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Solidity <= 0.932312: SIRA (10.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Solidity > 0.932312: DERMASON (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Compactness > 0.429662: DERMASON (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Compactness > 0.432041: SIRA (24.0)
+|   |   |   |   |   |   |   |   |   |   |   Compactness > 0.465324: DERMASON (8.0/3.0)
+|   |   |   |   |   |   |   |   |   |   ShapeFactor4 > 0.946438
+|   |   |   |   |   |   |   |   |   |   |   ShapeFactor2 <= 0.400548
+|   |   |   |   |   |   |   |   |   |   |   |   ShapeFactor4 <= 0.956691: DERMASON (7.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   ShapeFactor4 > 0.956691: SIRA (8.0)
+|   |   |   |   |   |   |   |   |   |   |   ShapeFactor2 > 0.400548: DERMASON (9.0/1.0)
+|   |   |   |   |   |   |   |   roundness > 0.790972
+|   |   |   |   |   |   |   |   |   ShapeFactor4 <= 0.864053: SIRA (4.0/1.0)
+|   |   |   |   |   |   |   |   |   ShapeFactor4 > 0.864053: DERMASON (81.0/14.0)
+|   |   |   |   |   |   |   Compactness > 0.471328: SIRA (174.0/68.0)
+|   |   |   |   |   roundness > 0.821688
+|   |   |   |   |   |   ConvexArea <= 0.076866: DERMASON (360.0/63.0)
+|   |   |   |   |   |   ConvexArea > 0.076866
+|   |   |   |   |   |   |   roundness <= 0.85568
+|   |   |   |   |   |   |   |   Solidity <= 0.908424: DERMASON (13.0/1.0)
+|   |   |   |   |   |   |   |   Solidity > 0.908424
+|   |   |   |   |   |   |   |   |   Compactness <= 0.484829: DERMASON (32.0/7.0)
+|   |   |   |   |   |   |   |   |   Compactness > 0.484829: SIRA (44.0/17.0)
+|   |   |   |   |   |   |   roundness > 0.85568
+|   |   |   |   |   |   |   |   ConvexArea <= 0.077151: SIRA (3.0/1.0)
+|   |   |   |   |   |   |   |   ConvexArea > 0.077151: DERMASON (44.0/6.0)
+|   |   |   |   Compactness > 0.584198
+|   |   |   |   |   ShapeFactor4 <= 0.982904
+|   |   |   |   |   |   ConvexArea <= 0.074789
+|   |   |   |   |   |   |   Compactness <= 0.585217: SEKER (2.0/1.0)
+|   |   |   |   |   |   |   Compactness > 0.585217: DERMASON (52.0/8.0)
+|   |   |   |   |   |   ConvexArea > 0.074789
+|   |   |   |   |   |   |   roundness <= 0.872808
+|   |   |   |   |   |   |   |   ShapeFactor4 <= 0.918929: DERMASON (2.0)
+|   |   |   |   |   |   |   |   ShapeFactor4 > 0.918929
+|   |   |   |   |   |   |   |   |   Compactness <= 0.601816: SIRA (7.0/1.0)
+|   |   |   |   |   |   |   |   |   Compactness > 0.601816
+|   |   |   |   |   |   |   |   |   |   Solidity <= 0.918503: SEKER (5.0)
+|   |   |   |   |   |   |   |   |   |   Solidity > 0.918503
+|   |   |   |   |   |   |   |   |   |   |   Compactness <= 0.621801: SEKER (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   Compactness > 0.621801: SIRA (2.0)
+|   |   |   |   |   |   |   roundness > 0.872808
+|   |   |   |   |   |   |   |   ShapeFactor4 <= 0.974766: DERMASON (12.0/1.0)
+|   |   |   |   |   |   |   |   ShapeFactor4 > 0.974766: SEKER (4.0/1.0)
+|   |   |   |   |   ShapeFactor4 > 0.982904
+|   |   |   |   |   |   roundness <= 0.879767
+|   |   |   |   |   |   |   ShapeFactor2 <= 0.548192: SEKER (5.0/1.0)
+|   |   |   |   |   |   |   ShapeFactor2 > 0.548192: DERMASON (3.0)
+|   |   |   |   |   |   roundness > 0.879767: SEKER (8.0)
+|   |   ConvexArea > 0.082353
+|   |   |   ConvexArea <= 0.147322
+|   |   |   |   roundness <= 0.855627
+|   |   |   |   |   roundness <= 0.713934
+|   |   |   |   |   |   ConvexArea <= 0.112575
+|   |   |   |   |   |   |   Compactness <= 0.563454
+|   |   |   |   |   |   |   |   roundness <= 0.643371
+|   |   |   |   |   |   |   |   |   ShapeFactor4 <= 0.939734
+|   |   |   |   |   |   |   |   |   |   ShapeFactor4 <= 0.812243: HOROZ (2.0)
+|   |   |   |   |   |   |   |   |   |   ShapeFactor4 > 0.812243: SIRA (6.0)
+|   |   |   |   |   |   |   |   |   ShapeFactor4 > 0.939734: BARBUNYA (6.0/1.0)
+|   |   |   |   |   |   |   |   roundness > 0.643371
+|   |   |   |   |   |   |   |   |   Compactness <= 0.443259: SIRA (34.0/2.0)
+|   |   |   |   |   |   |   |   |   Compactness > 0.443259
+|   |   |   |   |   |   |   |   |   |   Solidity <= 0.879274: SIRA (7.0)
+|   |   |   |   |   |   |   |   |   |   Solidity > 0.879274: BARBUNYA (3.0/1.0)
+|   |   |   |   |   |   |   Compactness > 0.563454: SEKER (7.0/2.0)
+|   |   |   |   |   |   ConvexArea > 0.112575
+|   |   |   |   |   |   |   Solidity <= 0.881667
+|   |   |   |   |   |   |   |   Solidity <= 0.716532
+|   |   |   |   |   |   |   |   |   Area <= 0.124131: HOROZ (2.0)
+|   |   |   |   |   |   |   |   |   Area > 0.124131: SIRA (3.0/1.0)
+|   |   |   |   |   |   |   |   Solidity > 0.716532
+|   |   |   |   |   |   |   |   |   Compactness <= 0.396977: SIRA (3.0)
+|   |   |   |   |   |   |   |   |   Compactness > 0.396977: BARBUNYA (51.0/1.0)
+|   |   |   |   |   |   |   Solidity > 0.881667: SEKER (3.0/1.0)
+|   |   |   |   |   roundness > 0.713934
+|   |   |   |   |   |   ConvexArea <= 0.090627
+|   |   |   |   |   |   |   Compactness <= 0.577277
+|   |   |   |   |   |   |   |   ShapeFactor4 <= 0.943252
+|   |   |   |   |   |   |   |   |   Compactness <= 0.40076
+|   |   |   |   |   |   |   |   |   |   roundness <= 0.782535: SIRA (23.0/7.0)
+|   |   |   |   |   |   |   |   |   |   roundness > 0.782535: DERMASON (5.0)
+|   |   |   |   |   |   |   |   |   Compactness > 0.40076: SIRA (212.0/20.0)
+|   |   |   |   |   |   |   |   ShapeFactor4 > 0.943252
+|   |   |   |   |   |   |   |   |   Compactness <= 0.484526
+|   |   |   |   |   |   |   |   |   |   roundness <= 0.822684: SIRA (79.0/27.0)
+|   |   |   |   |   |   |   |   |   |   roundness > 0.822684: DERMASON (28.0/6.0)
+|   |   |   |   |   |   |   |   |   Compactness > 0.484526: SIRA (81.0/21.0)
+|   |   |   |   |   |   |   Compactness > 0.577277
+|   |   |   |   |   |   |   |   Solidity <= 0.904117: SIRA (6.0/1.0)
+|   |   |   |   |   |   |   |   Solidity > 0.904117
+|   |   |   |   |   |   |   |   |   Compactness <= 0.597221: DERMASON (6.0/1.0)
+|   |   |   |   |   |   |   |   |   Compactness > 0.597221: SEKER (5.0)
+|   |   |   |   |   |   ConvexArea > 0.090627
+|   |   |   |   |   |   |   ShapeFactor4 <= 0.960059: SIRA (1355.0/20.0)
+|   |   |   |   |   |   |   ShapeFactor4 > 0.960059
+|   |   |   |   |   |   |   |   Compactness <= 0.555568
+|   |   |   |   |   |   |   |   |   ConvexArea <= 0.12763: SIRA (198.0/13.0)
+|   |   |   |   |   |   |   |   |   ConvexArea > 0.12763
+|   |   |   |   |   |   |   |   |   |   Area <= 0.137124
+|   |   |   |   |   |   |   |   |   |   |   Solidity <= 0.929458: BARBUNYA (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   Solidity > 0.929458: SIRA (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   Area > 0.137124: SEKER (5.0/1.0)
+|   |   |   |   |   |   |   |   Compactness > 0.555568
+|   |   |   |   |   |   |   |   |   ShapeFactor2 <= 0.444225
+|   |   |   |   |   |   |   |   |   |   roundness <= 0.849853: SEKER (12.0)
+|   |   |   |   |   |   |   |   |   |   roundness > 0.849853: SIRA (2.0)
+|   |   |   |   |   |   |   |   |   ShapeFactor2 > 0.444225: SIRA (5.0/1.0)
+|   |   |   |   roundness > 0.855627
+|   |   |   |   |   Area <= 0.092773
+|   |   |   |   |   |   roundness <= 0.886686
+|   |   |   |   |   |   |   ShapeFactor2 <= 0.494668: DERMASON (57.0/25.0)
+|   |   |   |   |   |   |   ShapeFactor2 > 0.494668
+|   |   |   |   |   |   |   |   roundness <= 0.878714: SEKER (3.0)
+|   |   |   |   |   |   |   |   roundness > 0.878714: DERMASON (2.0)
+|   |   |   |   |   |   roundness > 0.886686: SEKER (27.0/9.0)
+|   |   |   |   |   Area > 0.092773
+|   |   |   |   |   |   roundness <= 0.892212
+|   |   |   |   |   |   |   ShapeFactor4 <= 0.948353
+|   |   |   |   |   |   |   |   Area <= 0.107167: SIRA (19.0/1.0)
+|   |   |   |   |   |   |   |   Area > 0.107167
+|   |   |   |   |   |   |   |   |   Solidity <= 0.932455: SIRA (3.0)
+|   |   |   |   |   |   |   |   |   Solidity > 0.932455: SEKER (2.0)
+|   |   |   |   |   |   |   ShapeFactor4 > 0.948353
+|   |   |   |   |   |   |   |   Area <= 0.116787
+|   |   |   |   |   |   |   |   |   Compactness <= 0.604102
+|   |   |   |   |   |   |   |   |   |   Solidity <= 0.956889
+|   |   |   |   |   |   |   |   |   |   |   Area <= 0.096133: SEKER (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   Area > 0.096133: SIRA (20.0/5.0)
+|   |   |   |   |   |   |   |   |   |   Solidity > 0.956889: SEKER (12.0/1.0)
+|   |   |   |   |   |   |   |   |   Compactness > 0.604102: SEKER (8.0)
+|   |   |   |   |   |   |   |   Area > 0.116787
+|   |   |   |   |   |   |   |   |   ShapeFactor4 <= 0.974324
+|   |   |   |   |   |   |   |   |   |   Area <= 0.127116: BARBUNYA (4.0/2.0)
+|   |   |   |   |   |   |   |   |   |   Area > 0.127116: SEKER (6.0/2.0)
+|   |   |   |   |   |   |   |   |   ShapeFactor4 > 0.974324: SEKER (5.0)
+|   |   |   |   |   |   roundness > 0.892212: SEKER (33.0/1.0)
+|   |   |   ConvexArea > 0.147322
+|   |   |   |   roundness <= 0.742466: BARBUNYA (324.0)
+|   |   |   |   roundness > 0.742466
+|   |   |   |   |   roundness <= 0.833406
+|   |   |   |   |   |   ShapeFactor4 <= 0.852559: CALI (7.0)
+|   |   |   |   |   |   ShapeFactor4 > 0.852559
+|   |   |   |   |   |   |   ConvexArea <= 0.15579
+|   |   |   |   |   |   |   |   ConvexArea <= 0.155283
+|   |   |   |   |   |   |   |   |   Compactness <= 0.472389: SIRA (4.0/1.0)
+|   |   |   |   |   |   |   |   |   Compactness > 0.472389: BARBUNYA (5.0)
+|   |   |   |   |   |   |   |   ConvexArea > 0.155283: SEKER (2.0)
+|   |   |   |   |   |   |   ConvexArea > 0.15579
+|   |   |   |   |   |   |   |   Compactness <= 0.510145
+|   |   |   |   |   |   |   |   |   ShapeFactor2 <= 0.287194: BARBUNYA (6.0)
+|   |   |   |   |   |   |   |   |   ShapeFactor2 > 0.287194
+|   |   |   |   |   |   |   |   |   |   roundness <= 0.75661: BARBUNYA (2.0)
+|   |   |   |   |   |   |   |   |   |   roundness > 0.75661: CALI (8.0)
+|   |   |   |   |   |   |   |   Compactness > 0.510145: BARBUNYA (25.0/1.0)
+|   |   |   |   |   roundness > 0.833406: SEKER (4.0)
+|   Compactness > 0.634907
+|   |   ShapeFactor2 <= 0.453137
+|   |   |   Solidity <= 0.922459: BARBUNYA (64.0)
+|   |   |   Solidity > 0.922459: SEKER (3.0/2.0)
+|   |   ShapeFactor2 > 0.453137
+|   |   |   Area <= 0.045287
+|   |   |   |   Compactness <= 0.77224: DERMASON (115.0)
+|   |   |   |   Compactness > 0.77224
+|   |   |   |   |   Area <= 0.024087: DERMASON (2.0)
+|   |   |   |   |   Area > 0.024087: SEKER (12.0/1.0)
+|   |   |   Area > 0.045287
+|   |   |   |   ShapeFactor4 <= 0.944568
+|   |   |   |   |   ConvexArea <= 0.077023
+|   |   |   |   |   |   Compactness <= 0.726684
+|   |   |   |   |   |   |   ConvexArea <= 0.062149
+|   |   |   |   |   |   |   |   Solidity <= 0.937643: DERMASON (15.0)
+|   |   |   |   |   |   |   |   Solidity > 0.937643
+|   |   |   |   |   |   |   |   |   ShapeFactor4 <= 0.93617: DERMASON (3.0)
+|   |   |   |   |   |   |   |   |   ShapeFactor4 > 0.93617: SIRA (3.0/1.0)
+|   |   |   |   |   |   |   ConvexArea > 0.062149
+|   |   |   |   |   |   |   |   Solidity <= 0.90098
+|   |   |   |   |   |   |   |   |   Area <= 0.074173: SIRA (5.0/1.0)
+|   |   |   |   |   |   |   |   |   Area > 0.074173: SEKER (4.0/1.0)
+|   |   |   |   |   |   |   |   Solidity > 0.90098
+|   |   |   |   |   |   |   |   |   ShapeFactor2 <= 0.627984: DERMASON (17.0/7.0)
+|   |   |   |   |   |   |   |   |   ShapeFactor2 > 0.627984: SEKER (4.0)
+|   |   |   |   |   |   Compactness > 0.726684: SEKER (16.0/1.0)
+|   |   |   |   |   ConvexArea > 0.077023
+|   |   |   |   |   |   ConvexArea <= 0.138348
+|   |   |   |   |   |   |   Compactness <= 0.655319
+|   |   |   |   |   |   |   |   Area <= 0.116543: SIRA (10.0/2.0)
+|   |   |   |   |   |   |   |   Area > 0.116543: SEKER (2.0)
+|   |   |   |   |   |   |   Compactness > 0.655319: SEKER (61.0/2.0)
+|   |   |   |   |   |   ConvexArea > 0.138348: BARBUNYA (4.0)
+|   |   |   |   ShapeFactor4 > 0.944568
+|   |   |   |   |   Compactness <= 0.69585
+|   |   |   |   |   |   Area <= 0.064587
+|   |   |   |   |   |   |   ShapeFactor4 <= 0.987494: DERMASON (35.0/6.0)
+|   |   |   |   |   |   |   ShapeFactor4 > 0.987494: SEKER (5.0)
+|   |   |   |   |   |   Area > 0.064587: SEKER (326.0/21.0)
+|   |   |   |   |   Compactness > 0.69585
+|   |   |   |   |   |   roundness <= 0.789427
+|   |   |   |   |   |   |   Area <= 0.115638: SEKER (18.0)
+|   |   |   |   |   |   |   Area > 0.115638
+|   |   |   |   |   |   |   |   Compactness <= 0.721382: SEKER (4.0/1.0)
+|   |   |   |   |   |   |   |   Compactness > 0.721382: BARBUNYA (7.0/1.0)
+|   |   |   |   |   |   roundness > 0.789427: SEKER (1400.0)
+
+Number of Leaves  : 	224
+
+Size of the tree : 	447
+
+
+Time taken to build model: 0.14 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       12441               91.404  %
+Incorrectly Classified Instances      1170                8.596  %
+Kappa statistic                          0.896 
+Mean absolute error                      0.0311
+Root mean squared error                  0.143 
+Relative absolute error                 13.1638 %
+Root relative squared error             41.607  %
+Total Number of Instances            13611     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,941    0,011    0,938      0,941    0,939      0,929    0,976     0,935     SEKER
+                 0,899    0,009    0,917      0,899    0,908      0,899    0,962     0,892     BARBUNYA
+                 0,996    0,000    1,000      0,996    0,998      0,998    0,998     0,996     BOMBAY
+                 0,922    0,010    0,923      0,922    0,923      0,912    0,972     0,890     CALI
+                 0,941    0,008    0,952      0,941    0,947      0,938    0,980     0,924     HOROZ
+                 0,852    0,034    0,859      0,852    0,855      0,821    0,959     0,858     SIRA
+                 0,920    0,035    0,903      0,920    0,911      0,880    0,979     0,931     DERMASON
+Weighted Avg.    0,914    0,020    0,914      0,914    0,914      0,894    0,973     0,910     
+
+=== Confusion Matrix ===
+
+    a    b    c    d    e    f    g   <-- classified as
+ 1907   10    0    2    0   57   51 |    a = SEKER
+   18 1189    0   73    8   34    0 |    b = BARBUNYA
+    0    1  520    1    0    0    0 |    c = BOMBAY
+    2   72    0 1503   35   18    0 |    d = CALI
+    0    8    0   36 1814   49   21 |    e = HOROZ
+   44   16    0   13   39 2246  278 |    f = SIRA
+   63    0    0    0    9  212 3262 |    g = DERMASON
+

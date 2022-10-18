@@ -1,0 +1,462 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     Dry_Beans_Dataset-weka.filters.unsupervised.attribute.Normalize-S1.0-T0.0-weka.filters.unsupervised.attribute.Remove-V-R2,6,10-11,13-14,16-17
+Instances:    13611
+Attributes:   8
+              Perimeter
+              Eccentricity
+              Solidity
+              roundness
+              ShapeFactor1
+              ShapeFactor2
+              ShapeFactor4
+              Class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+Perimeter <= 0.230099
+|   Eccentricity <= 0.651512
+|   |   ShapeFactor1 <= 0.552408
+|   |   |   ShapeFactor4 <= 0.941071
+|   |   |   |   ShapeFactor1 <= 0.4771
+|   |   |   |   |   Eccentricity <= 0.620323: SEKER (46.0)
+|   |   |   |   |   Eccentricity > 0.620323
+|   |   |   |   |   |   ShapeFactor4 <= 0.905235: SIRA (3.0/1.0)
+|   |   |   |   |   |   ShapeFactor4 > 0.905235: SEKER (5.0/1.0)
+|   |   |   |   ShapeFactor1 > 0.4771
+|   |   |   |   |   ShapeFactor4 <= 0.88531: SIRA (7.0/1.0)
+|   |   |   |   |   ShapeFactor4 > 0.88531
+|   |   |   |   |   |   Solidity <= 0.866264: SEKER (7.0)
+|   |   |   |   |   |   Solidity > 0.866264
+|   |   |   |   |   |   |   Solidity <= 0.903463
+|   |   |   |   |   |   |   |   Perimeter <= 0.13431: SIRA (3.0/1.0)
+|   |   |   |   |   |   |   |   Perimeter > 0.13431: DERMASON (3.0)
+|   |   |   |   |   |   |   Solidity > 0.903463
+|   |   |   |   |   |   |   |   Perimeter <= 0.139952: SEKER (28.0/12.0)
+|   |   |   |   |   |   |   |   Perimeter > 0.139952: SIRA (2.0)
+|   |   |   ShapeFactor4 > 0.941071
+|   |   |   |   Eccentricity <= 0.588306: SEKER (1424.0/2.0)
+|   |   |   |   Eccentricity > 0.588306
+|   |   |   |   |   ShapeFactor1 <= 0.523342: SEKER (327.0/19.0)
+|   |   |   |   |   ShapeFactor1 > 0.523342
+|   |   |   |   |   |   ShapeFactor4 <= 0.985753: DERMASON (18.0/5.0)
+|   |   |   |   |   |   ShapeFactor4 > 0.985753: SEKER (9.0)
+|   |   ShapeFactor1 > 0.552408
+|   |   |   ShapeFactor1 <= 0.593514
+|   |   |   |   ShapeFactor4 <= 0.979765: DERMASON (49.0/7.0)
+|   |   |   |   ShapeFactor4 > 0.979765: SEKER (9.0/1.0)
+|   |   |   ShapeFactor1 > 0.593514: DERMASON (121.0)
+|   Eccentricity > 0.651512
+|   |   Perimeter <= 0.151023
+|   |   |   Perimeter <= 0.121547: DERMASON (2509.0/40.0)
+|   |   |   Perimeter > 0.121547
+|   |   |   |   ShapeFactor1 <= 0.520172
+|   |   |   |   |   ShapeFactor4 <= 0.980782
+|   |   |   |   |   |   roundness <= 0.889828
+|   |   |   |   |   |   |   ShapeFactor1 <= 0.507591
+|   |   |   |   |   |   |   |   ShapeFactor1 <= 0.500498
+|   |   |   |   |   |   |   |   |   Perimeter <= 0.149137: SEKER (3.0)
+|   |   |   |   |   |   |   |   |   Perimeter > 0.149137: DERMASON (2.0)
+|   |   |   |   |   |   |   |   ShapeFactor1 > 0.500498
+|   |   |   |   |   |   |   |   |   ShapeFactor4 <= 0.971569
+|   |   |   |   |   |   |   |   |   |   Eccentricity <= 0.676862: SEKER (3.0)
+|   |   |   |   |   |   |   |   |   |   Eccentricity > 0.676862
+|   |   |   |   |   |   |   |   |   |   |   ShapeFactor4 <= 0.96759: SIRA (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   ShapeFactor4 > 0.96759: SEKER (2.0/1.0)
+|   |   |   |   |   |   |   |   |   ShapeFactor4 > 0.971569: SIRA (4.0)
+|   |   |   |   |   |   |   ShapeFactor1 > 0.507591: DERMASON (21.0/7.0)
+|   |   |   |   |   |   roundness > 0.889828
+|   |   |   |   |   |   |   Solidity <= 0.947053: DERMASON (7.0)
+|   |   |   |   |   |   |   Solidity > 0.947053
+|   |   |   |   |   |   |   |   ShapeFactor1 <= 0.502458: SEKER (9.0)
+|   |   |   |   |   |   |   |   ShapeFactor1 > 0.502458: DERMASON (10.0/3.0)
+|   |   |   |   |   ShapeFactor4 > 0.980782: SEKER (12.0/1.0)
+|   |   |   |   ShapeFactor1 > 0.520172
+|   |   |   |   |   ShapeFactor1 <= 0.680116
+|   |   |   |   |   |   roundness <= 0.821688
+|   |   |   |   |   |   |   ShapeFactor1 <= 0.628186
+|   |   |   |   |   |   |   |   ShapeFactor2 <= 0.51741
+|   |   |   |   |   |   |   |   |   ShapeFactor4 <= 0.939926: SIRA (161.0/67.0)
+|   |   |   |   |   |   |   |   |   ShapeFactor4 > 0.939926
+|   |   |   |   |   |   |   |   |   |   ShapeFactor2 <= 0.487631: DERMASON (150.0/42.0)
+|   |   |   |   |   |   |   |   |   |   ShapeFactor2 > 0.487631: SIRA (7.0)
+|   |   |   |   |   |   |   |   ShapeFactor2 > 0.51741
+|   |   |   |   |   |   |   |   |   Perimeter <= 0.14069: DERMASON (10.0/1.0)
+|   |   |   |   |   |   |   |   |   Perimeter > 0.14069: SEKER (2.0/1.0)
+|   |   |   |   |   |   |   ShapeFactor1 > 0.628186
+|   |   |   |   |   |   |   |   ShapeFactor4 <= 0.855874
+|   |   |   |   |   |   |   |   |   ShapeFactor4 <= 0.749744: SIRA (2.0)
+|   |   |   |   |   |   |   |   |   ShapeFactor4 > 0.749744
+|   |   |   |   |   |   |   |   |   |   Perimeter <= 0.13196: DERMASON (3.0)
+|   |   |   |   |   |   |   |   |   |   Perimeter > 0.13196: HOROZ (4.0/1.0)
+|   |   |   |   |   |   |   |   ShapeFactor4 > 0.855874: DERMASON (67.0/8.0)
+|   |   |   |   |   |   roundness > 0.821688
+|   |   |   |   |   |   |   ShapeFactor4 <= 0.984726
+|   |   |   |   |   |   |   |   roundness <= 0.852759: DERMASON (292.0/71.0)
+|   |   |   |   |   |   |   |   roundness > 0.852759
+|   |   |   |   |   |   |   |   |   Solidity <= 0.917381
+|   |   |   |   |   |   |   |   |   |   Solidity <= 0.906038: DERMASON (4.0)
+|   |   |   |   |   |   |   |   |   |   Solidity > 0.906038
+|   |   |   |   |   |   |   |   |   |   |   Eccentricity <= 0.732968: SIRA (10.0)
+|   |   |   |   |   |   |   |   |   |   |   Eccentricity > 0.732968: DERMASON (5.0/1.0)
+|   |   |   |   |   |   |   |   |   Solidity > 0.917381: DERMASON (175.0/23.0)
+|   |   |   |   |   |   |   ShapeFactor4 > 0.984726
+|   |   |   |   |   |   |   |   Solidity <= 0.946913
+|   |   |   |   |   |   |   |   |   ShapeFactor1 <= 0.531353: SIRA (2.0)
+|   |   |   |   |   |   |   |   |   ShapeFactor1 > 0.531353: DERMASON (10.0/1.0)
+|   |   |   |   |   |   |   |   Solidity > 0.946913
+|   |   |   |   |   |   |   |   |   Perimeter <= 0.140493: SEKER (3.0)
+|   |   |   |   |   |   |   |   |   Perimeter > 0.140493: DERMASON (2.0)
+|   |   |   |   |   ShapeFactor1 > 0.680116
+|   |   |   |   |   |   roundness <= 0.567015: DERMASON (7.0)
+|   |   |   |   |   |   roundness > 0.567015
+|   |   |   |   |   |   |   Eccentricity <= 0.874926
+|   |   |   |   |   |   |   |   ShapeFactor4 <= 0.805674: HOROZ (2.0)
+|   |   |   |   |   |   |   |   ShapeFactor4 > 0.805674: DERMASON (3.0)
+|   |   |   |   |   |   |   Eccentricity > 0.874926: HOROZ (17.0/1.0)
+|   |   Perimeter > 0.151023
+|   |   |   Eccentricity <= 0.886138
+|   |   |   |   roundness <= 0.863309
+|   |   |   |   |   Perimeter <= 0.170093
+|   |   |   |   |   |   ShapeFactor4 <= 0.948893
+|   |   |   |   |   |   |   Solidity <= 0.767156: DERMASON (10.0/1.0)
+|   |   |   |   |   |   |   Solidity > 0.767156
+|   |   |   |   |   |   |   |   roundness <= 0.732588
+|   |   |   |   |   |   |   |   |   Perimeter <= 0.15476: DERMASON (3.0)
+|   |   |   |   |   |   |   |   |   Perimeter > 0.15476
+|   |   |   |   |   |   |   |   |   |   Eccentricity <= 0.791777
+|   |   |   |   |   |   |   |   |   |   |   Eccentricity <= 0.765133: DERMASON (3.0)
+|   |   |   |   |   |   |   |   |   |   |   Eccentricity > 0.765133: SIRA (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   Eccentricity > 0.791777
+|   |   |   |   |   |   |   |   |   |   |   ShapeFactor4 <= 0.794242: HOROZ (2.0)
+|   |   |   |   |   |   |   |   |   |   |   ShapeFactor4 > 0.794242: SIRA (17.0/3.0)
+|   |   |   |   |   |   |   |   roundness > 0.732588
+|   |   |   |   |   |   |   |   |   Eccentricity <= 0.80874
+|   |   |   |   |   |   |   |   |   |   Perimeter <= 0.163662
+|   |   |   |   |   |   |   |   |   |   |   Solidity <= 0.949441
+|   |   |   |   |   |   |   |   |   |   |   |   Perimeter <= 0.163332: SIRA (172.0/23.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Perimeter > 0.163332: DERMASON (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   Solidity > 0.949441
+|   |   |   |   |   |   |   |   |   |   |   |   roundness <= 0.855659
+|   |   |   |   |   |   |   |   |   |   |   |   |   Eccentricity <= 0.77701: DERMASON (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Eccentricity > 0.77701: SIRA (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   roundness > 0.855659: SIRA (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   Perimeter > 0.163662: SIRA (110.0/3.0)
+|   |   |   |   |   |   |   |   |   Eccentricity > 0.80874
+|   |   |   |   |   |   |   |   |   |   roundness <= 0.818964: SIRA (70.0/22.0)
+|   |   |   |   |   |   |   |   |   |   roundness > 0.818964: DERMASON (4.0)
+|   |   |   |   |   |   ShapeFactor4 > 0.948893
+|   |   |   |   |   |   |   Eccentricity <= 0.698307
+|   |   |   |   |   |   |   |   Perimeter <= 0.159179: DERMASON (4.0/1.0)
+|   |   |   |   |   |   |   |   Perimeter > 0.159179: SEKER (5.0)
+|   |   |   |   |   |   |   Eccentricity > 0.698307: SIRA (222.0/90.0)
+|   |   |   |   |   Perimeter > 0.170093
+|   |   |   |   |   |   roundness <= 0.716717
+|   |   |   |   |   |   |   ShapeFactor2 <= 0.317666
+|   |   |   |   |   |   |   |   roundness <= 0.687775
+|   |   |   |   |   |   |   |   |   ShapeFactor4 <= 0.769274: HOROZ (9.0/1.0)
+|   |   |   |   |   |   |   |   |   ShapeFactor4 > 0.769274
+|   |   |   |   |   |   |   |   |   |   ShapeFactor2 <= 0.276116
+|   |   |   |   |   |   |   |   |   |   |   ShapeFactor4 <= 0.89283
+|   |   |   |   |   |   |   |   |   |   |   |   roundness <= 0.659688: HOROZ (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   roundness > 0.659688: SIRA (4.0)
+|   |   |   |   |   |   |   |   |   |   |   ShapeFactor4 > 0.89283: HOROZ (4.0)
+|   |   |   |   |   |   |   |   |   |   ShapeFactor2 > 0.276116: SIRA (8.0)
+|   |   |   |   |   |   |   |   roundness > 0.687775: SIRA (44.0/3.0)
+|   |   |   |   |   |   |   ShapeFactor2 > 0.317666
+|   |   |   |   |   |   |   |   Perimeter <= 0.187725
+|   |   |   |   |   |   |   |   |   Eccentricity <= 0.686746: SEKER (3.0/1.0)
+|   |   |   |   |   |   |   |   |   Eccentricity > 0.686746
+|   |   |   |   |   |   |   |   |   |   Solidity <= 0.74598: DERMASON (3.0)
+|   |   |   |   |   |   |   |   |   |   Solidity > 0.74598
+|   |   |   |   |   |   |   |   |   |   |   Eccentricity <= 0.836901: SIRA (11.0)
+|   |   |   |   |   |   |   |   |   |   |   Eccentricity > 0.836901: DERMASON (3.0/1.0)
+|   |   |   |   |   |   |   |   Perimeter > 0.187725
+|   |   |   |   |   |   |   |   |   ShapeFactor2 <= 0.46456
+|   |   |   |   |   |   |   |   |   |   roundness <= 0.711953
+|   |   |   |   |   |   |   |   |   |   |   ShapeFactor1 <= 0.471227: BARBUNYA (5.0)
+|   |   |   |   |   |   |   |   |   |   |   ShapeFactor1 > 0.471227
+|   |   |   |   |   |   |   |   |   |   |   |   ShapeFactor2 <= 0.382362
+|   |   |   |   |   |   |   |   |   |   |   |   |   ShapeFactor4 <= 0.952298
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Solidity <= 0.878667: SIRA (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Solidity > 0.878667: BARBUNYA (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   ShapeFactor4 > 0.952298: BARBUNYA (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   ShapeFactor2 > 0.382362: SIRA (5.0)
+|   |   |   |   |   |   |   |   |   |   roundness > 0.711953: SEKER (3.0/2.0)
+|   |   |   |   |   |   |   |   |   ShapeFactor2 > 0.46456: SEKER (6.0/1.0)
+|   |   |   |   |   |   roundness > 0.716717
+|   |   |   |   |   |   |   ShapeFactor4 <= 0.962296: SIRA (1414.0/29.0)
+|   |   |   |   |   |   |   ShapeFactor4 > 0.962296
+|   |   |   |   |   |   |   |   ShapeFactor1 <= 0.44045
+|   |   |   |   |   |   |   |   |   Eccentricity <= 0.722289: SEKER (9.0)
+|   |   |   |   |   |   |   |   |   Eccentricity > 0.722289: CALI (2.0)
+|   |   |   |   |   |   |   |   ShapeFactor1 > 0.44045: SIRA (186.0/22.0)
+|   |   |   |   roundness > 0.863309
+|   |   |   |   |   ShapeFactor4 <= 0.934211: SIRA (10.0/1.0)
+|   |   |   |   |   ShapeFactor4 > 0.934211
+|   |   |   |   |   |   ShapeFactor1 <= 0.483237
+|   |   |   |   |   |   |   Eccentricity <= 0.680933: SEKER (32.0)
+|   |   |   |   |   |   |   Eccentricity > 0.680933
+|   |   |   |   |   |   |   |   Solidity <= 0.960627
+|   |   |   |   |   |   |   |   |   Perimeter <= 0.178922: SIRA (12.0/3.0)
+|   |   |   |   |   |   |   |   |   Perimeter > 0.178922
+|   |   |   |   |   |   |   |   |   |   roundness <= 0.871422
+|   |   |   |   |   |   |   |   |   |   |   Eccentricity <= 0.703372: SEKER (5.0)
+|   |   |   |   |   |   |   |   |   |   |   Eccentricity > 0.703372
+|   |   |   |   |   |   |   |   |   |   |   |   Eccentricity <= 0.720868: SIRA (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Eccentricity > 0.720868: SEKER (3.0)
+|   |   |   |   |   |   |   |   |   |   roundness > 0.871422
+|   |   |   |   |   |   |   |   |   |   |   Perimeter <= 0.192185: SEKER (2.0)
+|   |   |   |   |   |   |   |   |   |   |   Perimeter > 0.192185: BARBUNYA (2.0)
+|   |   |   |   |   |   |   |   Solidity > 0.960627: SEKER (13.0)
+|   |   |   |   |   |   ShapeFactor1 > 0.483237
+|   |   |   |   |   |   |   Perimeter <= 0.156109
+|   |   |   |   |   |   |   |   roundness <= 0.871883
+|   |   |   |   |   |   |   |   |   Solidity <= 0.950234: SIRA (5.0/1.0)
+|   |   |   |   |   |   |   |   |   Solidity > 0.950234: DERMASON (2.0)
+|   |   |   |   |   |   |   |   roundness > 0.871883
+|   |   |   |   |   |   |   |   |   ShapeFactor1 <= 0.490461: DERMASON (4.0)
+|   |   |   |   |   |   |   |   |   ShapeFactor1 > 0.490461
+|   |   |   |   |   |   |   |   |   |   ShapeFactor1 <= 0.498454: SEKER (3.0)
+|   |   |   |   |   |   |   |   |   |   ShapeFactor1 > 0.498454: DERMASON (5.0/2.0)
+|   |   |   |   |   |   |   Perimeter > 0.156109
+|   |   |   |   |   |   |   |   roundness <= 0.875576
+|   |   |   |   |   |   |   |   |   Eccentricity <= 0.756276: SIRA (5.0)
+|   |   |   |   |   |   |   |   |   Eccentricity > 0.756276: SEKER (5.0/1.0)
+|   |   |   |   |   |   |   |   roundness > 0.875576: SEKER (7.0)
+|   |   |   Eccentricity > 0.886138
+|   |   |   |   Eccentricity <= 0.907297
+|   |   |   |   |   ShapeFactor1 <= 0.615966
+|   |   |   |   |   |   Perimeter <= 0.215583
+|   |   |   |   |   |   |   ShapeFactor4 <= 0.908982
+|   |   |   |   |   |   |   |   ShapeFactor1 <= 0.610249: HOROZ (6.0/1.0)
+|   |   |   |   |   |   |   |   ShapeFactor1 > 0.610249: SIRA (2.0)
+|   |   |   |   |   |   |   ShapeFactor4 > 0.908982: SIRA (10.0/1.0)
+|   |   |   |   |   |   Perimeter > 0.215583: HOROZ (8.0/1.0)
+|   |   |   |   |   ShapeFactor1 > 0.615966: HOROZ (16.0)
+|   |   |   |   Eccentricity > 0.907297: HOROZ (244.0)
+Perimeter > 0.230099
+|   Perimeter <= 0.549027
+|   |   ShapeFactor1 <= 0.431362
+|   |   |   Eccentricity <= 0.814115
+|   |   |   |   Perimeter <= 0.264178
+|   |   |   |   |   ShapeFactor4 <= 0.865035
+|   |   |   |   |   |   Perimeter <= 0.253284: SIRA (5.0)
+|   |   |   |   |   |   Perimeter > 0.253284: CALI (3.0/1.0)
+|   |   |   |   |   ShapeFactor4 > 0.865035
+|   |   |   |   |   |   roundness <= 0.808155
+|   |   |   |   |   |   |   roundness <= 0.56204: SEKER (6.0)
+|   |   |   |   |   |   |   roundness > 0.56204
+|   |   |   |   |   |   |   |   Eccentricity <= 0.778381
+|   |   |   |   |   |   |   |   |   ShapeFactor2 <= 0.419324: BARBUNYA (16.0)
+|   |   |   |   |   |   |   |   |   ShapeFactor2 > 0.419324
+|   |   |   |   |   |   |   |   |   |   Perimeter <= 0.245583: SEKER (3.0)
+|   |   |   |   |   |   |   |   |   |   Perimeter > 0.245583: BARBUNYA (6.0/1.0)
+|   |   |   |   |   |   |   |   Eccentricity > 0.778381
+|   |   |   |   |   |   |   |   |   ShapeFactor4 <= 0.966692
+|   |   |   |   |   |   |   |   |   |   Eccentricity <= 0.787714: SIRA (3.0)
+|   |   |   |   |   |   |   |   |   |   Eccentricity > 0.787714: BARBUNYA (3.0/1.0)
+|   |   |   |   |   |   |   |   |   ShapeFactor4 > 0.966692: SEKER (2.0)
+|   |   |   |   |   |   roundness > 0.808155
+|   |   |   |   |   |   |   roundness <= 0.818937: SIRA (4.0)
+|   |   |   |   |   |   |   roundness > 0.818937: SEKER (12.0/2.0)
+|   |   |   |   Perimeter > 0.264178
+|   |   |   |   |   roundness <= 0.729448
+|   |   |   |   |   |   ShapeFactor4 <= 0.798423
+|   |   |   |   |   |   |   Solidity <= 0.613743
+|   |   |   |   |   |   |   |   Perimeter <= 0.345355: HOROZ (2.0)
+|   |   |   |   |   |   |   |   Perimeter > 0.345355: CALI (2.0)
+|   |   |   |   |   |   |   Solidity > 0.613743
+|   |   |   |   |   |   |   |   roundness <= 0.671449: BARBUNYA (21.0)
+|   |   |   |   |   |   |   |   roundness > 0.671449
+|   |   |   |   |   |   |   |   |   Eccentricity <= 0.737694: BARBUNYA (3.0)
+|   |   |   |   |   |   |   |   |   Eccentricity > 0.737694: CALI (8.0)
+|   |   |   |   |   |   ShapeFactor4 > 0.798423: BARBUNYA (727.0/6.0)
+|   |   |   |   |   roundness > 0.729448
+|   |   |   |   |   |   Eccentricity <= 0.758418
+|   |   |   |   |   |   |   Perimeter <= 0.474351
+|   |   |   |   |   |   |   |   ShapeFactor4 <= 0.79822: CALI (3.0)
+|   |   |   |   |   |   |   |   ShapeFactor4 > 0.79822: BARBUNYA (60.0/3.0)
+|   |   |   |   |   |   |   Perimeter > 0.474351: BOMBAY (2.0)
+|   |   |   |   |   |   Eccentricity > 0.758418
+|   |   |   |   |   |   |   ShapeFactor4 <= 0.92965
+|   |   |   |   |   |   |   |   Solidity <= 0.870134: CALI (27.0)
+|   |   |   |   |   |   |   |   Solidity > 0.870134
+|   |   |   |   |   |   |   |   |   roundness <= 0.759749
+|   |   |   |   |   |   |   |   |   |   ShapeFactor1 <= 0.318179: BARBUNYA (6.0)
+|   |   |   |   |   |   |   |   |   |   ShapeFactor1 > 0.318179: CALI (14.0/5.0)
+|   |   |   |   |   |   |   |   |   roundness > 0.759749: CALI (45.0/5.0)
+|   |   |   |   |   |   |   ShapeFactor4 > 0.92965
+|   |   |   |   |   |   |   |   Solidity <= 0.950078: BARBUNYA (31.0/4.0)
+|   |   |   |   |   |   |   |   Solidity > 0.950078: CALI (14.0/3.0)
+|   |   |   Eccentricity > 0.814115
+|   |   |   |   roundness <= 0.620514
+|   |   |   |   |   Eccentricity <= 0.869387: BARBUNYA (183.0)
+|   |   |   |   |   Eccentricity > 0.869387
+|   |   |   |   |   |   ShapeFactor4 <= 0.839468
+|   |   |   |   |   |   |   roundness <= 0.535152
+|   |   |   |   |   |   |   |   Solidity <= 0.675763: HOROZ (3.0)
+|   |   |   |   |   |   |   |   Solidity > 0.675763: BARBUNYA (3.0/1.0)
+|   |   |   |   |   |   |   roundness > 0.535152: CALI (35.0/6.0)
+|   |   |   |   |   |   ShapeFactor4 > 0.839468
+|   |   |   |   |   |   |   Solidity <= 0.873421: BARBUNYA (38.0/4.0)
+|   |   |   |   |   |   |   Solidity > 0.873421
+|   |   |   |   |   |   |   |   Eccentricity <= 0.93157
+|   |   |   |   |   |   |   |   |   ShapeFactor4 <= 0.929081: CALI (9.0/1.0)
+|   |   |   |   |   |   |   |   |   ShapeFactor4 > 0.929081
+|   |   |   |   |   |   |   |   |   |   Eccentricity <= 0.907778: BARBUNYA (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   Eccentricity > 0.907778: HOROZ (2.0)
+|   |   |   |   |   |   |   |   Eccentricity > 0.93157: HOROZ (5.0)
+|   |   |   |   roundness > 0.620514
+|   |   |   |   |   ShapeFactor4 <= 0.905608
+|   |   |   |   |   |   ShapeFactor1 <= 0.410258
+|   |   |   |   |   |   |   ShapeFactor2 <= 0.200282: CALI (1021.0/4.0)
+|   |   |   |   |   |   |   ShapeFactor2 > 0.200282
+|   |   |   |   |   |   |   |   roundness <= 0.674626
+|   |   |   |   |   |   |   |   |   ShapeFactor4 <= 0.830468
+|   |   |   |   |   |   |   |   |   |   Solidity <= 0.827041: CALI (4.0)
+|   |   |   |   |   |   |   |   |   |   Solidity > 0.827041: HOROZ (2.0)
+|   |   |   |   |   |   |   |   |   ShapeFactor4 > 0.830468
+|   |   |   |   |   |   |   |   |   |   Eccentricity <= 0.841293: BARBUNYA (9.0)
+|   |   |   |   |   |   |   |   |   |   Eccentricity > 0.841293: CALI (4.0/1.0)
+|   |   |   |   |   |   |   |   roundness > 0.674626: CALI (165.0/7.0)
+|   |   |   |   |   |   ShapeFactor1 > 0.410258
+|   |   |   |   |   |   |   ShapeFactor2 <= 0.231579
+|   |   |   |   |   |   |   |   ShapeFactor4 <= 0.546215: HOROZ (3.0)
+|   |   |   |   |   |   |   |   ShapeFactor4 > 0.546215: CALI (45.0/7.0)
+|   |   |   |   |   |   |   ShapeFactor2 > 0.231579
+|   |   |   |   |   |   |   |   roundness <= 0.71479
+|   |   |   |   |   |   |   |   |   Perimeter <= 0.287896
+|   |   |   |   |   |   |   |   |   |   Perimeter <= 0.28305: BARBUNYA (2.0)
+|   |   |   |   |   |   |   |   |   |   Perimeter > 0.28305: CALI (2.0)
+|   |   |   |   |   |   |   |   |   Perimeter > 0.287896: BARBUNYA (4.0)
+|   |   |   |   |   |   |   |   roundness > 0.71479: CALI (6.0)
+|   |   |   |   |   ShapeFactor4 > 0.905608
+|   |   |   |   |   |   Solidity <= 0.907215
+|   |   |   |   |   |   |   Eccentricity <= 0.86699
+|   |   |   |   |   |   |   |   Eccentricity <= 0.817798
+|   |   |   |   |   |   |   |   |   Solidity <= 0.874599: CALI (2.0)
+|   |   |   |   |   |   |   |   |   Solidity > 0.874599: BARBUNYA (4.0)
+|   |   |   |   |   |   |   |   Eccentricity > 0.817798: BARBUNYA (65.0)
+|   |   |   |   |   |   |   Eccentricity > 0.86699
+|   |   |   |   |   |   |   |   Solidity <= 0.886568: BARBUNYA (5.0)
+|   |   |   |   |   |   |   |   Solidity > 0.886568
+|   |   |   |   |   |   |   |   |   ShapeFactor4 <= 0.956437: CALI (4.0)
+|   |   |   |   |   |   |   |   |   ShapeFactor4 > 0.956437: BARBUNYA (2.0)
+|   |   |   |   |   |   Solidity > 0.907215
+|   |   |   |   |   |   |   Solidity <= 0.941752
+|   |   |   |   |   |   |   |   ShapeFactor4 <= 0.928228: CALI (46.0/3.0)
+|   |   |   |   |   |   |   |   ShapeFactor4 > 0.928228
+|   |   |   |   |   |   |   |   |   Solidity <= 0.926213
+|   |   |   |   |   |   |   |   |   |   ShapeFactor1 <= 0.413104: BARBUNYA (20.0)
+|   |   |   |   |   |   |   |   |   |   ShapeFactor1 > 0.413104: CALI (4.0/1.0)
+|   |   |   |   |   |   |   |   |   Solidity > 0.926213
+|   |   |   |   |   |   |   |   |   |   Solidity <= 0.939135
+|   |   |   |   |   |   |   |   |   |   |   Perimeter <= 0.37852
+|   |   |   |   |   |   |   |   |   |   |   |   Perimeter <= 0.294566: BARBUNYA (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Perimeter > 0.294566: CALI (15.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   Perimeter > 0.37852: BARBUNYA (3.0)
+|   |   |   |   |   |   |   |   |   |   Solidity > 0.939135: BARBUNYA (4.0)
+|   |   |   |   |   |   |   Solidity > 0.941752: CALI (135.0/7.0)
+|   |   ShapeFactor1 > 0.431362
+|   |   |   ShapeFactor2 <= 0.214006: HOROZ (1568.0/52.0)
+|   |   |   ShapeFactor2 > 0.214006
+|   |   |   |   ShapeFactor4 <= 0.75707
+|   |   |   |   |   Eccentricity <= 0.812937: SIRA (4.0/1.0)
+|   |   |   |   |   Eccentricity > 0.812937: HOROZ (24.0/2.0)
+|   |   |   |   ShapeFactor4 > 0.75707
+|   |   |   |   |   roundness <= 0.688188
+|   |   |   |   |   |   Eccentricity <= 0.857867
+|   |   |   |   |   |   |   Eccentricity <= 0.73224: SEKER (3.0/1.0)
+|   |   |   |   |   |   |   Eccentricity > 0.73224
+|   |   |   |   |   |   |   |   ShapeFactor1 <= 0.474972
+|   |   |   |   |   |   |   |   |   roundness <= 0.671996: BARBUNYA (35.0)
+|   |   |   |   |   |   |   |   |   roundness > 0.671996
+|   |   |   |   |   |   |   |   |   |   Perimeter <= 0.268968: BARBUNYA (3.0)
+|   |   |   |   |   |   |   |   |   |   Perimeter > 0.268968: CALI (3.0)
+|   |   |   |   |   |   |   |   ShapeFactor1 > 0.474972
+|   |   |   |   |   |   |   |   |   ShapeFactor4 <= 0.90005: SIRA (3.0)
+|   |   |   |   |   |   |   |   |   ShapeFactor4 > 0.90005
+|   |   |   |   |   |   |   |   |   |   ShapeFactor1 <= 0.499587: BARBUNYA (4.0)
+|   |   |   |   |   |   |   |   |   |   ShapeFactor1 > 0.499587: SIRA (2.0)
+|   |   |   |   |   |   Eccentricity > 0.857867
+|   |   |   |   |   |   |   ShapeFactor4 <= 0.840577: SIRA (5.0)
+|   |   |   |   |   |   |   ShapeFactor4 > 0.840577
+|   |   |   |   |   |   |   |   Eccentricity <= 0.873344
+|   |   |   |   |   |   |   |   |   Solidity <= 0.840605: BARBUNYA (3.0)
+|   |   |   |   |   |   |   |   |   Solidity > 0.840605
+|   |   |   |   |   |   |   |   |   |   Eccentricity <= 0.860713: HOROZ (2.0)
+|   |   |   |   |   |   |   |   |   |   Eccentricity > 0.860713: SIRA (2.0)
+|   |   |   |   |   |   |   |   Eccentricity > 0.873344: HOROZ (12.0/2.0)
+|   |   |   |   |   roundness > 0.688188
+|   |   |   |   |   |   Perimeter <= 0.254812
+|   |   |   |   |   |   |   Eccentricity <= 0.788142
+|   |   |   |   |   |   |   |   Perimeter <= 0.238998: SIRA (2.0)
+|   |   |   |   |   |   |   |   Perimeter > 0.238998: BARBUNYA (2.0)
+|   |   |   |   |   |   |   Eccentricity > 0.788142: SIRA (130.0/6.0)
+|   |   |   |   |   |   Perimeter > 0.254812
+|   |   |   |   |   |   |   ShapeFactor4 <= 0.95828
+|   |   |   |   |   |   |   |   Perimeter <= 0.272015
+|   |   |   |   |   |   |   |   |   ShapeFactor4 <= 0.820604
+|   |   |   |   |   |   |   |   |   |   Perimeter <= 0.268293: CALI (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   Perimeter > 0.268293: SIRA (3.0/1.0)
+|   |   |   |   |   |   |   |   |   ShapeFactor4 > 0.820604
+|   |   |   |   |   |   |   |   |   |   Perimeter <= 0.259422
+|   |   |   |   |   |   |   |   |   |   |   ShapeFactor2 <= 0.228885: CALI (2.0)
+|   |   |   |   |   |   |   |   |   |   |   ShapeFactor2 > 0.228885: SIRA (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   Perimeter > 0.259422: SIRA (7.0)
+|   |   |   |   |   |   |   |   Perimeter > 0.272015: CALI (4.0)
+|   |   |   |   |   |   |   ShapeFactor4 > 0.95828: BARBUNYA (4.0/1.0)
+|   Perimeter > 0.549027
+|   |   ShapeFactor2 <= 0.1939: BOMBAY (514.0)
+|   |   ShapeFactor2 > 0.1939
+|   |   |   Solidity <= 0.840265: BARBUNYA (2.0)
+|   |   |   Solidity > 0.840265: BOMBAY (6.0)
+
+Number of Leaves  : 	200
+
+Size of the tree : 	399
+
+
+Time taken to build model: 0.11 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       12440               91.3967 %
+Incorrectly Classified Instances      1171                8.6033 %
+Kappa statistic                          0.8959
+Mean absolute error                      0.0314
+Root mean squared error                  0.1436
+Relative absolute error                 13.3013 %
+Root relative squared error             41.7616 %
+Total Number of Instances            13611     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,942    0,010    0,941      0,942    0,942      0,931    0,973     0,903     SEKER
+                 0,901    0,008    0,922      0,901    0,911      0,902    0,966     0,877     BARBUNYA
+                 0,996    0,000    0,994      0,996    0,995      0,995    0,999     0,997     BOMBAY
+                 0,929    0,009    0,932      0,929    0,931      0,921    0,977     0,898     CALI
+                 0,949    0,010    0,941      0,949    0,945      0,936    0,976     0,918     HOROZ
+                 0,838    0,032    0,862      0,838    0,850      0,814    0,954     0,847     SIRA
+                 0,922    0,037    0,898      0,922    0,910      0,878    0,972     0,914     DERMASON
+Weighted Avg.    0,914    0,021    0,914      0,914    0,914      0,894    0,970     0,898     
+
+=== Confusion Matrix ===
+
+    a    b    c    d    e    f    g   <-- classified as
+ 1909   11    0    1    1   56   49 |    a = SEKER
+    9 1191    3   74   17   27    1 |    b = BARBUNYA
+    0    1  520    1    0    0    0 |    c = BOMBAY
+    3   62    0 1515   38   12    0 |    d = CALI
+    0    7    0   28 1829   47   17 |    e = HOROZ
+   52   18    0    6   49 2208  303 |    f = SIRA
+   55    2    0    0   10  211 3268 |    g = DERMASON
+

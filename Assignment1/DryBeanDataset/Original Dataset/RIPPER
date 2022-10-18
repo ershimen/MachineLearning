@@ -1,0 +1,108 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.rules.JRip -F 3 -N 2.0 -O 2 -S 1
+Relation:     Dry_Beans_Dataset-weka.filters.unsupervised.attribute.Normalize-S1.0-T0.0
+Instances:    13611
+Attributes:   17
+              Area
+              Perimeter
+              MajorAxisLength
+              MinorAxisLength
+              AspectRation
+              Eccentricity
+              ConvexArea
+              EquivDiameter
+              Extent
+              Solidity
+              roundness
+              Compactness
+              ShapeFactor1
+              ShapeFactor2
+              ShapeFactor3
+              ShapeFactor4
+              Class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+JRIP rules:
+===========
+
+(MinorAxisLength >= 0.595925) => Class=BOMBAY (523.0/1.0)
+(ShapeFactor1 <= 0.417788) and (Compactness >= 0.341762) and (roundness <= 0.635913) => Class=BARBUNYA (616.0/2.0)
+(ShapeFactor1 <= 0.431362) and (ShapeFactor4 >= 0.892877) and (Solidity <= 0.906921) and (Perimeter >= 0.263016) => Class=BARBUNYA (443.0/32.0)
+(roundness <= 0.670603) and (Compactness >= 0.31729) and (ShapeFactor4 >= 0.839602) and (MinorAxisLength >= 0.30057) => Class=BARBUNYA (25.0/1.0)
+(ShapeFactor1 <= 0.458735) and (Solidity <= 0.926106) and (roundness <= 0.753612) and (Compactness >= 0.383039) and (MajorAxisLength >= 0.213043) and (ShapeFactor4 >= 0.932409) => Class=BARBUNYA (48.0/1.0)
+(MinorAxisLength >= 0.237507) and (ShapeFactor2 >= 0.204265) and (Perimeter >= 0.227022) and (Compactness >= 0.467781) and (roundness <= 0.756432) and (ShapeFactor1 <= 0.367822) => Class=BARBUNYA (42.0/1.0)
+(ShapeFactor1 <= 0.458574) and (roundness <= 0.809319) and (ShapeFactor4 >= 0.874781) and (Perimeter >= 0.257691) and (ShapeFactor2 >= 0.253006) => Class=BARBUNYA (59.0/21.0)
+(ShapeFactor1 <= 0.470291) and (Compactness >= 0.31481) and (Solidity >= 0.678983) and (Extent <= 0.602043) and (roundness <= 0.630256) and (Area >= 0.114105) => Class=BARBUNYA (15.0/1.0)
+(MinorAxisLength >= 0.236517) and (roundness <= 0.69408) and (ShapeFactor2 >= 0.243254) and (AspectRation >= 0.208437) and (Solidity >= 0.727769) and (Solidity <= 0.881245) => Class=BARBUNYA (20.0/2.0)
+(Perimeter >= 0.235567) and (Compactness >= 0.334248) and (ShapeFactor4 >= 0.941928) and (roundness <= 0.735593) and (Solidity <= 0.931311) => Class=BARBUNYA (20.0/6.0)
+(ConvexArea >= 0.179419) and (ShapeFactor1 <= 0.40815) => Class=CALI (1475.0/54.0)
+(ConvexArea >= 0.15668) and (Compactness >= 0.24652) and (ShapeFactor1 <= 0.432118) => Class=CALI (119.0/23.0)
+(Area >= 0.141715) and (MinorAxisLength >= 0.234821) and (Extent >= 0.534926) and (ShapeFactor4 <= 0.875453) and (ShapeFactor1 <= 0.441117) => Class=CALI (24.0/10.0)
+(Compactness <= 0.244642) => Class=HOROZ (1698.0/22.0)
+(Compactness <= 0.289017) and (ShapeFactor4 <= 0.91599) and (Extent <= 0.504825) => Class=HOROZ (59.0/6.0)
+(Compactness <= 0.286736) and (AspectRation >= 0.585844) => Class=HOROZ (43.0/8.0)
+(Compactness <= 0.351281) and (ShapeFactor4 <= 0.747851) => Class=HOROZ (59.0/11.0)
+(Compactness <= 0.349587) and (roundness <= 0.689149) and (Extent <= 0.34578) => Class=HOROZ (9.0/2.0)
+(Compactness <= 0.315265) and (Extent >= 0.785407) and (Solidity <= 0.911356) => Class=HOROZ (15.0/0.0)
+(ShapeFactor1 <= 0.525567) and (Compactness >= 0.718021) => Class=SEKER (1232.0/3.0)
+(ShapeFactor1 <= 0.539947) and (Compactness >= 0.66053) => Class=SEKER (478.0/23.0)
+(Compactness >= 0.613975) and (ShapeFactor1 <= 0.519246) and (roundness >= 0.901614) => Class=SEKER (89.0/7.0)
+(ShapeFactor1 <= 0.556102) and (Compactness >= 0.653001) and (MinorAxisLength >= 0.228864) => Class=SEKER (9.0/0.0)
+(Compactness >= 0.596186) and (ShapeFactor1 <= 0.558635) and (AspectRation <= 0.227952) and (ShapeFactor4 >= 0.981146) => Class=SEKER (38.0/1.0)
+(Compactness >= 0.570777) and (ShapeFactor4 >= 0.9558) and (ShapeFactor1 <= 0.5018) and (ShapeFactor2 >= 0.486086) => Class=SEKER (58.0/11.0)
+(Compactness >= 0.551964) and (ShapeFactor1 <= 0.551256) and (ShapeFactor4 >= 0.974832) and (Area >= 0.098008) => Class=SEKER (32.0/6.0)
+(ShapeFactor1 <= 0.442331) and (ShapeFactor4 >= 0.957678) and (Extent <= 0.705865) => Class=SEKER (18.0/2.0)
+(ShapeFactor1 <= 0.505274) and (roundness >= 0.86279) and (MajorAxisLength >= 0.191734) => Class=SEKER (25.0/9.0)
+(Compactness >= 0.599538) and (ShapeFactor1 <= 0.55332) and (MajorAxisLength <= 0.114291) and (Area <= 0.053071) => Class=SEKER (8.0/0.0)
+(Perimeter >= 0.150574) and (ConvexArea >= 0.090685) and (roundness >= 0.735145) and (Compactness <= 0.497465) => Class=SIRA (1301.0/30.0)
+(Perimeter >= 0.164097) and (roundness >= 0.720759) => Class=SIRA (634.0/60.0)
+(Perimeter >= 0.161114) and (roundness >= 0.713708) => Class=SIRA (170.0/47.0)
+(ShapeFactor4 <= 0.94319) and (roundness >= 0.693211) and (Perimeter >= 0.153534) and (ShapeFactor1 >= 0.498127) => Class=SIRA (149.0/22.0)
+(Perimeter >= 0.14707) and (Solidity <= 0.938525) and (roundness >= 0.689432) => Class=SIRA (298.0/118.0)
+(Perimeter >= 0.123358) and (ShapeFactor4 <= 0.93389) and (MajorAxisLength >= 0.157668) and (Solidity <= 0.889104) and (AspectRation <= 0.413132) => Class=SIRA (21.0/3.0)
+(Perimeter >= 0.125593) and (roundness <= 0.820942) and (ShapeFactor1 <= 0.578071) and (ShapeFactor1 >= 0.547119) and (Perimeter <= 0.143479) => Class=SIRA (48.0/15.0)
+ => Class=DERMASON (3691.0/372.0)
+
+Number of Rules : 37
+
+
+Time taken to build model: 2.38 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       12451               91.4775 %
+Incorrectly Classified Instances      1160                8.5225 %
+Kappa statistic                          0.8967
+Mean absolute error                      0.0381
+Root mean squared error                  0.146 
+Relative absolute error                 16.1382 %
+Root relative squared error             42.483  %
+Total Number of Instances            13611     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,932    0,008    0,955      0,932    0,944      0,934    0,979     0,947     SEKER
+                 0,887    0,008    0,925      0,887    0,906      0,896    0,974     0,901     BARBUNYA
+                 0,998    0,000    0,998      0,998    0,998      0,998    0,999     0,994     BOMBAY
+                 0,922    0,010    0,925      0,922    0,924      0,913    0,975     0,929     CALI
+                 0,940    0,007    0,960      0,940    0,950      0,942    0,986     0,957     HOROZ
+                 0,851    0,029    0,875      0,851    0,863      0,831    0,962     0,889     SIRA
+                 0,933    0,045    0,879      0,933    0,905      0,871    0,973     0,883     DERMASON
+Weighted Avg.    0,915    0,022    0,915      0,915    0,915      0,895    0,975     0,916     
+
+=== Confusion Matrix ===
+
+    a    b    c    d    e    f    g   <-- classified as
+ 1890   14    0    1    0   48   74 |    a = SEKER
+    9 1173    1   84    5   27   23 |    b = BARBUNYA
+    0    0  521    1    0    0    0 |    c = BOMBAY
+    4   63    0 1503   34   15   11 |    d = CALI
+    0   10    0   32 1813   44   29 |    e = HOROZ
+   31    8    0    4   30 2243  320 |    f = SIRA
+   45    0    0    0    7  186 3308 |    g = DERMASON
+
