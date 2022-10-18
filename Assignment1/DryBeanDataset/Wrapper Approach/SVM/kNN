@@ -1,6 +1,6 @@
 === Run information ===
 
-Scheme:       weka.classifiers.lazy.IBk -K 7 -W 0 -A "weka.core.neighboursearch.LinearNNSearch -A \"weka.core.EuclideanDistance -R first-last\""
+Scheme:       weka.classifiers.lazy.IBk -K 10 -W 0 -A "weka.core.neighboursearch.LinearNNSearch -A \"weka.core.EuclideanDistance -R first-last\""
 Relation:     Dry_Beans_Dataset-weka.filters.unsupervised.attribute.Normalize-S1.0-T0.0-weka.filters.unsupervised.attribute.Remove-V-R2,7-13,16-17
 Instances:    13611
 Attributes:   10
@@ -19,7 +19,7 @@ Test mode:    10-fold cross-validation
 === Classifier model (full training set) ===
 
 IB1 instance-based classifier
-using 7 nearest neighbour(s) for classification
+using 10 nearest neighbour(s) for classification
 
 
 Time taken to build model: 0 seconds
@@ -27,35 +27,35 @@ Time taken to build model: 0 seconds
 === Stratified cross-validation ===
 === Summary ===
 
-Correctly Classified Instances       12564               92.3077 %
-Incorrectly Classified Instances      1047                7.6923 %
-Kappa statistic                          0.907 
-Mean absolute error                      0.0295
-Root mean squared error                  0.1277
-Relative absolute error                 12.4838 %
-Root relative squared error             37.1375 %
+Correctly Classified Instances       12565               92.315  %
+Incorrectly Classified Instances      1046                7.685  %
+Kappa statistic                          0.9071
+Mean absolute error                      0.0303
+Root mean squared error                  0.1268
+Relative absolute error                 12.8187 %
+Root relative squared error             36.8886 %
 Total Number of Instances            13611     
 
 === Detailed Accuracy By Class ===
 
                  TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
-                 0,947    0,009    0,946      0,947    0,947      0,937    0,989     0,970     SEKER
-                 0,893    0,005    0,947      0,893    0,919      0,911    0,984     0,956     BARBUNYA
+                 0,946    0,009    0,946      0,946    0,946      0,937    0,991     0,975     SEKER
+                 0,901    0,005    0,950      0,901    0,925      0,917    0,987     0,962     BARBUNYA
                  1,000    0,000    1,000      1,000    1,000      1,000    1,000     1,000     BOMBAY
-                 0,950    0,011    0,919      0,950    0,934      0,925    0,992     0,964     CALI
-                 0,950    0,007    0,960      0,950    0,955      0,948    0,991     0,975     HOROZ
-                 0,876    0,034    0,862      0,876    0,869      0,837    0,976     0,912     SIRA
-                 0,918    0,029    0,919      0,918    0,918      0,889    0,986     0,962     DERMASON
-Weighted Avg.    0,923    0,018    0,923      0,923    0,923      0,905    0,986     0,957     
+                 0,948    0,010    0,927      0,948    0,938      0,929    0,993     0,969     CALI
+                 0,951    0,007    0,960      0,951    0,955      0,948    0,991     0,977     HOROZ
+                 0,884    0,037    0,852      0,884    0,868      0,835    0,979     0,921     SIRA
+                 0,910    0,027    0,922      0,910    0,916      0,887    0,989     0,969     DERMASON
+Weighted Avg.    0,923    0,018    0,924      0,923    0,923      0,905    0,988     0,962     
 
 === Confusion Matrix ===
 
     a    b    c    d    e    f    g   <-- classified as
- 1920   10    0    0    1   58   38 |    a = SEKER
-   10 1180    0   96    7   29    0 |    b = BARBUNYA
+ 1917    9    0    0    1   64   36 |    a = SEKER
+    8 1191    0   86    7   30    0 |    b = BARBUNYA
     0    0  522    0    0    0    0 |    c = BOMBAY
-    3   42    0 1548   25   12    0 |    d = CALI
-    0    4    0   36 1832   46   10 |    e = HOROZ
-   37   10    0    4   37 2308  240 |    f = SIRA
-   60    0    0    0    7  225 3254 |    g = DERMASON
+    2   43    0 1546   23   16    0 |    d = CALI
+    0    3    0   34 1833   45   13 |    e = HOROZ
+   35    8    0    2   39 2329  223 |    f = SIRA
+   64    0    0    0    6  249 3227 |    g = DERMASON
 

@@ -1,6 +1,6 @@
 === Run information ===
 
-Scheme:       weka.classifiers.lazy.IBk -K 7 -W 0 -A "weka.core.neighboursearch.LinearNNSearch -A \"weka.core.EuclideanDistance -R first-last\""
+Scheme:       weka.classifiers.lazy.IBk -K 10 -W 0 -A "weka.core.neighboursearch.LinearNNSearch -A \"weka.core.EuclideanDistance -R first-last\""
 Relation:     Dry_Beans_Dataset-weka.filters.unsupervised.attribute.Normalize-S1.0-T0.0
 Instances:    13611
 Attributes:   17
@@ -26,7 +26,7 @@ Test mode:    10-fold cross-validation
 === Classifier model (full training set) ===
 
 IB1 instance-based classifier
-using 7 nearest neighbour(s) for classification
+using 10 nearest neighbour(s) for classification
 
 
 Time taken to build model: 0 seconds
@@ -34,35 +34,35 @@ Time taken to build model: 0 seconds
 === Stratified cross-validation ===
 === Summary ===
 
-Correctly Classified Instances       12515               91.9477 %
-Incorrectly Classified Instances      1096                8.0523 %
-Kappa statistic                          0.9026
-Mean absolute error                      0.0304
-Root mean squared error                  0.1304
-Relative absolute error                 12.8441 %
-Root relative squared error             37.9269 %
+Correctly Classified Instances       12530               92.0579 %
+Incorrectly Classified Instances      1081                7.9421 %
+Kappa statistic                          0.904 
+Mean absolute error                      0.031 
+Root mean squared error                  0.1287
+Relative absolute error                 13.1374 %
+Root relative squared error             37.453  %
 Total Number of Instances            13611     
 
 === Detailed Accuracy By Class ===
 
                  TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
-                 0,946    0,010    0,943      0,946    0,944      0,935    0,989     0,970     SEKER
-                 0,888    0,005    0,946      0,888    0,916      0,908    0,981     0,951     BARBUNYA
+                 0,948    0,010    0,942      0,948    0,945      0,936    0,990     0,973     SEKER
+                 0,890    0,005    0,946      0,890    0,917      0,909    0,983     0,957     BARBUNYA
                  1,000    0,000    1,000      1,000    1,000      1,000    1,000     1,000     BOMBAY
-                 0,947    0,012    0,917      0,947    0,931      0,922    0,992     0,963     CALI
-                 0,947    0,006    0,962      0,947    0,954      0,947    0,990     0,975     HOROZ
-                 0,872    0,036    0,852      0,872    0,862      0,829    0,974     0,908     SIRA
-                 0,912    0,030    0,915      0,912    0,913      0,883    0,986     0,960     DERMASON
-Weighted Avg.    0,919    0,019    0,920      0,919    0,920      0,901    0,985     0,954     
+                 0,945    0,011    0,922      0,945    0,934      0,925    0,993     0,968     CALI
+                 0,946    0,006    0,964      0,946    0,955      0,947    0,991     0,977     HOROZ
+                 0,881    0,038    0,846      0,881    0,863      0,830    0,978     0,919     SIRA
+                 0,908    0,027    0,921      0,908    0,915      0,885    0,989     0,968     DERMASON
+Weighted Avg.    0,921    0,019    0,921      0,921    0,921      0,902    0,988     0,960     
 
 === Confusion Matrix ===
 
     a    b    c    d    e    f    g   <-- classified as
- 1918   10    0    0    1   62   36 |    a = SEKER
-   11 1174    0   99    6   32    0 |    b = BARBUNYA
+ 1922    7    0    0    1   63   34 |    a = SEKER
+   11 1177    0   93    6   35    0 |    b = BARBUNYA
     0    0  522    0    0    0    0 |    c = BOMBAY
-    2   46    0 1543   24   15    0 |    d = CALI
-    0    4    0   37 1825   51   11 |    e = HOROZ
-   38    7    0    4   34 2299  254 |    f = SIRA
-   66    0    0    0    8  238 3234 |    g = DERMASON
+    2   50    0 1541   22   15    0 |    d = CALI
+    0    3    0   33 1824   57   11 |    e = HOROZ
+   37    7    0    4   35 2323  230 |    f = SIRA
+   68    0    0    0    5  252 3221 |    g = DERMASON
 

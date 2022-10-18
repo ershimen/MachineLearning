@@ -28,14 +28,14 @@
 \section{Introduction}
 \label{sec:introduction}
 
-The goal of this practical application is to study how feature subset selection (FSS) affects different machine learning models. Specifically how they perform with all variables, a univariate filter, a multivariate filter, and a multivariate wrapper. The selected models are the following:
+The goal of this practical application is to study how feature subset selection (FSS) affects different machine learning models. Specifically how they perform with a dataset with all variables and datasets obtained from a univariate filter, a multivariate filter, and a multivariate wrapper. The selected classification models are the following:
 
 \begin{itemize}
-\item k-Nearest Neighbours
-\item Rule Induction
-\item Support Vector Machines
-\item Neural Network
-\item Classification Trees
+\item k-Nearest Neighbours.
+\item Rule Induction - RIPPER algorithm.
+\item Support Vector Machines.
+\item Neural Network - Multilayer Perceptron.
+\item Classification Trees - C4.5 algorithm.
 \end{itemize}
 
 For this assignment, the dataset chosen \cite{misc_dry_bean_dataset_602}\cite{KOKLU2020105507} contains data about instances of dry beans, which was created from images of 13,611 grains of 7 different varieties.
@@ -68,7 +68,7 @@ The dataset contains 13,611 instances created from images of dry beans of 7 diff
 \item[17] \textbf{Class}: Seker, Barbunya, Bombay, Cali, Dermosan, Horoz and Sira.
 \end{itemize}
 
-All attributes are numeric, except the class which is nominal. Additionally, there are no \textit{meta-attributes} such as instance or object identifiers, so there is no need to remove any column. \autoref{tab:table1} shows more information about the dataset.
+All attributes are numeric, except the class which is nominal. Additionally, there are no \textit{meta-attributes} such as instance or object identifiers, so there is no need to remove any column. \autoref{tab:table1} shows more information about the ranges of values and \autoref{tab:table2} shows the number of instances of each class.
 
 \begin{table}[h]
 \centering
@@ -95,11 +95,9 @@ All attributes are numeric, except the class which is nominal. Additionally, the
 	17 & Class & - & -\\
 	\hline
 \end{tabular}
-\caption{Dataset table.}
+\caption{Value ranges of each variable.}
 \label{tab:table1}
 \end{table}
-
-Since there are some variables with high values compared to others (for example Area compared to Extent); normalization is necessary. The number of instances of each class is shown in \autoref{tab:table2}.
 
 \begin{table}[h]
 \centering
@@ -120,6 +118,8 @@ Since there are some variables with high values compared to others (for example 
 \label{tab:table2}
 \end{table}
 
+Since there are some variables with high values compared to others (for example Area compared to Extent); normalization is necessary.
+
 \section{Methodology}
 \label{sec:methodology}
 
@@ -136,13 +136,13 @@ The evaluation of each model will be conducted with cross validation with 10 fol
 \subsection{Classification Algorithms}
 \label{subsec:algorithms}
 
-The following machine learning algorithms have been evaluated. Note that some of them have the option to normalize de input data, which was set to \textit{false} because the data was already normalized.
+The following machine learning algorithms have been evaluated. Note that some of them have the option to normalize de input data, which was set to \textit{false} because the data was already normalized in the pre-processing stage.
 
 \begin{itemize}
-\item \textbf{k-Nearest Neighbour}. Since there are 7 classes, the parameter \textit{k} was set to 7.
+\item \textbf{k-Nearest Neighbour}. The parameter \textit{k} was set to 10 neighbours.
 \item \textbf{Rule Induction}. For this classification method the RIPPER algorithm was used.
-\item \textbf{Support Vector Machine}. Non-linear with a polynomial kernel of exponent 2.
-\item \textbf{Neural Network}. With 29 neurons and a single hidden layer.
+\item \textbf{Support Vector Machine}. Non-linear with a polynomial kernel of exponent 2, since it can fit more complex distributions.
+\item \textbf{Neural Network}. With \textit{t} neurons (\textit{t} = attributes + classes) and a single hidden layer.
 \item \textbf{Classification Tree}. C4.5 algorithm. This algorithm is an improved version of the ID3 algorithm that uses a gain ratio to choose attributes. It also penalizes attributes with many values and many uniformly distributed values.
 \end{itemize}
 
@@ -194,6 +194,8 @@ The selection of features has been performed with the following algorithms. \aut
 \label{tab:table4}
 \end{table}
 
+Note that the optimization of each classification model and feature selection method is not part of this practical application.
+
 \section{Results}
 \label{sec:results}
 
@@ -208,9 +210,9 @@ This section includes the scores obtained with each classifier (\hyperref[subsec
 	Area & $\bullet$ & $\bullet$ & & & & & & $\bullet$\\
     Perimeter & $\bullet$ & $\bullet$ & $\bullet$ & $\bullet$ & $\bullet$ & $\bullet$ & $\bullet$ &\\
     MajorAxisLength & $\bullet$ & $\bullet$ & $\bullet$ & & & & &\\
-    MinorAxisLength & $\bullet$ & $\bullet$ & $\bullet$ & & & & $\bullet$ &\\
+    MinorAxisLength & $\bullet$ & $\bullet$ & $\bullet$ & & $\bullet$ & & $\bullet$ &\\
     AspectRatio & $\bullet$ & & $\bullet$ & & & & $\bullet$ &\\
-    Eccentricity & $\bullet$ & & & & $\bullet$ & & $\bullet$ &\\
+    Eccentricity & $\bullet$ & & & & & & $\bullet$ &\\
     ConvexArea & $\bullet$ & $\bullet$ & $\bullet$ & & & $\bullet$ & & $\bullet$\\
     EquivDiameter & $\bullet$ & $\bullet$ & & $\bullet$ & & $\bullet$ & & $\bullet$\\
     Extent & $\bullet$ & & $\bullet$ & & & $\bullet$ & $\bullet$ &\\
@@ -231,7 +233,7 @@ This section includes the scores obtained with each classifier (\hyperref[subsec
 
 \autoref{tab:table6} shows the score of each classification algorithm with all datasets obtained from each Feature Subset Selection method described, and \autoref{tab:table7} shows the training time of each model. The full version of each result report including the confusion matrices can be found in \cite{repo}.
 
-Note that images of the trees obtained by the C4.5 algorithm, or the neural networks generated are not shown because there are too many nodes to show and the representation is not understandable. All the rules generated from the RIPPER algorithm and the support vectors from the SVMs can be found in the complete result reports. In the same way, a representation of the outputs of the kNN algorithm is not included because it is not possible to visualize a 7-dimensional space.
+Note that images of the trees obtained by the C4.5 algorithm, or the neural networks generated are not shown because there are too many nodes to show and the representation is not understandable. All the rules generated from the RIPPER algorithm and the support vectors from the SVMs can be found in the complete result reports. In the same way, a representation of the outputs of the kNN algorithm is not included because it is not possible to visualize a 16-dimensional space.
 
 \begin{table}[h]
 \centering
@@ -239,14 +241,14 @@ Note that images of the trees obtained by the C4.5 algorithm, or the neural netw
 	\hline
 	Dataset & kNN & RIPPER & SVM & MLP & C4.5\\
 	\hline
-	Original & 91.9477 & 91.4775 & 92.5648 & 92.7852 & 91.4995\\
-	Univariate Filter & 90.8897 & 90.2432 & 89.9052 & 91.2718 & 90.3681\\
-	Multivariate Filter & 92.1901 & 91.1395 & 92.4987 & 92.5428 & 91.0073\\
-	Wrapper (kNN) & 92.4840 & 91.4114 & 92.462 & 92.5428 & 91.3967\\
-	Wrapper (RIPPER) & 92.5428 & 91.4261 & 92.4106 & 92.4693 & 91.4628\\
-	Wrapper (SVM) & 92.3077 & 91.4187 & 92.5281 & 92.7044 & 91.3452\\
-	Wrapper (MLP) & 92.0065 & 91.4334 & 92.5648 & 92.6971 & 91.3085\\
-	Wrapper (C4.5) & 92.4326 & 91.4628 & 92.3297 & 92.4546 & 91.4040\\
+	Original & 92.0579 & 91.4775 & 92.5648 & 92.7852 & 91.4995\\
+	Univariate Filter & 90.8309 & 90.2432 & 89.9052 & 91.2718 & 90.3681\\
+	Multivariate Filter & 92.0432 & 91.1395 & 92.4987 & 92.5428 & 91.0073\\
+	Wrapper (kNN) & 92.4914 & 91.5436 & 92.4546 & 92.5648 & 91.382\\
+	Wrapper (RIPPER) & 92.5354 & 91.4261 & 92.4106 & 92.4693 & 91.4628\\
+	Wrapper (SVM) & 92.315 & 91.4187 & 92.5281 & 92.7044 & 91.3452\\
+	Wrapper (MLP) & 92.1608 & 91.4334 & 92.5648 & 92.6971 & 91.3085\\
+	Wrapper (C4.5) & 92.3885 & 91.4628 & 92.3297 & 92.4546 & 91.4040\\
     \hline 
 \end{tabular}
 \caption{Scores of all classifiers with all obtained datasets (percentage of correctly classified instances).}
@@ -262,7 +264,7 @@ Note that images of the trees obtained by the C4.5 algorithm, or the neural netw
 	Original & $<$0.1 & 2.38 & 7.98 & 33.37 & 0.3\\
 	Univariate Filter & $<$0.1 & 1.89 & 12.11 & 14.87 & 0.1\\
 	Multivariate Filter & $<$0.1 & 2.43 & 6.16 & 20.67 & 0.18\\
-	Wrapper (kNN) & $<$0.1 & 1.78 & 5.58 & 13.25 & 0.11\\
+	Wrapper (kNN) & $<$0.1 & 2.41 & 6.69 & 13.43 & 0.21\\
 	Wrapper (RIPPER) & $<$0.1 & 1.67 & 6.82 & 14.89 & 0.12\\
 	Wrapper (SVM) & $<$0.1 & 1.74 & 6.13 & 16.64 & 0.14\\
 	Wrapper (MLP) & $<$0.1 & 1.91 & 6.71 & 20.56 & 0.17\\
@@ -278,32 +280,65 @@ Note that images of the trees obtained by the C4.5 algorithm, or the neural netw
 
 Generally, the models trained obtained a score of at least 90\% in most cases. However, the results do not differ greatly from each other. The greatest precision obtained is 92.7852\%, which was achieved with the original dataset and a Multilayer Perceptron classification algorithm.
 
-Overall, the best performing models are the Multilayer Perceptron and the Support Vector Machine, followed closely by the k-Nearest Neighbour. Note that the latter has a training time hundreds of times faster compared to the first two.
+Overall, the best performing models are the Multilayer Perceptron, the Support Vector Machine, and the k-Nearest Neighbour. Note that the latter has a training time hundreds of times faster compared to the first two.
 
 Regarding the selection of features of this dataset, it is clear that not all variables are needed to obtain models that perform as well as the model generated from all attributes.
 
-In the case of the k-Nearest Neighbours, the reduced datasets obtained slightly better scores than the original dataset. This is probably due to some moderate overfitting. With the \textit{k} parameter set to 7 the model could not fit all de dataset information, because with 7 clusters it is not possible to separate all the classes. Generally, this model obtained the best results when the training time is considered.
+In the case of the k-Nearest Neighbours, the reduced datasets obtained slightly better scores than the original dataset. This is probably due to some moderate overfitting. With the \textit{k} parameter set to 10 the model could not fit all de dataset information, because with 10 clusters it is not possible to separate all the classes. This model obtained the best results when the training time is considered.
 
 The Rule Induction classifier did not perform as well as the k-Nearest Neighbours. It obtained slightly poorer results than the kNN implementation, while spending more computational resources.
 
-Both the Support Vector Machine and the Multilayer Perceptron obtained the best results. This is because both models can adapt to more complex data distributions than the other methods. The SVM calculated more than 1,200 support vectors for each dataset, while the MLP used at least 20 neurons. The complexity of this models is reflected in the training times, which are significantly higher than the other algorithms.
+Both the Support Vector Machine and the Multilayer Perceptron obtained the best results. This is because both models can fit more complex data distributions than the other methods. The SVM calculated more than 1,200 support vectors for each dataset, while the MLP used between 20 and 29 neurons (\autoref{fig:nn}). The complexity of this models is reflected in the training times, which are significantly higher than the other algorithms.
 
-Lastly the tree algorithm performed the same as the RIPPER algorithm, while spending approximately 10 times less computational time to train the models. A representation of the tree is shown in \autoref{fig:figure1}. Note that Weka does not allow to rescale the size of the graph representation.
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.85\textwidth]{nn}
+\caption{Neural network obtained from the original dataset.}
+\label{fig:nn}
+\end{figure}
+
+Lastly the tree algorithm performed the same as the RIPPER algorithm, while spending approximately 10 times less computational time to train the models. A representation of the tree is shown in \autoref{fig:tree}. However, it is hardly understandable since Weka does not allow to rescale the size of the graph representation.
 
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.9\textwidth]{tree}
 \caption{Tree obtained from the original dataset.}
-\label{fig:figure1}
+\label{fig:tree}
 \end{figure}
 
-Inspecting \autoref{tab:table6} we can deduce that in most cases the reduced datasets obtain similar scores to the original dataset. This is because there are variables that provide no additional information, in other words, there are dependent variables in the dataset. As stated in the \hyperref[sec:problem]{Problem Description section}, there are some variables that are calculated from others. For instance, the \textit{Roundness} is obtained from the \textit{Area} and the \textit{Perimeter}, and the \textit{Compactness} from the \textit{Equivalent diameter} and the \textit{Major axis length}. Additionally, there are some attributes that are fundamentally related, such as the \textit{Area} and the \textit{Perimeter}.
+Inspecting \autoref{tab:table6} we can deduce that in most cases the reduced datasets obtain similar scores to the original dataset. This is because there are variables that provide no additional information, in other words, there are dependent or irrelevant variables in the dataset. As stated in the \hyperref[sec:problem]{Problem Description section}, there are some variables that are calculated from others. For instance, the \textit{Roundness} is obtained from the \textit{Area} and the \textit{Perimeter}, and the \textit{Compactness} from the \textit{Equivalent diameter} and the \textit{Major axis length}. Additionally, there are some attributes that are fundamentally related, such as the \textit{Area} and the \textit{Perimeter}. The most selected variables are the \textit{Perimeter}, the \textit{Roundness}, and the \textit{Shape Factor 1}.
 
-Overall, the most selected variables are the \textit{Perimeter}, the \textit{Roundness}, and the \textit{Shape Factor 1}. In most cases, the best results were obtained selecting 9 or more attributes.
-
-Looking at \autoref{tab:table5}, both the Univariant Filter and the Wrapper approach with the RIPPER classifier selected 8 features. However, as \autoref{tab:table6} shows, the scores are better in the latter. This means that there are some features selected by the Wrapper that have not been selected by the Univariant Filter that are \textit{significant}. For example, the Wrapper selected \textit{Shape Factor 3 and 4} and \textit{Solidity, Compactness and Roundness}, which were not selected by the Filter. This means that these attributes provide relevant information. 
+Looking at \autoref{tab:table5}, both the Univariant Filter and the Wrapper approach with the RIPPER classifier selected 8 features. However, as \autoref{tab:table6} shows, the scores are better in the latter. This means that there are some features selected by the Wrapper that have not been selected by the Univariant Filter that are \textit{significant}. For example, the Wrapper selected \textit{Shape Factor 3 and 4} and \textit{Solidity, Compactness and Roundness}, which were not selected by the Filter. This means that these attributes provide relevant information.
 
 The rest of the reduced datasets obtained similar scores compared to the original dataset. The cause of this is the redundancy of some variables. However, the scores are not close to 100\%, probably because the dataset contains multiple irrelevant attributes, and the isolated \textit{important} features need more complex models to fit the distribution.
+
+\autoref{tab:table8} shows the confusion matrix obtained by the Multilayer Perceptron with the original dataset (the best precision achieved). In this scenario, all instances of the class \textit{BOMBAY} are classified correctly, this is probably due to the fact that the class has a well-defined boundary that could be fitted perfectly by this classification model. In contrast, the other classes had some instances wrongly classified because the algorithm could not fit to the boundaries between each other.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{||c||c|c|c|c|c|c|c||}
+	\hline
+	Classified as $\rightarrow$ & a & b & c & d & e & f & g\\
+	\hline
+	\hline
+	a = SEKER & 1929 & 8 & 0 & 0 & 0 & 55 & 35\\
+	\hline
+	b = BARBUNYA & 10 & 1207 & 0 & 74 & 5 & 25 & 1\\
+	\hline
+	c = BOMBAY & 0 & 0 & 522 & 0 & 0 & 0 & 0\\
+	\hline	
+	d = CALI & 3 & 47 & 0 & 1535 & 29 & 16 & 0\\
+	\hline
+	e = HOROZ & 0 & 3 & 0 & 25 & 1843 & 44 & 13\\
+	\hline
+	f = SIRA & 31 & 12 & 0 & 7 & 34 & 2291 & 261\\
+	\hline
+	g = DERMASON & 44 & 1 & 0 & 0 & 8 & 191 & 3302\\
+    \hline 
+\end{tabular}
+\caption{Confusion matrix of the MLP trained with the original dataset.}
+\label{tab:table8}
+\end{table}
 
 \section{Conclusion}
 \label{sec:conclusion}
@@ -312,11 +347,11 @@ In this practical application, a dataset of dry beans with 13,611 instances and 
 
 Different datasets were obtained from the original by extracting features with a Univariate Filter, Multivariate Filter, and different Wrapper approaches. All of which were tested with the following classifiers: k-Nearest Neighbour, RIPPER, Support Vector Machine, Multilayer Perceptron and C4.5.
 
-Overall, the precision obtained is similar in most cases, the best ones obtained by the MLP and SVM with the original dataset. Generally, these two classification algorithms obtained better scores than the other three due to the ability to fit more complex data distributions. However, the impact of the complexity of the models is reflected in the training time.
+Overall, the precision obtained is similar in most cases, the best ones obtained by the MLP, SVM, and kNN with the original dataset. Generally, both SVM and MLP obtained better scores than RIPPER and C4.5 due to the ability to fit more complex data distributions. However, the impact of the complexity of the models is reflected in the training time.
 
-The k-Nearest Neighbour classifier performed the best when the execution time is taken into consideration. It obtained better scores than the RIPPER and C4.5 algorithms, while consuming less computational time. However, the optimization of each model (finding the best combination of hyperparameters) is not part of this assignment, but it could be an interesting subsequent work.
+The k-Nearest Neighbour classifier performed the best when the execution time is taken into consideration. It obtained better scores than the RIPPER and C4.5 algorithms, while consuming less computational time. Note that the optimization of each model (finding the best combination of hyperparameters) is not part of this assignment, but it could be an interesting subsequent work.
 
-On the other side, in most cases the datasets obtained by selecting features did not obtain better precision than the original dataset. Nevertheless, the reduction of attributes did reduce the training time approximately by half in the Multilayer Perceptron and C4.5 classifiers. Some attributes, for instance the \textit{Perimeter} and the \texttt{Roundness} were selected by most feature selection methods, which denotes the importance of these.
+On the other side, in most cases the datasets obtained by selecting features did not obtain better precision than the original dataset. Nevertheless, the reduction of attributes did reduce the training time approximately by half in the Multilayer Perceptron and C4.5 classifiers. Some attributes, for instance the \textit{Perimeter} and the \textit{Roundness} were selected by most feature selection methods, which denotes the importance of these.
 
 In summary, the dataset used in this practical application contains variables that are not needed to achieve similar scores to the original dataset. The best precision was obtained by the Multilayer Perceptron, which can fit more complex data compared to other classification algorithms. However, the k-Nearest Neighbour algorithm achieved similar scores while spending significantly less computational time to train the model.
 
