@@ -14,10 +14,9 @@
 }
 
 \title{\textbf{\Huge Practical Application 1} \\
-		\Large Machine Learning \\
-		Grupo 20}
+		\Large Machine Learning}
 
-\date{\Large October 2022}
+\date{\Large October 18, 2022}
 
 \begin{document}
 \maketitle
@@ -29,7 +28,7 @@
 \section{Introduction}
 \label{sec:introduction}
 
-The goal of this practical application is to study how feature subset selection (FSS) affects different machine learning models. Specifically how they perform with all variables, a univariate filter, a multivatiate filter and a multivariate wrapper. The selected models are the following:
+The goal of this practical application is to study how feature subset selection (FSS) affects different machine learning models. Specifically how they perform with all variables, a univariate filter, a multivariate filter, and a multivariate wrapper. The selected models are the following:
 
 \begin{itemize}
 \item k-Nearest Neighbours
@@ -39,14 +38,14 @@ The goal of this practical application is to study how feature subset selection 
 \item Classification Trees
 \end{itemize}
 
-For this assignment, the dataset chosen [] contains data about instances of dry beans, which was created from images of 13,611 grains of 7 different varieties.
+For this assignment, the dataset chosen \cite{misc_dry_bean_dataset_602}\cite{KOKLU2020105507} contains data about instances of dry beans, which was created from images of 13,611 grains of 7 different varieties.
 
-The rest of the document has the following structure. Firstly de dataset is analyzed in the \hyperref[sec:problem]{Problem Description}, later the metodology is specified in the \hyperref[sec:metodology]{Metodology section}. Subsequently the results are shown in the \hyperref[sec:results]{Results section}, and finally they are analyzed in the \hyperref[sec:discussion]{Discussion} and \hyperref[sec:conclusion]{Conclussion} sections.
+The rest of the document has the following structure. Firstly, de dataset is analysed in the \hyperref[sec:problem]{Problem Description}, later the methodology is specified in the \hyperref[sec:methodology]{Methodology section}. Subsequently the results are shown in the \hyperref[sec:results]{Results section}, and finally they are analysed in the \hyperref[sec:discussion]{Discussion} and \hyperref[sec:conclusion]{Conclusion} sections.
 
 \section{Problem Description}
 \label{sec:problem}
 
-The datset contains 13,611 instances created from images of dry beans of 7 different varieties. There are a total of 17 attributes (16 plus the class column) and their significance is the following:
+The dataset contains 13,611 instances created from images of dry beans of 7 different varieties. There are a total of 17 attributes (16 plus the class column) and their significance is the following:
 
 \begin{itemize}
 \setlength\itemsep{-1ex}
@@ -69,7 +68,7 @@ The datset contains 13,611 instances created from images of dry beans of 7 diffe
 \item[17] \textbf{Class}: Seker, Barbunya, Bombay, Cali, Dermosan, Horoz and Sira.
 \end{itemize}
 
-All atributes are numeric, except the class which is nominal. Additionally there are no \textit{meta-attributes} such as instance or object identifiers, so there is no need to remove any column. \autoref{tab:table1} shows more information about the dataset.
+All attributes are numeric, except the class which is nominal. Additionally, there are no \textit{meta-attributes} such as instance or object identifiers, so there is no need to remove any column. \autoref{tab:table1} shows more information about the dataset.
 
 \begin{table}[h]
 \centering
@@ -100,7 +99,7 @@ All atributes are numeric, except the class which is nominal. Additionally there
 \label{tab:table1}
 \end{table}
 
-Since there are some variables with high values compared to others (for example Area compared to Extent), normalization is necessary. The amount of instances of each class is shown in \autoref{tab:table2}.
+Since there are some variables with high values compared to others (for example Area compared to Extent); normalization is necessary. The number of instances of each class is shown in \autoref{tab:table2}.
 
 \begin{table}[h]
 \centering
@@ -117,32 +116,32 @@ Since there are some variables with high values compared to others (for example 
 	DERMASON & 3546\\
 	\hline
 \end{tabular}
-\caption{Numer of instances per class.}
+\caption{Number of instances per class.}
 \label{tab:table2}
 \end{table}
 
-\section{Metodology}
-\label{sec:metodology}
+\section{Methodology}
+\label{sec:methodology}
 
 \subsection{Software}
 \label{subsec:software}
 
-For this practical application, Weka [] has been used to perform the traning and evaluation of all models, as well as the normalization of the dataset. Besides from normalization of the dataset, there is no need to perform more preprocessing. There are no missing values and all variables are numerical (except the class).
+For this practical application, Weka \cite{weka} has been used to perform the training and evaluation of all models, as well as the normalization of the dataset. Besides from normalization of the dataset, there is no need to perform more pre-processing. There are no missing values and all variables are numerical (except the class).
 
 \subsection{Evaluation}
 \label{subsec:evaluation}
 
-The evaluation of each model will be conducted with cross validation with 10 folds. Because each class has different weight (different number of instances) the confusion matrix will be discussed as well. Besides the accuarcy, traning and classification time will also be considered.
+The evaluation of each model will be conducted with cross validation with 10 folds. Because each class has different weight (different number of instances) the confusion matrix will be discussed as well. Besides the accuracy, training time will also be considered.
 
 \subsection{Classification Algorithms}
 \label{subsec:algorithms}
 
-The following machine learning algorithms have been evaluated. Note that some of them have the option to normalize de input data, which was unset because the data was already normalized.
+The following machine learning algorithms have been evaluated. Note that some of them have the option to normalize de input data, which was set to \textit{false} because the data was already normalized.
 
 \begin{itemize}
 \item \textbf{k-Nearest Neighbour}. Since there are 7 classes, the parameter \textit{k} was set to 7.
 \item \textbf{Rule Induction}. For this classification method the RIPPER algorithm was used.
-\item \textbf{Support Vector Machine}. Non-linear with a polinomial kernel of exponent 2.
+\item \textbf{Support Vector Machine}. Non-linear with a polynomial kernel of exponent 2.
 \item \textbf{Neural Network}. With 29 neurons and a single hidden layer.
 \item \textbf{Classification Tree}. C4.5 algorithm. This algorithm is an improved version of the ID3 algorithm that uses a gain ratio to choose attributes. It also penalizes attributes with many values and many uniformly distributed values.
 \end{itemize}
@@ -230,9 +229,9 @@ This section includes the scores obtained with each classifier (\hyperref[subsec
 \label{tab:table5}
 \end{table}
 
-\autoref{tab:table6} shows the score of each classification algorithm with all datasets obtained from each Feature Subset Selection method described, and \autoref{tab:table7} shows the training time of each model. The full version of each result report including the confusion matrices can be found in [].
+\autoref{tab:table6} shows the score of each classification algorithm with all datasets obtained from each Feature Subset Selection method described, and \autoref{tab:table7} shows the training time of each model. The full version of each result report including the confusion matrices can be found in \cite{repo}.
 
-Note that images of the trees obtained my the C4.5 algorithm, or the neural networks generated are not shown because there are too many nodes to show and the representation is not understandable. All the rules generated from the RIPPER algorithm and the support vectors from the SVMs can be found in the complete result reports. In the same way, a representation of the outputs of the kNN algorithm is not included because it is not possible to visualize a 7 dimenisonal space.
+Note that images of the trees obtained by the C4.5 algorithm, or the neural networks generated are not shown because there are too many nodes to show and the representation is not understandable. All the rules generated from the RIPPER algorithm and the support vectors from the SVMs can be found in the complete result reports. In the same way, a representation of the outputs of the kNN algorithm is not included because it is not possible to visualize a 7-dimensional space.
 
 \begin{table}[h]
 \centering
@@ -277,31 +276,52 @@ Note that images of the trees obtained my the C4.5 algorithm, or the neural netw
 \section{Discussion}
 \label{sec:discussion}
 
-On the whole, the models trained obtained a score of at least 90\% in most cases. However, the results do not differ greatly from each other. The greatest precision obtained is 92.7852\%, which was achieved with the original dataset and a Multilayer Perceptron classification algorithm.
+Generally, the models trained obtained a score of at least 90\% in most cases. However, the results do not differ greatly from each other. The greatest precision obtained is 92.7852\%, which was achieved with the original dataset and a Multilayer Perceptron classification algorithm.
 
-Overall the best performing models are the Multilayer Perceptron and the Support Vector Machine, followed closely by the k-Nearest Neighbour. Note that the latter has a training time hundreds times faster compared to the first two.
+Overall, the best performing models are the Multilayer Perceptron and the Support Vector Machine, followed closely by the k-Nearest Neighbour. Note that the latter has a training time hundreds of times faster compared to the first two.
 
 Regarding the selection of features of this dataset, it is clear that not all variables are needed to obtain models that perform as well as the model generated from all attributes.
 
-In the case of the k-Nearest Neigbours, the reduced datasets obtained a slightly better scores than the original dataset. This is probably due to some moderate overfitting. Generally this model obtained the best results when the training time is considered.
+In the case of the k-Nearest Neighbours, the reduced datasets obtained slightly better scores than the original dataset. This is probably due to some moderate overfitting. With the \textit{k} parameter set to 7 the model could not fit all de dataset information, because with 7 clusters it is not possible to separate all the classes. Generally, this model obtained the best results when the training time is considered.
 
-RIPPER (rules)
+The Rule Induction classifier did not perform as well as the k-Nearest Neighbours. It obtained slightly poorer results than the kNN implementation, while spending more computational resources.
 
-SVM
+Both the Support Vector Machine and the Multilayer Perceptron obtained the best results. This is because both models can adapt to more complex data distributions than the other methods. The SVM calculated more than 1,200 support vectors for each dataset, while the MLP used at least 20 neurons. The complexity of this models is reflected in the training times, which are significantly higher than the other algorithms.
 
-MLP
+Lastly the tree algorithm performed the same as the RIPPER algorithm, while spending approximately 10 times less computational time to train the models. A representation of the tree is shown in \autoref{fig:figure1}. Note that Weka does not allow to rescale the size of the graph representation.
 
-C4.5
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.9\textwidth]{tree}
+\caption{Tree obtained from the original dataset.}
+\label{fig:figure1}
+\end{figure}
 
-Univariate
+Inspecting \autoref{tab:table6} we can deduce that in most cases the reduced datasets obtain similar scores to the original dataset. This is because there are variables that provide no additional information, in other words, there are dependent variables in the dataset. As stated in the \hyperref[sec:problem]{Problem Description section}, there are some variables that are calculated from others. For instance, the \textit{Roundness} is obtained from the \textit{Area} and the \textit{Perimeter}, and the \textit{Compactness} from the \textit{Equivalent diameter} and the \textit{Major axis length}. Additionally, there are some attributes that are fundamentally related, such as the \textit{Area} and the \textit{Perimeter}.
 
-The rest
+Overall, the most selected variables are the \textit{Perimeter}, the \textit{Roundness}, and the \textit{Shape Factor 1}. In most cases, the best results were obtained selecting 9 or more attributes.
 
-Correlation
+Looking at \autoref{tab:table5}, both the Univariant Filter and the Wrapper approach with the RIPPER classifier selected 8 features. However, as \autoref{tab:table6} shows, the scores are better in the latter. This means that there are some features selected by the Wrapper that have not been selected by the Univariant Filter that are \textit{significant}. For example, the Wrapper selected \textit{Shape Factor 3 and 4} and \textit{Solidity, Compactness and Roundness}, which were not selected by the Filter. This means that these attributes provide relevant information. 
+
+The rest of the reduced datasets obtained similar scores compared to the original dataset. The cause of this is the redundancy of some variables. However, the scores are not close to 100\%, probably because the dataset contains multiple irrelevant attributes, and the isolated \textit{important} features need more complex models to fit the distribution.
 
 \section{Conclusion}
 \label{sec:conclusion}
 
+In this practical application, a dataset of dry beans with 13,611 instances and 17 features (including the class) was analysed with different attribute selection methods and different classifiers with a 10-fold cross-validation test approach. The dataset contains instances of seven different classes. The only pre-processing needed was the normalization of the dataset, since there are no missing values or nominal variables (except the class column).
 
+Different datasets were obtained from the original by extracting features with a Univariate Filter, Multivariate Filter, and different Wrapper approaches. All of which were tested with the following classifiers: k-Nearest Neighbour, RIPPER, Support Vector Machine, Multilayer Perceptron and C4.5.
+
+Overall, the precision obtained is similar in most cases, the best ones obtained by the MLP and SVM with the original dataset. Generally, these two classification algorithms obtained better scores than the other three due to the ability to fit more complex data distributions. However, the impact of the complexity of the models is reflected in the training time.
+
+The k-Nearest Neighbour classifier performed the best when the execution time is taken into consideration. It obtained better scores than the RIPPER and C4.5 algorithms, while consuming less computational time. However, the optimization of each model (finding the best combination of hyperparameters) is not part of this assignment, but it could be an interesting subsequent work.
+
+On the other side, in most cases the datasets obtained by selecting features did not obtain better precision than the original dataset. Nevertheless, the reduction of attributes did reduce the training time approximately by half in the Multilayer Perceptron and C4.5 classifiers. Some attributes, for instance the \textit{Perimeter} and the \texttt{Roundness} were selected by most feature selection methods, which denotes the importance of these.
+
+In summary, the dataset used in this practical application contains variables that are not needed to achieve similar scores to the original dataset. The best precision was obtained by the Multilayer Perceptron, which can fit more complex data compared to other classification algorithms. However, the k-Nearest Neighbour algorithm achieved similar scores while spending significantly less computational time to train the model.
+
+\newpage
+\bibliography{references}
+\bibliographystyle{ieeetr}
 
 \end{document}
