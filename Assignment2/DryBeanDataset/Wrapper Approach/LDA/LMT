@@ -1,0 +1,257 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.LMT -I -1 -M 15 -W 0.0
+Relation:     Dry_Beans_Dataset-weka.filters.unsupervised.attribute.Normalize-S1.0-T0.0-weka.filters.unsupervised.attribute.Remove-V-R1-2,7,9,12,16-17
+Instances:    13611
+Attributes:   7
+              Area
+              Perimeter
+              ConvexArea
+              Extent
+              Compactness
+              ShapeFactor4
+              Class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Logistic model tree 
+------------------
+
+Perimeter <= 0.230099
+|   Compactness <= 0.634907: LM_1:124/372 (6317)
+|   Compactness > 0.634907: LM_2:124/372 (2047)
+Perimeter > 0.230099: LM_3:124/248 (5247)
+
+Number of Leaves  : 	3
+
+Size of the Tree : 	5
+
+
+LM_1:
+Class SEKER :
+-39 + 
+[Area] * 36.92 +
+[Perimeter] * -16.74 +
+[ConvexArea] * -32.93 +
+[Extent] * -1.92 +
+[Compactness] * 27.33 +
+[ShapeFactor4] * 27.63
+
+Class BARBUNYA :
+-48.29 + 
+[Area] * -244.27 +
+[Perimeter] * 148.9 +
+[ConvexArea] * 99.63 +
+[Extent] * 3.34 +
+[Compactness] * 12.45 +
+[ShapeFactor4] * 24.25
+
+Class BOMBAY :
+-288.18 + 
+[Area] * 502.25 +
+[Perimeter] * -278.29 +
+[ConvexArea] * 27.16 +
+[Extent] * 3.71 +
+[Compactness] * 40.16
+
+Class CALI :
+-47.38 + 
+[Area] * -10.96 +
+[Perimeter] * 54.06 +
+[ConvexArea] * -9.24 +
+[Extent] * 5.36 +
+[Compactness] * 12.48 +
+[ShapeFactor4] * 24.75
+
+Class HOROZ :
+37.33 + 
+[Area] * -24.04 +
+[Perimeter] * -31.14 +
+[ConvexArea] * -29.73 +
+[Extent] * -1.05 +
+[Compactness] * -46.05 +
+[ShapeFactor4] * -11.02
+
+Class SIRA :
+13.87 + 
+[Area] * 6.72 +
+[Perimeter] * -11.01 +
+[ConvexArea] * -43 +
+[Extent] * -0.39 +
+[Compactness] * -7.31 +
+[ShapeFactor4] * -4.12
+
+Class DERMASON :
+19.71 + 
+[Area] * -33.23 +
+[Perimeter] * -80.41 +
+[ConvexArea] * -47.86 +
+[Extent] * -2.82 +
+[Compactness] * -9.7 +
+[ShapeFactor4] * 7.25
+
+LM_2:
+Class SEKER :
+-65.76 + 
+[Area] * 18.61 +
+[Perimeter] * 15.94 +
+[ConvexArea] * -72.7 +
+[Extent] * -0.99 +
+[Compactness] * 38.47 +
+[ShapeFactor4] * 48.3
+
+Class BARBUNYA :
+-58.45 + 
+[Area] * -221.93 +
+[Perimeter] * 173.83 +
+[ConvexArea] * 84.77 +
+[Extent] * 8.77 +
+[Compactness] * 5.93 +
+[ShapeFactor4] * 30.1
+
+Class BOMBAY :
+-288.18 + 
+[Area] * 502.25 +
+[Perimeter] * -278.29 +
+[ConvexArea] * 27.16 +
+[Extent] * 3.71 +
+[Compactness] * 40.16
+
+Class CALI :
+-101.51 + 
+[Area] * 23.68 +
+[Perimeter] * 79.75 +
+[ConvexArea] * -115.83 +
+[Extent] * -22.25 +
+[Compactness] * 25.63 +
+[ShapeFactor4] * 94.31
+
+Class HOROZ :
+-68.27 + 
+[Area] * -24.28 +
+[Perimeter] * -33.87 +
+[ConvexArea] * -24.2 +
+[Extent] * -1.1 +
+[Compactness] * -46.38 +
+[ShapeFactor4] * -11.58
+
+Class SIRA :
+30.45 + 
+[Area] * 45.14 +
+[Perimeter] * -58.9 +
+[ConvexArea] * -16.95 +
+[Extent] * -2.25 +
+[Compactness] * -13.82 +
+[ShapeFactor4] * -14.56
+
+Class DERMASON :
+33.73 + 
+[Area] * -41.08 +
+[Perimeter] * -106.43 +
+[ConvexArea] * 11.54 +
+[Extent] * -4.26 +
+[Compactness] * -14.3 +
+[ShapeFactor4] * -3.64
+
+LM_3:
+Class SEKER :
+-31.61 + 
+[Area] * 50.87 +
+[Perimeter] * 27.42 +
+[ConvexArea] * -143.42 +
+[Extent] * 0.44 +
+[Compactness] * 30.71 +
+[ShapeFactor4] * 20.64
+
+Class BARBUNYA :
+-42.48 + 
+[Area] * -84.28 +
+[Perimeter] * 104.62 +
+[ConvexArea] * 11.78 +
+[Extent] * 0.56 +
+[Compactness] * 22.06 +
+[ShapeFactor4] * 15.15
+
+Class BOMBAY :
+-110.09 + 
+[Area] * 956.51 +
+[Perimeter] * -577.13 +
+[ConvexArea] * 27.16 +
+[Extent] * -11.53 +
+[Compactness] * 78.51
+
+Class CALI :
+6.04 + 
+[Area] * 141.65 +
+[Perimeter] * -67.81 +
+[ConvexArea] * -2.63 +
+[Extent] * 2.19 +
+[Compactness] * -12.92 +
+[ShapeFactor4] * -9.28
+
+Class HOROZ :
+27.77 + 
+[Area] * -16.19 +
+[Perimeter] * 15.95 +
+[ConvexArea] * -42.93 +
+[Extent] * 0.1  +
+[Compactness] * -46.93 +
+[ShapeFactor4] * -11.42
+
+Class SIRA :
+25.56 + 
+[Area] * 55.7 +
+[Perimeter] * -90.42 +
+[ConvexArea] * -28.22 +
+[Extent] * -0.9 +
+[Compactness] * -12.35 +
+[ShapeFactor4] * -3.27
+
+Class DERMASON :
+194.18 + 
+[Area] * -2371.27 +
+[Perimeter] * 54.95 +
+[ConvexArea] * -64.42 +
+[Extent] * -2.69 +
+[Compactness] * 55.83 +
+[ShapeFactor4] * -138.19
+
+
+Time taken to build model: 13 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       12571               92.3591 %
+Incorrectly Classified Instances      1040                7.6409 %
+Kappa statistic                          0.9076
+Mean absolute error                      0.0329
+Root mean squared error                  0.1273
+Relative absolute error                 13.9219 %
+Root relative squared error             37.0303 %
+Total Number of Instances            13611     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,944    0,008    0,952      0,944    0,948      0,939    0,996     0,986     SEKER
+                 0,903    0,007    0,934      0,903    0,918      0,910    0,995     0,973     BARBUNYA
+                 0,996    0,000    0,996      0,996    0,996      0,996    1,000     1,000     BOMBAY
+                 0,939    0,010    0,928      0,939    0,934      0,924    0,996     0,978     CALI
+                 0,950    0,007    0,955      0,950    0,952      0,945    0,996     0,987     HOROZ
+                 0,872    0,032    0,866      0,872    0,869      0,837    0,984     0,941     SIRA
+                 0,926    0,030    0,917      0,926    0,921      0,893    0,992     0,977     DERMASON
+Weighted Avg.    0,924    0,018    0,924      0,924    0,924      0,906    0,993     0,973     
+
+=== Confusion Matrix ===
+
+    a    b    c    d    e    f    g   <-- classified as
+ 1914   19    0    0    0   63   31 |    a = SEKER
+   14 1194    1   76    6   31    0 |    b = BARBUNYA
+    0    0  520    2    0    0    0 |    c = BOMBAY
+    3   53    1 1531   31   11    0 |    d = CALI
+    0    4    0   33 1832   43   16 |    e = HOROZ
+   32    7    0    8   41 2298  250 |    f = SIRA
+   47    1    0    0    9  207 3282 |    g = DERMASON
+

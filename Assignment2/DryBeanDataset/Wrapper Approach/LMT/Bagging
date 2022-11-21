@@ -1,0 +1,61 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.meta.Bagging -P 100 -S 1 -num-slots 1 -I 10 -W weka.classifiers.bayes.NaiveBayes
+Relation:     Dry_Beans_Dataset-weka.filters.unsupervised.attribute.Normalize-S1.0-T0.0-weka.filters.unsupervised.attribute.Remove-V-R1-3,7-8,10-11,14,16-17
+Instances:    13611
+Attributes:   10
+              Area
+              Perimeter
+              MajorAxisLength
+              ConvexArea
+              EquivDiameter
+              Solidity
+              roundness
+              ShapeFactor2
+              ShapeFactor4
+              Class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Bagging with 10 iterations and base learner
+
+weka.classifiers.bayes.NaiveBayes 
+
+Time taken to build model: 0.11 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       11543               84.8064 %
+Incorrectly Classified Instances      2068               15.1936 %
+Kappa statistic                          0.8166
+Mean absolute error                      0.0471
+Root mean squared error                  0.1889
+Relative absolute error                 19.9333 %
+Root relative squared error             54.9532 %
+Total Number of Instances            13611     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,842    0,037    0,799      0,842    0,820      0,788    0,971     0,906     SEKER
+                 0,778    0,016    0,840      0,778    0,808      0,789    0,980     0,881     BARBUNYA
+                 1,000    0,000    0,989      1,000    0,994      0,994    1,000     1,000     BOMBAY
+                 0,870    0,020    0,855      0,870    0,863      0,844    0,989     0,939     CALI
+                 0,863    0,023    0,859      0,863    0,861      0,837    0,983     0,914     HOROZ
+                 0,849    0,056    0,784      0,849    0,815      0,770    0,970     0,890     SIRA
+                 0,836    0,031    0,906      0,836    0,870      0,828    0,980     0,953     DERMASON
+Weighted Avg.    0,848    0,032    0,850      0,848    0,848      0,816    0,979     0,921     
+
+=== Confusion Matrix ===
+
+    a    b    c    d    e    f    g   <-- classified as
+ 1707   16    0    0    3  162  139 |    a = SEKER
+    0 1029    1  172   62   58    0 |    b = BARBUNYA
+    0    0  522    0    0    0    0 |    c = BOMBAY
+    1  114    5 1418   86    6    0 |    d = CALI
+    0   55    0   67 1663  128   15 |    e = HOROZ
+  119    7    0    1  117 2238  154 |    f = SIRA
+  309    4    0    0    6  261 2966 |    g = DERMASON
+

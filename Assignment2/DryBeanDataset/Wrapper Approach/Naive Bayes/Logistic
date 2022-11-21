@@ -1,0 +1,77 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.Logistic -R 1.0E-8 -M -1 -num-decimal-places 4
+Relation:     Dry_Beans_Dataset-weka.filters.unsupervised.attribute.Normalize-S1.0-T0.0-weka.filters.unsupervised.attribute.Remove-V-R2,11-13,16-17
+Instances:    13611
+Attributes:   6
+              Perimeter
+              roundness
+              Compactness
+              ShapeFactor1
+              ShapeFactor4
+              Class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Logistic Regression with ridge parameter of 1.0E-8
+Coefficients...
+                                Class
+Variable                        SEKER               BARBUNYA                 BOMBAY                   CALI                  HOROZ                   SIRA
+========================================================================================================================================================
+Perimeter                    122.6821                83.2646                722.999                57.7438               147.5876               -96.0632
+roundness                      5.1908               -17.4808               358.6025                16.7366                16.8368               -23.7141
+Compactness                   47.5217                10.6809               195.6578               -36.1733               -13.6638               -38.3752
+ShapeFactor1                  14.7379               -59.4434               348.0428               -95.3347                47.0252              -106.6375
+ShapeFactor4                  29.8703                 8.9363              -134.3783               -16.5178               -17.6388               -10.7245
+Intercept                    -86.6715                11.6021              -642.3413                50.4722               -45.2959               121.7997
+
+
+Odds Ratios...
+                                Class
+Variable                        SEKER               BARBUNYA                 BOMBAY                   CALI                  HOROZ                   SIRA
+========================================================================================================================================================
+Perimeter       1.9060785863351933E53  1.4499412945562452E36               Infinity  1.1961829114581766E25  1.2487633551787505E64                      0
+roundness                    179.6034                      0  5.483927383541303E155          18561985.0514          20518650.4473                      0
+Compactness      4.349342686745699E20             43517.6216   9.399751905032624E84                      0                      0                      0
+ShapeFactor1             2515213.6001                      0  1.422496489365307E151                      0  2.6471799061105616E20                      0
+ShapeFactor4     9.386358439569479E12              7602.8993                      0                      0                      0                      0
+
+
+Time taken to build model: 1.37 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       12535               92.0946 %
+Incorrectly Classified Instances      1076                7.9054 %
+Kappa statistic                          0.9044
+Mean absolute error                      0.0331
+Root mean squared error                  0.1277
+Relative absolute error                 14.019  %
+Root relative squared error             37.136  %
+Total Number of Instances            13611     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,948    0,009    0,947      0,948    0,947      0,938    0,996     0,986     SEKER
+                 0,905    0,006    0,939      0,905    0,922      0,914    0,996     0,974     BARBUNYA
+                 0,998    0,000    0,996      0,998    0,997      0,997    1,000     1,000     BOMBAY
+                 0,939    0,010    0,928      0,939    0,934      0,925    0,997     0,980     CALI
+                 0,949    0,008    0,954      0,949    0,952      0,944    0,997     0,987     HOROZ
+                 0,877    0,037    0,849      0,877    0,863      0,830    0,985     0,940     SIRA
+                 0,909    0,027    0,922      0,909    0,915      0,886    0,992     0,979     DERMASON
+Weighted Avg.    0,921    0,019    0,921      0,921    0,921      0,903    0,993     0,974     
+
+=== Confusion Matrix ===
+
+    a    b    c    d    e    f    g   <-- classified as
+ 1921   17    0    1    1   62   25 |    a = SEKER
+   12 1197    1   74    6   32    0 |    b = BARBUNYA
+    0    0  521    1    0    0    0 |    c = BOMBAY
+    4   48    1 1531   33   13    0 |    d = CALI
+    0    5    0   33 1830   42   18 |    e = HOROZ
+   39    7    0    9   39 2312  230 |    f = SIRA
+   52    1    0    0    9  261 3223 |    g = DERMASON
+

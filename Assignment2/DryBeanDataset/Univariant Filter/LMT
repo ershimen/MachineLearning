@@ -1,0 +1,1705 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.LMT -I -1 -M 15 -W 0.0
+Relation:     Dry_Beans_Dataset-weka.filters.unsupervised.attribute.Normalize-S1.0-T0.0-weka.filters.unsupervised.attribute.Remove-V-R2,7,1,8,3,14,13,4,17
+Instances:    13611
+Attributes:   9
+              Perimeter
+              ConvexArea
+              Area
+              EquivDiameter
+              MajorAxisLength
+              ShapeFactor2
+              ShapeFactor1
+              MinorAxisLength
+              Class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Logistic model tree 
+------------------
+
+MajorAxisLength <= 0.261576
+|   MinorAxisLength <= 0.174968
+|   |   ShapeFactor2 <= 0.385247
+|   |   |   ShapeFactor2 <= 0.27782: LM_1:70/350 (134)
+|   |   |   ShapeFactor2 > 0.27782
+|   |   |   |   Perimeter <= 0.147237: LM_2:70/420 (130)
+|   |   |   |   Perimeter > 0.147237
+|   |   |   |   |   Area <= 0.09226
+|   |   |   |   |   |   ConvexArea <= 0.089778
+|   |   |   |   |   |   |   MinorAxisLength <= 0.138336: LM_3:70/630 (26)
+|   |   |   |   |   |   |   MinorAxisLength > 0.138336: LM_4:70/630 (193)
+|   |   |   |   |   |   ConvexArea > 0.089778: LM_5:70/560 (10)
+|   |   |   |   |   Area > 0.09226: LM_6:70/490 (38)
+|   |   ShapeFactor2 > 0.385247: LM_7:70/280 (3189)
+|   MinorAxisLength > 0.174968
+|   |   ShapeFactor2 <= 0.486745
+|   |   |   ConvexArea <= 0.090627: LM_8:70/350 (630)
+|   |   |   ConvexArea > 0.090627
+|   |   |   |   Perimeter <= 0.236955
+|   |   |   |   |   ShapeFactor1 <= 0.443632
+|   |   |   |   |   |   ShapeFactor2 <= 0.410178: LM_9:70/560 (59)
+|   |   |   |   |   |   ShapeFactor2 > 0.410178: LM_10:70/560 (60)
+|   |   |   |   |   ShapeFactor1 > 0.443632: LM_11:70/490 (1620)
+|   |   |   |   Perimeter > 0.236955: LM_12:70/420 (129)
+|   |   ShapeFactor2 > 0.486745
+|   |   |   ShapeFactor1 <= 0.519248: LM_13:70/350 (1814)
+|   |   |   ShapeFactor1 > 0.519248: LM_14:70/350 (266)
+MajorAxisLength > 0.261576
+|   ShapeFactor1 <= 0.431174
+|   |   Area <= 0.409281
+|   |   |   ShapeFactor2 <= 0.227903
+|   |   |   |   ShapeFactor1 <= 0.40815: LM_15:70/420 (1746)
+|   |   |   |   ShapeFactor1 > 0.40815: LM_16:70/420 (113)
+|   |   |   ShapeFactor2 > 0.227903
+|   |   |   |   Perimeter <= 0.32864: LM_17:70/420 (355)
+|   |   |   |   Perimeter > 0.32864: LM_18:70/420 (565)
+|   |   Area > 0.409281: LM_19:10/220 (521)
+|   ShapeFactor1 > 0.431174
+|   |   ShapeFactor2 <= 0.214006: LM_20:70/280 (1736)
+|   |   ShapeFactor2 > 0.214006
+|   |   |   Perimeter <= 0.254681: LM_21:70/350 (209)
+|   |   |   Perimeter > 0.254681: LM_22:70/350 (68)
+
+Number of Leaves  : 	22
+
+Size of the Tree : 	43
+
+
+
+
+LM_1:
+Class SEKER :
+-57.78 + 
+[Perimeter] * -44.38 +
+[ConvexArea] * -19.1 +
+[Area] * 8.92 +
+[MajorAxisLength] * 5.4  +
+[ShapeFactor2] * 23.6 +
+[ShapeFactor1] * -88.68 +
+[MinorAxisLength] * -109.81
+
+Class BARBUNYA :
+98.58 + 
+[Perimeter] * 48.33 +
+[ConvexArea] * 705.43 +
+[Area] * -194.44 +
+[MajorAxisLength] * -232.26 +
+[ShapeFactor2] * -24.91 +
+[ShapeFactor1] * -151.39 +
+[MinorAxisLength] * -439.57
+
+Class BOMBAY :
+-172.16 + 
+[Perimeter] * -160.59 +
+[Area] * 57.42 +
+[EquivDiameter] * 92.1 +
+[ShapeFactor2] * -64.15 +
+[ShapeFactor1] * -262.95 +
+[MinorAxisLength] * 19.97
+
+Class CALI :
+-187.53 + 
+[Perimeter] * -23.39 +
+[ConvexArea] * 14.31 +
+[Area] * -43.02 +
+[EquivDiameter] * 22.23 +
+[MajorAxisLength] * 15.61 +
+[ShapeFactor2] * 9.78 +
+[ShapeFactor1] * -14.41 +
+[MinorAxisLength] * 21.6
+
+Class HOROZ :
+-44.46 + 
+[Perimeter] * 24.89 +
+[Area] * -138.32 +
+[EquivDiameter] * -10.64 +
+[MajorAxisLength] * 23.39 +
+[ShapeFactor2] * -33.62 +
+[ShapeFactor1] * 78 +
+[MinorAxisLength] * 91.03
+
+Class SIRA :
+64.41 + 
+[Perimeter] * -80.68 +
+[ConvexArea] * -13.11 +
+[Area] * 10.53 +
+[EquivDiameter] * 44.96 +
+[MajorAxisLength] * 36.47 +
+[ShapeFactor2] * -9.79 +
+[ShapeFactor1] * -69.03 +
+[MinorAxisLength] * -129.94
+
+Class DERMASON :
+17.94 + 
+[Perimeter] * -282.08 +
+[ConvexArea] * -23.66 +
+[Area] * 256.93 +
+[EquivDiameter] * -16.65 +
+[MajorAxisLength] * -26.36 +
+[ShapeFactor2] * 33.3 +
+[ShapeFactor1] * 20.37 +
+[MinorAxisLength] * -9.31
+
+
+LM_2:
+Class SEKER :
+-117.78 + 
+[Perimeter] * -44.38 +
+[ConvexArea] * -19.1 +
+[Area] * 8.92 +
+[MajorAxisLength] * 5.4  +
+[ShapeFactor2] * 23.6 +
+[ShapeFactor1] * -88.68 +
+[MinorAxisLength] * -109.81
+
+Class BARBUNYA :
+110.24 + 
+[Perimeter] * 42.07 +
+[ConvexArea] * 1328.85 +
+[Area] * -194.44 +
+[MajorAxisLength] * -394.01 +
+[ShapeFactor2] * -24.91 +
+[ShapeFactor1] * -151.51 +
+[MinorAxisLength] * -633.45
+
+Class BOMBAY :
+-232.16 + 
+[Perimeter] * -160.59 +
+[Area] * 57.42 +
+[EquivDiameter] * 92.1 +
+[ShapeFactor2] * -64.15 +
+[ShapeFactor1] * -262.95 +
+[MinorAxisLength] * 19.97
+
+Class CALI :
+-247.53 + 
+[Perimeter] * -23.39 +
+[ConvexArea] * 14.31 +
+[Area] * -43.02 +
+[EquivDiameter] * 22.23 +
+[MajorAxisLength] * 15.61 +
+[ShapeFactor2] * 9.78 +
+[ShapeFactor1] * -14.41 +
+[MinorAxisLength] * 21.6
+
+Class HOROZ :
+19.55 + 
+[Perimeter] * -86.1 +
+[Area] * -256.82 +
+[MajorAxisLength] * 75.04 +
+[ShapeFactor2] * -51.88 +
+[ShapeFactor1] * 14.83 +
+[MinorAxisLength] * 66.21
+
+Class SIRA :
+32.17 + 
+[Perimeter] * 80.55 +
+[ConvexArea] * 25.36 +
+[Area] * -152.2 +
+[EquivDiameter] * -2.28 +
+[MajorAxisLength] * -110.03 +
+[ShapeFactor2] * -4.17 +
+[ShapeFactor1] * -14.58 +
+[MinorAxisLength] * -10.66
+
+Class DERMASON :
+-21.28 + 
+[Perimeter] * -106.96 +
+[ConvexArea] * -23.66 +
+[Area] * 335.71 +
+[EquivDiameter] * -16.65 +
+[MajorAxisLength] * -44.64 +
+[ShapeFactor2] * 2.84 +
+[ShapeFactor1] * 50.52 +
+[MinorAxisLength] * -29.4
+
+
+
+
+LM_3:
+Class SEKER :
+-297.78 + 
+[Perimeter] * -44.38 +
+[ConvexArea] * -19.1 +
+[Area] * 8.92 +
+[MajorAxisLength] * 5.4  +
+[ShapeFactor2] * 23.6 +
+[ShapeFactor1] * -88.68 +
+[MinorAxisLength] * -109.81
+
+Class BARBUNYA :
+-1986.55 + 
+[Perimeter] * 10494 +
+[ConvexArea] * 1738.82 +
+[Area] * -194.44 +
+[MajorAxisLength] * -523.04 +
+[ShapeFactor2] * -24.91 +
+[ShapeFactor1] * -151.51 +
+[MinorAxisLength] * -749.24
+
+Class BOMBAY :
+-412.16 + 
+[Perimeter] * -160.59 +
+[Area] * 57.42 +
+[EquivDiameter] * 92.1 +
+[ShapeFactor2] * -64.15 +
+[ShapeFactor1] * -262.95 +
+[MinorAxisLength] * 19.97
+
+Class CALI :
+-427.53 + 
+[Perimeter] * -23.39 +
+[ConvexArea] * 14.31 +
+[Area] * -43.02 +
+[EquivDiameter] * 22.23 +
+[MajorAxisLength] * 15.61 +
+[ShapeFactor2] * 9.78 +
+[ShapeFactor1] * -14.41 +
+[MinorAxisLength] * 21.6
+
+Class HOROZ :
+-117.81 + 
+[Perimeter] * 53.05 +
+[ConvexArea] * -221.8 +
+[Area] * -197.49 +
+[MajorAxisLength] * 59.73 +
+[ShapeFactor2] * -42.36 +
+[ShapeFactor1] * 134.26 +
+[MinorAxisLength] * 447.48
+
+Class SIRA :
+-87.38 + 
+[Perimeter] * -34.25 +
+[ConvexArea] * 304.15 +
+[Area] * -439.11 +
+[EquivDiameter] * -0.25 +
+[MajorAxisLength] * 60.23 +
+[ShapeFactor2] * -17.97 +
+[ShapeFactor1] * 98.27 +
+[MinorAxisLength] * 285.44
+
+Class DERMASON :
+226.48 + 
+[Perimeter] * -82.9 +
+[ConvexArea] * -105.21 +
+[Area] * 415.8 +
+[EquivDiameter] * -16.65 +
+[MajorAxisLength] * -111.63 +
+[ShapeFactor2] * -0.61 +
+[ShapeFactor1] * -204.85 +
+[MinorAxisLength] * -598.36
+
+LM_4:
+Class SEKER :
+-297.78 + 
+[Perimeter] * -44.38 +
+[ConvexArea] * -19.1 +
+[Area] * 8.92 +
+[MajorAxisLength] * 5.4  +
+[ShapeFactor2] * 23.6 +
+[ShapeFactor1] * -88.68 +
+[MinorAxisLength] * -109.81
+
+Class BARBUNYA :
+-1986.55 + 
+[Perimeter] * 10494 +
+[ConvexArea] * 1738.82 +
+[Area] * -194.44 +
+[MajorAxisLength] * -523.04 +
+[ShapeFactor2] * -24.91 +
+[ShapeFactor1] * -151.51 +
+[MinorAxisLength] * -749.24
+
+Class BOMBAY :
+-412.16 + 
+[Perimeter] * -160.59 +
+[Area] * 57.42 +
+[EquivDiameter] * 92.1 +
+[ShapeFactor2] * -64.15 +
+[ShapeFactor1] * -262.95 +
+[MinorAxisLength] * 19.97
+
+Class CALI :
+-427.53 + 
+[Perimeter] * -23.39 +
+[ConvexArea] * 14.31 +
+[Area] * -43.02 +
+[EquivDiameter] * 22.23 +
+[MajorAxisLength] * 15.61 +
+[ShapeFactor2] * 9.78 +
+[ShapeFactor1] * -14.41 +
+[MinorAxisLength] * 21.6
+
+Class HOROZ :
+-233.78 + 
+[Perimeter] * -95.16 +
+[ConvexArea] * -171.74 +
+[Area] * -337.97 +
+[MajorAxisLength] * 21.94 +
+[ShapeFactor2] * -51.99 +
+[ShapeFactor1] * 311.51 +
+[MinorAxisLength] * 761.49
+
+Class SIRA :
+52.06 + 
+[Perimeter] * 31.97 +
+[ConvexArea] * -107.11 +
+[Area] * -114.08 +
+[EquivDiameter] * -27.3 +
+[MajorAxisLength] * 53.5 +
+[ShapeFactor2] * -4.32 +
+[ShapeFactor1] * -54.05 +
+[MinorAxisLength] * -56.74
+
+Class DERMASON :
+47.3 + 
+[Perimeter] * -106.73 +
+[ConvexArea] * 34.43 +
+[Area] * 415.8 +
+[EquivDiameter] * 14.28 +
+[MajorAxisLength] * -111.06 +
+[ShapeFactor2] * -0.61 +
+[ShapeFactor1] * -22.63 +
+[MinorAxisLength] * -209.18
+
+LM_5:
+Class SEKER :
+-237.78 + 
+[Perimeter] * -44.38 +
+[ConvexArea] * -19.1 +
+[Area] * 8.92 +
+[MajorAxisLength] * 5.4  +
+[ShapeFactor2] * 23.6 +
+[ShapeFactor1] * -88.68 +
+[MinorAxisLength] * -109.81
+
+Class BARBUNYA :
+-3604.25 + 
+[Perimeter] * 19297.24 +
+[ConvexArea] * 1738.82 +
+[Area] * -194.44 +
+[MajorAxisLength] * -523.04 +
+[ShapeFactor2] * -24.91 +
+[ShapeFactor1] * -151.51 +
+[MinorAxisLength] * -749.24
+
+Class BOMBAY :
+-352.16 + 
+[Perimeter] * -160.59 +
+[Area] * 57.42 +
+[EquivDiameter] * 92.1 +
+[ShapeFactor2] * -64.15 +
+[ShapeFactor1] * -262.95 +
+[MinorAxisLength] * 19.97
+
+Class CALI :
+-367.53 + 
+[Perimeter] * -23.39 +
+[ConvexArea] * 14.31 +
+[Area] * -43.02 +
+[EquivDiameter] * 22.23 +
+[MajorAxisLength] * 15.61 +
+[ShapeFactor2] * 9.78 +
+[ShapeFactor1] * -14.41 +
+[MinorAxisLength] * 21.6
+
+Class HOROZ :
+187.32 + 
+[Perimeter] * -396.64 +
+[ConvexArea] * -6069.61 +
+[Area] * 1355.65 +
+[EquivDiameter] * -1194.25 +
+[MajorAxisLength] * 1162.41 +
+[ShapeFactor2] * -194.01 +
+[ShapeFactor1] * 168.46 +
+[MinorAxisLength] * 1395.5
+
+Class SIRA :
+1330.75 + 
+[Perimeter] * -231.67 +
+[ConvexArea] * -4721.06 +
+[Area] * -6515.3 +
+[EquivDiameter] * 657.3 +
+[MajorAxisLength] * -563.16 +
+[ShapeFactor2] * 181.96 +
+[ShapeFactor1] * -32.51 +
+[MinorAxisLength] * -1783.63
+
+Class DERMASON :
+-2531.74 + 
+[Perimeter] * 1919.33 +
+[ConvexArea] * 5955.69 +
+[Area] * 21925.4 +
+[EquivDiameter] * 1587.37 +
+[MajorAxisLength] * -464.7 +
+[ShapeFactor2] * -2.95 +
+[ShapeFactor1] * -904.18 +
+[MinorAxisLength] * -125.68
+
+LM_6:
+Class SEKER :
+-177.78 + 
+[Perimeter] * -44.38 +
+[ConvexArea] * -19.1 +
+[Area] * 8.92 +
+[MajorAxisLength] * 5.4  +
+[ShapeFactor2] * 23.6 +
+[ShapeFactor1] * -88.68 +
+[MinorAxisLength] * -109.81
+
+Class BARBUNYA :
+123.15 + 
+[Perimeter] * 22.24 +
+[ConvexArea] * 1738.82 +
+[Area] * -194.44 +
+[MajorAxisLength] * -523.04 +
+[ShapeFactor2] * -24.91 +
+[ShapeFactor1] * -151.51 +
+[MinorAxisLength] * -749.24
+
+Class BOMBAY :
+-292.16 + 
+[Perimeter] * -160.59 +
+[Area] * 57.42 +
+[EquivDiameter] * 92.1 +
+[ShapeFactor2] * -64.15 +
+[ShapeFactor1] * -262.95 +
+[MinorAxisLength] * 19.97
+
+Class CALI :
+-307.53 + 
+[Perimeter] * -23.39 +
+[ConvexArea] * 14.31 +
+[Area] * -43.02 +
+[EquivDiameter] * 22.23 +
+[MajorAxisLength] * 15.61 +
+[ShapeFactor2] * 9.78 +
+[ShapeFactor1] * -14.41 +
+[MinorAxisLength] * 21.6
+
+Class HOROZ :
+310.91 + 
+[Perimeter] * -2078.57 +
+[ConvexArea] * -3147.95 +
+[Area] * -177.93 +
+[MajorAxisLength] * 42.52 +
+[ShapeFactor2] * -3438.5 +
+[ShapeFactor1] * 2275.28 +
+[MinorAxisLength] * 92.73
+
+Class SIRA :
+-291.02 + 
+[Perimeter] * 1779.79 +
+[ConvexArea] * 3095.97 +
+[Area] * -43.37 +
+[EquivDiameter] * -2.28 +
+[MajorAxisLength] * 23.1 +
+[ShapeFactor2] * 3455.82 +
+[ShapeFactor1] * -2214.82 +
+[MinorAxisLength] * -30.84
+
+Class DERMASON :
+-36.91 + 
+[Perimeter] * -62.33 +
+[ConvexArea] * -23.65 +
+[Area] * 200 +
+[EquivDiameter] * -16.65 +
+[MajorAxisLength] * -48.68 +
+[ShapeFactor2] * -4.62 +
+[ShapeFactor1] * 3.58 +
+[MinorAxisLength] * -92.71
+
+LM_7:
+Class SEKER :
+107.26 + 
+[Perimeter] * -44.38 +
+[ConvexArea] * -47.59 +
+[Area] * 8.92 +
+[MajorAxisLength] * 2.55 +
+[ShapeFactor2] * 20.01 +
+[ShapeFactor1] * -137.26 +
+[MinorAxisLength] * -190.65
+
+Class BARBUNYA :
+85.62 + 
+[Perimeter] * 42.65 +
+[ConvexArea] * 90.12 +
+[MajorAxisLength] * -74.8 +
+[ShapeFactor2] * -24.91 +
+[ShapeFactor1] * -151.51 +
+[MinorAxisLength] * -329.71
+
+Class BOMBAY :
+-112.16 + 
+[Perimeter] * -160.59 +
+[Area] * 57.42 +
+[EquivDiameter] * 92.1 +
+[ShapeFactor2] * -64.15 +
+[ShapeFactor1] * -262.95 +
+[MinorAxisLength] * 19.97
+
+Class CALI :
+-127.53 + 
+[Perimeter] * -23.39 +
+[ConvexArea] * 14.31 +
+[Area] * -43.02 +
+[EquivDiameter] * 22.23 +
+[MajorAxisLength] * 15.61 +
+[ShapeFactor2] * 9.78 +
+[ShapeFactor1] * -14.41 +
+[MinorAxisLength] * 21.6
+
+Class HOROZ :
+24.08 + 
+[Perimeter] * -44.65 +
+[Area] * -136.35 +
+[MajorAxisLength] * 17.16 +
+[ShapeFactor2] * -44.67 +
+[ShapeFactor1] * 9.41 +
+[MinorAxisLength] * 8.74
+
+Class SIRA :
+7.56 + 
+[Perimeter] * -18.28 +
+[ConvexArea] * -13.11 +
+[Area] * -87.88 +
+[EquivDiameter] * -2.28 +
+[MajorAxisLength] * -1.05 +
+[ShapeFactor2] * -18.25 +
+[ShapeFactor1] * 11.01 +
+[MinorAxisLength] * 42.56
+
+Class DERMASON :
+9.95 + 
+[Perimeter] * -80.23 +
+[ConvexArea] * -23.66 +
+[Area] * 89.4 +
+[EquivDiameter] * -16.65 +
+[MajorAxisLength] * -2.31 +
+[ShapeFactor2] * 0.44 +
+[ShapeFactor1] * 13.71 +
+[MinorAxisLength] * -34.78
+
+
+
+LM_8:
+Class SEKER :
+-64.29 + 
+[Perimeter] * 23.22 +
+[ConvexArea] * 59.55 +
+[Area] * 61.65 +
+[EquivDiameter] * -5.12 +
+[MajorAxisLength] * 26.85 +
+[ShapeFactor2] * 41.23 +
+[ShapeFactor1] * 33.97 +
+[MinorAxisLength] * 44.04
+
+Class BARBUNYA :
+14.91 + 
+[Perimeter] * -159.14 +
+[ConvexArea] * 912.31 +
+[Area] * -106.72 +
+[MajorAxisLength] * -128.26 +
+[ShapeFactor2] * -9.56 +
+[ShapeFactor1] * -11.34 +
+[MinorAxisLength] * -163.23
+
+Class BOMBAY :
+-172.16 + 
+[Perimeter] * -160.59 +
+[Area] * 57.42 +
+[EquivDiameter] * 92.1 +
+[ShapeFactor2] * -64.15 +
+[ShapeFactor1] * -262.95 +
+[MinorAxisLength] * 19.97
+
+Class CALI :
+-46.67 + 
+[Perimeter] * -13.92 +
+[ConvexArea] * 14.31 +
+[Area] * -66.53 +
+[EquivDiameter] * 22.23 +
+[MajorAxisLength] * -9.55 +
+[ShapeFactor2] * -3.91 +
+[ShapeFactor1] * -34.53 +
+[MinorAxisLength] * 21.55
+
+Class HOROZ :
+-67.39 + 
+[Perimeter] * -255.68 +
+[ConvexArea] * -311.31 +
+[Area] * -161.94 +
+[EquivDiameter] * 362.7 +
+[MajorAxisLength] * 9.85 +
+[ShapeFactor2] * -51.64 +
+[ShapeFactor1] * 84.22 +
+[MinorAxisLength] * 309.29
+
+Class SIRA :
+-5.29 + 
+[Perimeter] * -22.48 +
+[ConvexArea] * -114.69 +
+[Area] * -93.9 +
+[EquivDiameter] * 31.82 +
+[ShapeFactor2] * -17.03 +
+[ShapeFactor1] * 29.27 +
+[MinorAxisLength] * 75.79
+
+Class DERMASON :
+85.64 + 
+[Perimeter] * -179.78 +
+[ConvexArea] * -77.63 +
+[Area] * 126.75 +
+[EquivDiameter] * 19.76 +
+[MajorAxisLength] * -21.67 +
+[ShapeFactor2] * -18.78 +
+[ShapeFactor1] * -61.02 +
+[MinorAxisLength] * -108.34
+
+
+
+
+LM_9:
+Class SEKER :
+396.91 + 
+[Perimeter] * -142.26 +
+[Area] * 224.58 +
+[MajorAxisLength] * 38.29 +
+[ShapeFactor2] * 25.26 +
+[ShapeFactor1] * -563.02 +
+[MinorAxisLength] * -669.69
+
+Class BARBUNYA :
+61.93 + 
+[Perimeter] * 130.95 +
+[ConvexArea] * 562.89 +
+[Area] * -26.08 +
+[EquivDiameter] * -65.53 +
+[MajorAxisLength] * -287.84 +
+[ShapeFactor2] * 39.92 +
+[ShapeFactor1] * -98.06 +
+[MinorAxisLength] * -208.95
+
+Class BOMBAY :
+-352.16 + 
+[Perimeter] * -160.59 +
+[Area] * 57.42 +
+[EquivDiameter] * 92.1 +
+[ShapeFactor2] * -64.15 +
+[ShapeFactor1] * -262.95 +
+[MinorAxisLength] * 19.97
+
+Class CALI :
+285.26 + 
+[Perimeter] * 69.76 +
+[ConvexArea] * -78.23 +
+[Area] * -38.68 +
+[EquivDiameter] * 22.23 +
+[MajorAxisLength] * -156.09 +
+[ShapeFactor2] * -15.65 +
+[ShapeFactor1] * -374.41 +
+[MinorAxisLength] * -355.27
+
+Class HOROZ :
+-259.48 + 
+[Perimeter] * 109.05 +
+[ConvexArea] * 26.46 +
+[Area] * -339.09 +
+[MajorAxisLength] * -6.75 +
+[ShapeFactor2] * -34.37 +
+[ShapeFactor1] * 188.89 +
+[MinorAxisLength] * 313.9
+
+Class SIRA :
+-508.42 + 
+[Perimeter] * 19.16 +
+[ConvexArea] * -77.56 +
+[Area] * -60.58 +
+[EquivDiameter] * -8.82 +
+[MajorAxisLength] * -2.03 +
+[ShapeFactor2] * -12.97 +
+[ShapeFactor1] * 668.97 +
+[MinorAxisLength] * 928.22
+
+Class DERMASON :
+-174.16 + 
+[Perimeter] * -174.23 +
+[ConvexArea] * -23.66 +
+[EquivDiameter] * 19.76 +
+[MajorAxisLength] * -17.56 +
+[ShapeFactor2] * -20.75 +
+[ShapeFactor1] * -32.43 +
+[MinorAxisLength] * -55.7
+
+LM_10:
+Class SEKER :
+178.37 + 
+[Perimeter] * -116.46 +
+[Area] * 316.18 +
+[MajorAxisLength] * 61.12 +
+[ShapeFactor2] * 53.03 +
+[ShapeFactor1] * -280.44 +
+[MinorAxisLength] * -411.99
+
+Class BARBUNYA :
+88.18 + 
+[Perimeter] * 169.8 +
+[ConvexArea] * 141.31 +
+[Area] * -279.56 +
+[MajorAxisLength] * -210.49 +
+[ShapeFactor2] * -22.35 +
+[ShapeFactor1] * -72.29 +
+[MinorAxisLength] * -97.41
+
+Class BOMBAY :
+-352.16 + 
+[Perimeter] * -160.59 +
+[Area] * 57.42 +
+[EquivDiameter] * 92.1 +
+[ShapeFactor2] * -64.15 +
+[ShapeFactor1] * -262.95 +
+[MinorAxisLength] * 19.97
+
+Class CALI :
+-1296.43 + 
+[Perimeter] * 3237.22 +
+[ConvexArea] * 3710.56 +
+[Area] * -38.68 +
+[EquivDiameter] * 22.23 +
+[MajorAxisLength] * 579.41 +
+[ShapeFactor2] * -19.37 +
+[ShapeFactor1] * -138.85 +
+[MinorAxisLength] * -84.9
+
+Class HOROZ :
+-259.48 + 
+[Perimeter] * 109.05 +
+[ConvexArea] * 26.46 +
+[Area] * -339.09 +
+[MajorAxisLength] * -6.75 +
+[ShapeFactor2] * -34.37 +
+[ShapeFactor1] * 188.89 +
+[MinorAxisLength] * 313.9
+
+Class SIRA :
+-247.33 + 
+[Perimeter] * -2.07 +
+[ConvexArea] * -77.02 +
+[Area] * -109.6 +
+[EquivDiameter] * -8.82 +
+[MajorAxisLength] * -4.7 +
+[ShapeFactor2] * -23.66 +
+[ShapeFactor1] * 345.39 +
+[MinorAxisLength] * 515.88
+
+Class DERMASON :
+-174.16 + 
+[Perimeter] * -174.23 +
+[ConvexArea] * -23.66 +
+[EquivDiameter] * 19.76 +
+[MajorAxisLength] * -17.56 +
+[ShapeFactor2] * -20.75 +
+[ShapeFactor1] * -32.43 +
+[MinorAxisLength] * -55.7
+
+LM_11:
+Class SEKER :
+98.05 + 
+[Perimeter] * -107.08 +
+[Area] * 156.9 +
+[EquivDiameter] * 2.75 +
+[MajorAxisLength] * 38.29 +
+[ShapeFactor2] * 44.59 +
+[ShapeFactor1] * -151.46 +
+[MinorAxisLength] * -226.65
+
+Class BARBUNYA :
+80.71 + 
+[Perimeter] * 181.63 +
+[ConvexArea] * 82.14 +
+[Area] * -26.08 +
+[MajorAxisLength] * -153.01 +
+[ShapeFactor2] * -1.43 +
+[ShapeFactor1] * -104.98 +
+[MinorAxisLength] * -195.26
+
+Class BOMBAY :
+-292.16 + 
+[Perimeter] * -160.59 +
+[Area] * 57.42 +
+[EquivDiameter] * 92.1 +
+[ShapeFactor2] * -64.15 +
+[ShapeFactor1] * -262.95 +
+[MinorAxisLength] * 19.97
+
+Class CALI :
+56.44 + 
+[Perimeter] * -138.66 +
+[ConvexArea] * 180.6 +
+[Area] * -38.68 +
+[EquivDiameter] * 37.97 +
+[MajorAxisLength] * -76.01 +
+[ShapeFactor2] * -39.12 +
+[ShapeFactor1] * -45.74 +
+[MinorAxisLength] * -27.2
+
+Class HOROZ :
+-190.22 + 
+[Perimeter] * 109.4 +
+[ConvexArea] * 26.46 +
+[Area] * -339.09 +
+[MajorAxisLength] * -6.75 +
+[ShapeFactor2] * -33.71 +
+[ShapeFactor1] * 248.37 +
+[MinorAxisLength] * 412.35
+
+Class SIRA :
+-83.31 + 
+[Perimeter] * 0.86 +
+[ConvexArea] * -29.58 +
+[Area] * -60.58 +
+[EquivDiameter] * -8.82 +
+[MajorAxisLength] * -2.03 +
+[ShapeFactor2] * -9.92 +
+[ShapeFactor1] * 114.41 +
+[MinorAxisLength] * 199.11
+
+Class DERMASON :
+-114.16 + 
+[Perimeter] * -174.23 +
+[ConvexArea] * -23.66 +
+[EquivDiameter] * 19.76 +
+[MajorAxisLength] * -17.56 +
+[ShapeFactor2] * -20.75 +
+[ShapeFactor1] * -32.43 +
+[MinorAxisLength] * -55.7
+
+LM_12:
+Class SEKER :
+47.48 + 
+[Perimeter] * -36.21 +
+[ConvexArea] * -10.36 +
+[Area] * 78.34 +
+[EquivDiameter] * -29.93 +
+[MajorAxisLength] * 7.58 +
+[ShapeFactor2] * 47.12 +
+[ShapeFactor1] * -83.08 +
+[MinorAxisLength] * -98.69
+
+Class BARBUNYA :
+-1.56 + 
+[Perimeter] * 106.02 +
+[ConvexArea] * 110.81 +
+[EquivDiameter] * 3.95 +
+[MajorAxisLength] * -89.61 +
+[ShapeFactor2] * -4.22 +
+[ShapeFactor1] * -10.49 +
+[MinorAxisLength] * -50.13
+
+Class BOMBAY :
+-232.16 + 
+[Perimeter] * -160.59 +
+[Area] * 57.42 +
+[EquivDiameter] * 92.1 +
+[ShapeFactor2] * -64.15 +
+[ShapeFactor1] * -262.95 +
+[MinorAxisLength] * 19.97
+
+Class CALI :
+34.1 + 
+[Perimeter] * 7.05 +
+[ConvexArea] * 14.31 +
+[Area] * -231.77 +
+[EquivDiameter] * 22.23 +
+[MajorAxisLength] * -31.85 +
+[ShapeFactor2] * -44.82 +
+[ShapeFactor1] * -41.03 +
+[MinorAxisLength] * 94.66
+
+Class HOROZ :
+-1539.11 + 
+[Perimeter] * 731.91 +
+[Area] * -249.07 +
+[MajorAxisLength] * 5112.73 +
+[ShapeFactor2] * -545.96 +
+[ShapeFactor1] * 250.08 +
+[MinorAxisLength] * 260.84
+
+Class SIRA :
+-36.11 + 
+[Perimeter] * 7.38 +
+[ConvexArea] * -29.58 +
+[Area] * -6.23 +
+[EquivDiameter] * -42.8 +
+[MajorAxisLength] * 23.07 +
+[ShapeFactor2] * -9.92 +
+[ShapeFactor1] * 47.72 +
+[MinorAxisLength] * 95.5
+
+Class DERMASON :
+-54.16 + 
+[Perimeter] * -174.23 +
+[ConvexArea] * -23.66 +
+[EquivDiameter] * 19.76 +
+[MajorAxisLength] * -17.56 +
+[ShapeFactor2] * -20.75 +
+[ShapeFactor1] * -32.43 +
+[MinorAxisLength] * -55.7
+
+
+LM_13:
+Class SEKER :
+43.02 + 
+[Perimeter] * -28.7 +
+[Area] * 61.87 +
+[EquivDiameter] * 7.59 +
+[MajorAxisLength] * 26.3 +
+[ShapeFactor2] * 44.51 +
+[ShapeFactor1] * -88.29 +
+[MinorAxisLength] * -125.24
+
+Class BARBUNYA :
+-9.63 + 
+[Perimeter] * 18.16 +
+[ConvexArea] * 186.04 +
+[Area] * -114.55 +
+[MajorAxisLength] * -63.42 +
+[ShapeFactor2] * 0.73 +
+[ShapeFactor1] * 1.51 +
+[MinorAxisLength] * 26.12
+
+Class BOMBAY :
+-172.16 + 
+[Perimeter] * -160.59 +
+[Area] * 57.42 +
+[EquivDiameter] * 92.1 +
+[ShapeFactor2] * -64.15 +
+[ShapeFactor1] * -262.95 +
+[MinorAxisLength] * 19.97
+
+Class CALI :
+81.92 + 
+[Perimeter] * -11.18 +
+[ConvexArea] * -240.59 +
+[Area] * -63.92 +
+[EquivDiameter] * 22.23 +
+[MajorAxisLength] * 11.9 +
+[ShapeFactor2] * -29.53 +
+[ShapeFactor1] * -108.57 +
+[MinorAxisLength] * 18.51
+
+Class HOROZ :
+-184.15 + 
+[Perimeter] * 40.39 +
+[Area] * -96.35 +
+[MajorAxisLength] * -6.75 +
+[ShapeFactor2] * -28.61 +
+[ShapeFactor1] * 97.14 +
+[MinorAxisLength] * 116.93
+
+Class SIRA :
+-78.12 + 
+[Perimeter] * -8.1 +
+[ConvexArea] * -13.11 +
+[Area] * -8.49 +
+[EquivDiameter] * -13.79 +
+[ShapeFactor2] * -8.17 +
+[ShapeFactor1] * 113.95 +
+[MinorAxisLength] * 148.97
+
+Class DERMASON :
+1.47 + 
+[Perimeter] * -33.28 +
+[ConvexArea] * -23.66 +
+[Area] * -93.92 +
+[EquivDiameter] * -16.65 +
+[MajorAxisLength] * -26.95 +
+[ShapeFactor2] * -21.25 +
+[ShapeFactor1] * 31.27 +
+[MinorAxisLength] * 76.76
+
+LM_14:
+Class SEKER :
+225.5 + 
+[Perimeter] * 1.07 +
+[ConvexArea] * -27.23 +
+[Area] * 35.33 +
+[EquivDiameter] * 7.59 +
+[MajorAxisLength] * 26.3 +
+[ShapeFactor2] * 45.4 +
+[ShapeFactor1] * -299.46 +
+[MinorAxisLength] * -501.23
+
+Class BARBUNYA :
+-70.67 + 
+[Perimeter] * 21.99 +
+[ConvexArea] * 120.86 +
+[Area] * -54.58 +
+[MajorAxisLength] * -62.61 +
+[ShapeFactor2] * 4.62 +
+[ShapeFactor1] * -1.4 +
+[MinorAxisLength] * 24.48
+
+Class BOMBAY :
+-172.16 + 
+[Perimeter] * -160.59 +
+[Area] * 57.42 +
+[EquivDiameter] * 92.1 +
+[ShapeFactor2] * -64.15 +
+[ShapeFactor1] * -262.95 +
+[MinorAxisLength] * 19.97
+
+Class CALI :
+-18.18 + 
+[Perimeter] * -13.72 +
+[ConvexArea] * -120.47 +
+[Area] * -63.92 +
+[EquivDiameter] * 22.23 +
+[MajorAxisLength] * 11.9 +
+[ShapeFactor2] * -11.97 +
+[ShapeFactor1] * -64.95 +
+[MinorAxisLength] * 18.51
+
+Class HOROZ :
+-184.15 + 
+[Perimeter] * 40.39 +
+[Area] * -96.35 +
+[MajorAxisLength] * -6.75 +
+[ShapeFactor2] * -28.61 +
+[ShapeFactor1] * 97.14 +
+[MinorAxisLength] * 116.93
+
+Class SIRA :
+-220.06 + 
+[Perimeter] * -8.1 +
+[ConvexArea] * -13.11 +
+[Area] * -3.25 +
+[EquivDiameter] * -13.79 +
+[MajorAxisLength] * 7.52 +
+[ShapeFactor2] * -8.17 +
+[ShapeFactor1] * 271.86 +
+[MinorAxisLength] * 449.25
+
+Class DERMASON :
+-139.08 + 
+[Perimeter] * -52.5 +
+[ConvexArea] * 15.69 +
+[Area] * -53.31 +
+[EquivDiameter] * -26.08 +
+[MajorAxisLength] * -26.95 +
+[ShapeFactor2] * -17.46 +
+[ShapeFactor1] * 199.65 +
+[MinorAxisLength] * 328.66
+
+
+
+
+
+LM_15:
+Class SEKER :
+248.05 + 
+[Perimeter] * -443.05 +
+[Area] * 5.3  +
+[EquivDiameter] * 148.77 +
+[MajorAxisLength] * 70.6 +
+[ShapeFactor2] * -23.18 +
+[ShapeFactor1] * -452.39 +
+[MinorAxisLength] * -453.05
+
+Class BARBUNYA :
+64.16 + 
+[Perimeter] * 96.56 +
+[Area] * 97.46 +
+[MajorAxisLength] * -94.35 +
+[ShapeFactor2] * 32.25 +
+[ShapeFactor1] * -113.71 +
+[MinorAxisLength] * -150.29
+
+Class BOMBAY :
+-620.96 + 
+[Perimeter] * -773.43 +
+[Area] * 541.29 +
+[EquivDiameter] * 17.95 +
+[MajorAxisLength] * 4.45 +
+[ShapeFactor2] * -93.93 +
+[ShapeFactor1] * -946.94 +
+[MinorAxisLength] * 1693.61
+
+Class CALI :
+-49.52 + 
+[Perimeter] * -87.86 +
+[ConvexArea] * 14.31 +
+[Area] * -94.85 +
+[EquivDiameter] * 22.23 +
+[MajorAxisLength] * 57.58 +
+[ShapeFactor2] * -40.53 +
+[ShapeFactor1] * 66.6 +
+[MinorAxisLength] * 166.55
+
+Class HOROZ :
+-116.88 + 
+[Perimeter] * 65.45 +
+[ConvexArea] * -99.88 +
+[MajorAxisLength] * 27.03 +
+[ShapeFactor2] * 8.66 +
+[ShapeFactor1] * 140.09 +
+[MinorAxisLength] * 153.17
+
+Class SIRA :
+438.45 + 
+[Perimeter] * -3012.71 +
+[ConvexArea] * 2464.18 +
+[EquivDiameter] * 26.59 +
+[MajorAxisLength] * 25.58 +
+[ShapeFactor2] * 33.48 +
+[ShapeFactor1] * -123.8 +
+[MinorAxisLength] * -135.83
+
+Class DERMASON :
+-281.23 + 
+[Perimeter] * -86.74 +
+[ConvexArea] * -23.66 +
+[EquivDiameter] * -18.67 +
+[ShapeFactor2] * -7.03 +
+[ShapeFactor1] * 8.36 +
+[MinorAxisLength] * -5.81
+
+LM_16:
+Class SEKER :
+248.05 + 
+[Perimeter] * -443.05 +
+[Area] * 5.3  +
+[EquivDiameter] * 148.77 +
+[MajorAxisLength] * 70.6 +
+[ShapeFactor2] * -23.18 +
+[ShapeFactor1] * -452.39 +
+[MinorAxisLength] * -453.05
+
+Class BARBUNYA :
+33.63 + 
+[Perimeter] * 96.56 +
+[ConvexArea] * 79.53 +
+[Area] * 18.21 +
+[MajorAxisLength] * -59.82 +
+[ShapeFactor2] * 29.03 +
+[ShapeFactor1] * -67.38 +
+[MinorAxisLength] * -147.95
+
+Class BOMBAY :
+-398.31 + 
+[Perimeter] * -773.43 +
+[Area] * 541.29 +
+[EquivDiameter] * 17.95 +
+[MajorAxisLength] * 23.9 +
+[ShapeFactor2] * -110.72 +
+[ShapeFactor1] * -661.27 +
+[MinorAxisLength] * 1133.03
+
+Class CALI :
+24.16 + 
+[Perimeter] * -93.6 +
+[ConvexArea] * -5.44 +
+[Area] * -83.12 +
+[EquivDiameter] * 22.23 +
+[MajorAxisLength] * 21.95 +
+[ShapeFactor2] * -82.05 +
+[ShapeFactor1] * -8.8 +
+[MinorAxisLength] * 97.28
+
+Class HOROZ :
+-195.05 + 
+[Perimeter] * 42.29 +
+[ConvexArea] * -70.2 +
+[Area] * 9.79 +
+[MajorAxisLength] * 62.88 +
+[ShapeFactor2] * 25.13 +
+[ShapeFactor1] * 240.18 +
+[MinorAxisLength] * 230.8
+
+Class SIRA :
+1783.99 + 
+[Perimeter] * -5413.73 +
+[ConvexArea] * 2464.18 +
+[EquivDiameter] * 26.59 +
+[MajorAxisLength] * 418.54 +
+[ShapeFactor2] * 33.42 +
+[ShapeFactor1] * -1868.89 +
+[MinorAxisLength] * -135.83
+
+Class DERMASON :
+-281.23 + 
+[Perimeter] * -86.74 +
+[ConvexArea] * -23.66 +
+[EquivDiameter] * -18.67 +
+[ShapeFactor2] * -7.03 +
+[ShapeFactor1] * 8.36 +
+[MinorAxisLength] * -5.81
+
+
+LM_17:
+Class SEKER :
+641.83 + 
+[Perimeter] * -522.27 +
+[Area] * 5.3  +
+[EquivDiameter] * 178.42 +
+[MajorAxisLength] * 70.6 +
+[ShapeFactor2] * -15.95 +
+[ShapeFactor1] * -816.42 +
+[MinorAxisLength] * -866.76
+
+Class BARBUNYA :
+88.42 + 
+[Perimeter] * 97.92 +
+[Area] * 150.86 +
+[MajorAxisLength] * -107.42 +
+[ShapeFactor2] * 16.14 +
+[ShapeFactor1] * -133.11 +
+[MinorAxisLength] * -214.92
+
+Class BOMBAY :
+136.13 + 
+[Perimeter] * -773.43 +
+[Area] * 541.29 +
+[EquivDiameter] * 17.95 +
+[MajorAxisLength] * 23.9 +
+[ShapeFactor2] * -110.72 +
+[ShapeFactor1] * -661.27 +
+[MinorAxisLength] * 98.12
+
+Class CALI :
+-69.24 + 
+[Perimeter] * -94.05 +
+[ConvexArea] * 14.31 +
+[Area] * -141.02 +
+[EquivDiameter] * 22.23 +
+[MajorAxisLength] * 100.03 +
+[ShapeFactor2] * -28.46 +
+[ShapeFactor1] * 74.76 +
+[MinorAxisLength] * 199.67
+
+Class HOROZ :
+-274.21 + 
+[Perimeter] * 42.29 +
+[Area] * -91.57 +
+[MajorAxisLength] * 9.76 +
+[ShapeFactor2] * -6.21 +
+[ShapeFactor1] * 375.59 +
+[MinorAxisLength] * 420.87
+
+Class SIRA :
+42.77 + 
+[Perimeter] * -335.71 +
+[ConvexArea] * 552.32 +
+[EquivDiameter] * 26.59 +
+[MajorAxisLength] * 25.58 +
+[ShapeFactor2] * 120.94 +
+[ShapeFactor1] * -34.71 +
+[MinorAxisLength] * -282.17
+
+Class DERMASON :
+-281.23 + 
+[Perimeter] * -86.74 +
+[ConvexArea] * -23.66 +
+[EquivDiameter] * -18.67 +
+[ShapeFactor2] * -7.03 +
+[ShapeFactor1] * 8.36 +
+[MinorAxisLength] * -5.81
+
+LM_18:
+Class SEKER :
+443.55 + 
+[Perimeter] * -507.63 +
+[Area] * 5.3  +
+[EquivDiameter] * 178.42 +
+[MajorAxisLength] * 70.6 +
+[ShapeFactor2] * -15.95 +
+[ShapeFactor1] * -631.64 +
+[MinorAxisLength] * -653.6
+
+Class BARBUNYA :
+52.92 + 
+[Perimeter] * 116.4 +
+[ConvexArea] * -73.17 +
+[Area] * 170.7 +
+[MajorAxisLength] * -106.5 +
+[ShapeFactor2] * 20.17 +
+[ShapeFactor1] * -91.99 +
+[MinorAxisLength] * -139.48
+
+Class BOMBAY :
+136.13 + 
+[Perimeter] * -773.43 +
+[Area] * 541.29 +
+[EquivDiameter] * 17.95 +
+[MajorAxisLength] * 23.9 +
+[ShapeFactor2] * -110.72 +
+[ShapeFactor1] * -661.27 +
+[MinorAxisLength] * 98.12
+
+Class CALI :
+-43.13 + 
+[Perimeter] * -109.48 +
+[ConvexArea] * 87.5 +
+[Area] * -159.43 +
+[EquivDiameter] * 22.23 +
+[MajorAxisLength] * 98.27 +
+[ShapeFactor2] * -29.75 +
+[ShapeFactor1] * 43.25 +
+[MinorAxisLength] * 137.41
+
+Class HOROZ :
+-214.01 + 
+[Perimeter] * 42.04 +
+[Area] * -91.57 +
+[MajorAxisLength] * 9.45 +
+[ShapeFactor2] * 4.99 +
+[ShapeFactor1] * 203.75 +
+[MinorAxisLength] * 233.75
+
+Class SIRA :
+-10.98 + 
+[Perimeter] * -338.05 +
+[ConvexArea] * 428.84 +
+[EquivDiameter] * 26.59 +
+[MajorAxisLength] * 25.58 +
+[ShapeFactor2] * 84.22 +
+[ShapeFactor1] * -26.78 +
+[MinorAxisLength] * -207.24
+
+Class DERMASON :
+-281.23 + 
+[Perimeter] * -86.74 +
+[ConvexArea] * -23.66 +
+[EquivDiameter] * -18.67 +
+[ShapeFactor2] * -7.03 +
+[ShapeFactor1] * 8.36 +
+[MinorAxisLength] * -5.81
+
+LM_19:
+Class SEKER :
+195.97 + 
+[Perimeter] * -415.26 +
+[Area] * 5.3  +
+[EquivDiameter] * 135.38 +
+[MajorAxisLength] * 70.6 +
+[ShapeFactor2] * -23.18 +
+[ShapeFactor1] * -235.5 +
+[MinorAxisLength] * -196.48
+
+Class BARBUNYA :
+23.28 + 
+[Perimeter] * 96.56 +
+[Area] * 7.52 +
+[MajorAxisLength] * -51.56 +
+[ShapeFactor2] * 19 +
+[ShapeFactor1] * -73.48 +
+[MinorAxisLength] * -76.9
+
+Class BOMBAY :
+93.82 + 
+[Perimeter] * -598.88 +
+[Area] * 541.29 +
+[EquivDiameter] * 92.1 +
+[MajorAxisLength] * 5.95 +
+[ShapeFactor2] * -76.65 +
+[ShapeFactor1] * -414.19 +
+[MinorAxisLength] * 98.12
+
+Class CALI :
+-29.81 + 
+[Perimeter] * -81.03 +
+[ConvexArea] * 14.31 +
+[Area] * -13.41 +
+[EquivDiameter] * 22.23 +
+[MajorAxisLength] * 36.73 +
+[ShapeFactor2] * -29.53 +
+[ShapeFactor1] * 26.14 +
+[MinorAxisLength] * 79.46
+
+Class HOROZ :
+-113.87 + 
+[Perimeter] * 41.29 +
+[ShapeFactor2] * -16.18 +
+[ShapeFactor1] * 151.59 +
+[MinorAxisLength] * 109.84
+
+Class SIRA :
+42.65 + 
+[Perimeter] * -281.45 +
+[ConvexArea] * 190.48 +
+[EquivDiameter] * 26.59 +
+[MajorAxisLength] * 25.58 +
+[ShapeFactor2] * 2.41 +
+[ShapeFactor1] * -11.38 +
+[MinorAxisLength] * -72.28
+
+Class DERMASON :
+-109.8 + 
+[Perimeter] * -86.74 +
+[ConvexArea] * -23.66 +
+[EquivDiameter] * -18.67 +
+[ShapeFactor2] * -7.03 +
+[ShapeFactor1] * 8.36 +
+[MinorAxisLength] * -5.81
+
+
+LM_20:
+Class SEKER :
+127.1 + 
+[Perimeter] * -138.72 +
+[ConvexArea] * -133.76 +
+[Area] * 5.3  +
+[EquivDiameter] * 75.88 +
+[MajorAxisLength] * 70.6 +
+[ShapeFactor2] * 9.83 +
+[ShapeFactor1] * -274.82 +
+[MinorAxisLength] * -230.94
+
+Class BARBUNYA :
+151.36 + 
+[Perimeter] * 83.46 +
+[ConvexArea] * 10.7 +
+[Area] * 0.96 +
+[EquivDiameter] * 10.57 +
+[MajorAxisLength] * -46.36 +
+[ShapeFactor2] * 9.5  +
+[ShapeFactor1] * -201.53 +
+[MinorAxisLength] * -321.7
+
+Class BOMBAY :
+-45.86 + 
+[Perimeter] * -388.25 +
+[Area] * 301.15 +
+[EquivDiameter] * 92.1 +
+[MajorAxisLength] * 5.95 +
+[ShapeFactor2] * -64.15 +
+[ShapeFactor1] * -344.69 +
+[MinorAxisLength] * 66.29
+
+Class CALI :
+-3.49 + 
+[Perimeter] * -22.27 +
+[ConvexArea] * 74.44 +
+[Area] * -54.92 +
+[EquivDiameter] * -30.15 +
+[MajorAxisLength] * 12.24 +
+[ShapeFactor2] * -28.54 +
+[ShapeFactor1] * 12.12 +
+[MinorAxisLength] * 40.71
+
+Class HOROZ :
+-74.46 + 
+[Perimeter] * 19.86 +
+[ConvexArea] * -66.3 +
+[Area] * 64.4 +
+[MajorAxisLength] * 5.42 +
+[ShapeFactor2] * -39.92 +
+[ShapeFactor1] * 119.07 +
+[MinorAxisLength] * 81.74
+
+Class SIRA :
+87.83 + 
+[Perimeter] * -92.91 +
+[ConvexArea] * -11.65 +
+[EquivDiameter] * 32.27 +
+[MajorAxisLength] * 27.28 +
+[ShapeFactor2] * -12.65 +
+[ShapeFactor1] * -91.13 +
+[MinorAxisLength] * -146.82
+
+Class DERMASON :
+-161.23 + 
+[Perimeter] * -86.74 +
+[ConvexArea] * -23.66 +
+[EquivDiameter] * -18.67 +
+[ShapeFactor2] * -7.03 +
+[ShapeFactor1] * 8.36 +
+[MinorAxisLength] * -5.81
+
+
+LM_21:
+Class SEKER :
+240.91 + 
+[Perimeter] * -17.41 +
+[ConvexArea] * -914.67 +
+[Area] * 5.3  +
+[EquivDiameter] * 600.4 +
+[MajorAxisLength] * 98.98 +
+[ShapeFactor2] * 7.1  +
+[ShapeFactor1] * -415.49 +
+[MinorAxisLength] * -425.34
+
+Class BARBUNYA :
+129.85 + 
+[Perimeter] * 209.32 +
+[ConvexArea] * 372.4 +
+[Area] * -120.67 +
+[EquivDiameter] * -77.77 +
+[MajorAxisLength] * -230.34 +
+[ShapeFactor2] * 50.05 +
+[ShapeFactor1] * -128.11 +
+[MinorAxisLength] * -392.49
+
+Class BOMBAY :
+-105.86 + 
+[Perimeter] * -388.25 +
+[Area] * 301.15 +
+[EquivDiameter] * 92.1 +
+[MajorAxisLength] * 5.95 +
+[ShapeFactor2] * -64.15 +
+[ShapeFactor1] * -344.69 +
+[MinorAxisLength] * 66.29
+
+Class CALI :
+16.25 + 
+[Perimeter] * 42.81 +
+[ConvexArea] * 87.11 +
+[Area] * -236.59 +
+[EquivDiameter] * 35.74 +
+[MajorAxisLength] * -34.44 +
+[ShapeFactor2] * -29.17 +
+[ShapeFactor1] * -10.93 +
+[MinorAxisLength] * 18.42
+
+Class HOROZ :
+-120.32 + 
+[Perimeter] * 50.69 +
+[ConvexArea] * -149 +
+[MajorAxisLength] * 12.06 +
+[ShapeFactor2] * -8.79 +
+[ShapeFactor1] * 164.51 +
+[MinorAxisLength] * 201.28
+
+Class SIRA :
+96.31 + 
+[Perimeter] * -184.71 +
+[ConvexArea] * 80.55 +
+[EquivDiameter] * 41.52 +
+[MajorAxisLength] * 56.99 +
+[ShapeFactor2] * -5.72 +
+[ShapeFactor1] * -96.5 +
+[MinorAxisLength] * -178.65
+
+Class DERMASON :
+-221.23 + 
+[Perimeter] * -86.74 +
+[ConvexArea] * -23.66 +
+[EquivDiameter] * -18.67 +
+[ShapeFactor2] * -7.03 +
+[ShapeFactor1] * 8.36 +
+[MinorAxisLength] * -5.81
+
+LM_22:
+Class SEKER :
+225.62 + 
+[Perimeter] * -117.11 +
+[ConvexArea] * -244.68 +
+[Area] * 5.3  +
+[EquivDiameter] * 151.66 +
+[MajorAxisLength] * 70.6 +
+[ShapeFactor2] * 4.67 +
+[ShapeFactor1] * -404.2 +
+[MinorAxisLength] * -425.34
+
+Class BARBUNYA :
+140.97 + 
+[Perimeter] * 101.16 +
+[ConvexArea] * 308.05 +
+[Area] * 0.96 +
+[EquivDiameter] * 10.57 +
+[MajorAxisLength] * -61.92 +
+[ShapeFactor2] * 115.21 +
+[ShapeFactor1] * -251.3 +
+[MinorAxisLength] * -472.2
+
+Class BOMBAY :
+-105.86 + 
+[Perimeter] * -388.25 +
+[Area] * 301.15 +
+[EquivDiameter] * 92.1 +
+[MajorAxisLength] * 5.95 +
+[ShapeFactor2] * -64.15 +
+[ShapeFactor1] * -344.69 +
+[MinorAxisLength] * 66.29
+
+Class CALI :
+3.18 + 
+[Perimeter] * -41.08 +
+[ConvexArea] * -238.52 +
+[Area] * 86.92 +
+[EquivDiameter] * 35.74 +
+[MajorAxisLength] * 71.47 +
+[ShapeFactor2] * -29.17 +
+[ShapeFactor1] * -10.93 +
+[MinorAxisLength] * 37.49
+
+Class HOROZ :
+-201.11 + 
+[Perimeter] * -12.3 +
+[ConvexArea] * -7.4 +
+[MajorAxisLength] * 25.66 +
+[ShapeFactor2] * -32.74 +
+[ShapeFactor1] * 286.66 +
+[MinorAxisLength] * 295.99
+
+Class SIRA :
+97.9 + 
+[Perimeter] * -16.58 +
+[ConvexArea] * -1.91 +
+[Area] * -42.82 +
+[EquivDiameter] * 41.52 +
+[MajorAxisLength] * 22.01 +
+[ShapeFactor2] * -19.17 +
+[ShapeFactor1] * -110.98 +
+[MinorAxisLength] * -209.24
+
+Class DERMASON :
+-221.23 + 
+[Perimeter] * -86.74 +
+[ConvexArea] * -23.66 +
+[EquivDiameter] * -18.67 +
+[ShapeFactor2] * -7.03 +
+[ShapeFactor1] * 8.36 +
+[MinorAxisLength] * -5.81
+
+
+Time taken to build model: 10.58 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       12514               91.9403 %
+Incorrectly Classified Instances      1097                8.0597 %
+Kappa statistic                          0.9024
+Mean absolute error                      0.0335
+Root mean squared error                  0.1309
+Relative absolute error                 14.1578 %
+Root relative squared error             38.087  %
+Total Number of Instances            13611     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,941    0,009    0,949      0,941    0,945      0,935    0,994     0,984     SEKER
+                 0,893    0,007    0,934      0,893    0,913      0,905    0,993     0,965     BARBUNYA
+                 0,998    0,000    0,998      0,998    0,998      0,998    0,999     0,996     BOMBAY
+                 0,940    0,011    0,921      0,940    0,931      0,921    0,995     0,973     CALI
+                 0,948    0,007    0,957      0,948    0,952      0,944    0,995     0,984     HOROZ
+                 0,851    0,030    0,870      0,851    0,860      0,827    0,982     0,923     SIRA
+                 0,931    0,036    0,901      0,931    0,916      0,886    0,992     0,978     DERMASON
+Weighted Avg.    0,919    0,020    0,919      0,919    0,919      0,901    0,991     0,968     
+
+=== Confusion Matrix ===
+
+    a    b    c    d    e    f    g   <-- classified as
+ 1908   13    0    1    0   62   43 |    a = SEKER
+   10 1181    1   89   10   31    0 |    b = BARBUNYA
+    0    0  521    1    0    0    0 |    c = BOMBAY
+    2   52    0 1533   29   14    0 |    d = CALI
+    0    6    0   30 1827   46   19 |    e = HOROZ
+   36   11    0   10   36 2242  301 |    f = SIRA
+   55    1    0    0    7  181 3302 |    g = DERMASON
+

@@ -1,0 +1,640 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.LMT -I -1 -M 15 -W 0.0
+Relation:     Dry_Beans_Dataset-weka.filters.unsupervised.attribute.Normalize-S1.0-T0.0-weka.filters.unsupervised.attribute.Remove-V-R1-2,8,14,17
+Instances:    13611
+Attributes:   5
+              Area
+              Perimeter
+              EquivDiameter
+              ShapeFactor2
+              Class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Logistic model tree 
+------------------
+
+Perimeter <= 0.230099
+|   ShapeFactor2 <= 0.447776
+|   |   Perimeter <= 0.16392
+|   |   |   Perimeter <= 0.147054: LM_1:67/335 (754)
+|   |   |   Perimeter > 0.147054
+|   |   |   |   ShapeFactor2 <= 0.278861: LM_2:21/356 (16)
+|   |   |   |   ShapeFactor2 > 0.278861
+|   |   |   |   |   Area <= 0.089126
+|   |   |   |   |   |   Perimeter <= 0.1559
+|   |   |   |   |   |   |   Area <= 0.06682: LM_3:27/563 (6)
+|   |   |   |   |   |   |   Area > 0.06682: LM_4:67/603 (225)
+|   |   |   |   |   |   Perimeter > 0.1559
+|   |   |   |   |   |   |   ShapeFactor2 <= 0.358123: LM_5:67/603 (40)
+|   |   |   |   |   |   |   ShapeFactor2 > 0.358123: LM_6:67/603 (120)
+|   |   |   |   |   Area > 0.089126: LM_7:67/469 (101)
+|   |   Perimeter > 0.16392: LM_8:67/268 (2206)
+|   ShapeFactor2 > 0.447776
+|   |   Area <= 0.057806: LM_9:67/268 (2228)
+|   |   Area > 0.057806: LM_10:67/268 (2668)
+Perimeter > 0.230099: LM_11:67/134 (5247)
+
+Number of Leaves  : 	11
+
+Size of the Tree : 	21
+
+
+
+
+LM_1:
+Class SEKER :
+-76.27 + 
+[Area] * 289.99 +
+[Perimeter] * -704.34 +
+[EquivDiameter] * 654.96 +
+[ShapeFactor2] * -22.51
+
+Class BARBUNYA :
+-103.57 + 
+[Area] * -117.57 +
+[Perimeter] * 180.2 +
+[EquivDiameter] * 129.59 +
+[ShapeFactor2] * 4.42
+
+Class BOMBAY :
+-308.07 + 
+[Area] * 204.92 +
+[Perimeter] * -132.66 +
+[EquivDiameter] * 120.36 +
+[ShapeFactor2] * 68.22
+
+Class CALI :
+-142.09 + 
+[Area] * -31.19 +
+[Perimeter] * -6.58 +
+[EquivDiameter] * 83.08 +
+[ShapeFactor2] * 24.98
+
+Class HOROZ :
+32.64 + 
+[Area] * -87.64 +
+[Perimeter] * -16.97 +
+[EquivDiameter] * -37.19 +
+[ShapeFactor2] * -48.32
+
+Class SIRA :
+5.55 + 
+[Area] * -184.53 +
+[Perimeter] * 67.13 +
+[EquivDiameter] * -0.78 +
+[ShapeFactor2] * 1.69
+
+Class DERMASON :
+27.41 + 
+[Area] * 93.1 +
+[Perimeter] * -90.7 +
+[EquivDiameter] * -87.53 +
+[ShapeFactor2] * -15.55
+
+
+LM_2:
+Class SEKER :
+-33.56 + 
+[Area] * 268.76 +
+[Perimeter] * -744.6 +
+[EquivDiameter] * 687.72 +
+[ShapeFactor2] * -23.57
+
+Class BARBUNYA :
+-62.86 + 
+[Area] * -160.74 +
+[Perimeter] * 160.04 +
+[EquivDiameter] * 165.34 +
+[ShapeFactor2] * 4.08
+
+Class BOMBAY :
+-326.07 + 
+[Area] * 204.92 +
+[Perimeter] * -132.66 +
+[EquivDiameter] * 120.36 +
+[ShapeFactor2] * 68.22
+
+Class CALI :
+-160.09 + 
+[Area] * -31.19 +
+[Perimeter] * -6.58 +
+[EquivDiameter] * 83.08 +
+[ShapeFactor2] * 24.98
+
+Class HOROZ :
+52.31 + 
+[Area] * -27.95 +
+[Perimeter] * 2.16 +
+[EquivDiameter] * -106.53 +
+[ShapeFactor2] * -45.94
+
+Class SIRA :
+-9.32 + 
+[Area] * -157.97 +
+[Perimeter] * 24.56 +
+[EquivDiameter] * 24.92 +
+[ShapeFactor2] * -5.26
+
+Class DERMASON :
+8.89 + 
+[Area] * 73.61 +
+[Perimeter] * -65.82 +
+[EquivDiameter] * -100.49 +
+[ShapeFactor2] * -17.12
+
+
+
+
+LM_3:
+Class SEKER :
+-152.3 + 
+[Area] * 230.31 +
+[Perimeter] * -745.43 +
+[EquivDiameter] * 704.45 +
+[ShapeFactor2] * -24.98
+
+Class BARBUNYA :
+-182.61 + 
+[Area] * -210.33 +
+[Perimeter] * 158.69 +
+[EquivDiameter] * 194.83 +
+[ShapeFactor2] * 2.73
+
+Class BOMBAY :
+-503.5 + 
+[Area] * 204.92 +
+[Perimeter] * -132.66 +
+[EquivDiameter] * 120.36 +
+[ShapeFactor2] * 68.22
+
+Class CALI :
+-337.52 + 
+[Area] * -31.19 +
+[Perimeter] * -6.58 +
+[EquivDiameter] * 83.08 +
+[ShapeFactor2] * 24.98
+
+Class HOROZ :
+-1319.76 + 
+[Area] * 24647.45 +
+[Perimeter] * -1272.55 +
+[EquivDiameter] * -72.88 +
+[ShapeFactor2] * -123.36
+
+Class SIRA :
+-18.01 + 
+[Area] * -382.67 +
+[Perimeter] * 25.35 +
+[EquivDiameter] * 168.78 +
+[ShapeFactor2] * -7.17
+
+Class DERMASON :
+1941.6 + 
+[Area] * -19943.72 +
+[Perimeter] * -4041.13 +
+[EquivDiameter] * -934.92 +
+[ShapeFactor2] * 120.78
+
+LM_4:
+Class SEKER :
+-186.59 + 
+[Area] * 230.31 +
+[Perimeter] * -745.43 +
+[EquivDiameter] * 704.45 +
+[ShapeFactor2] * -24.98
+
+Class BARBUNYA :
+-216.9 + 
+[Area] * -210.33 +
+[Perimeter] * 158.69 +
+[EquivDiameter] * 194.83 +
+[ShapeFactor2] * 2.73
+
+Class BOMBAY :
+-537.79 + 
+[Area] * 204.92 +
+[Perimeter] * -132.66 +
+[EquivDiameter] * 120.36 +
+[ShapeFactor2] * 68.22
+
+Class CALI :
+-371.8 + 
+[Area] * -31.19 +
+[Perimeter] * -6.58 +
+[EquivDiameter] * 83.08 +
+[ShapeFactor2] * 24.98
+
+Class HOROZ :
+90.12 + 
+[Area] * -150.76 +
+[Perimeter] * -552.39 +
+[EquivDiameter] * 78.78 +
+[ShapeFactor2] * -25.71
+
+Class SIRA :
+7.32 + 
+[Area] * -366.53 +
+[Perimeter] * 32.98 +
+[EquivDiameter] * 133.48 +
+[ShapeFactor2] * -3.52
+
+Class DERMASON :
+29.74 + 
+[Area] * 288.17 +
+[Perimeter] * -85.47 +
+[EquivDiameter] * -211.7 +
+[ShapeFactor2] * -15.47
+
+
+LM_5:
+Class SEKER :
+-186.59 + 
+[Area] * 230.31 +
+[Perimeter] * -745.43 +
+[EquivDiameter] * 704.45 +
+[ShapeFactor2] * -24.98
+
+Class BARBUNYA :
+-216.9 + 
+[Area] * -210.33 +
+[Perimeter] * 158.69 +
+[EquivDiameter] * 194.83 +
+[ShapeFactor2] * 2.73
+
+Class BOMBAY :
+-537.79 + 
+[Area] * 204.92 +
+[Perimeter] * -132.66 +
+[EquivDiameter] * 120.36 +
+[ShapeFactor2] * 68.22
+
+Class CALI :
+-371.8 + 
+[Area] * -31.19 +
+[Perimeter] * -6.58 +
+[EquivDiameter] * 83.08 +
+[ShapeFactor2] * 24.98
+
+Class HOROZ :
+-12.52 + 
+[Area] * -335.03 +
+[Perimeter] * 329.07 +
+[EquivDiameter] * -38.43 +
+[ShapeFactor2] * -21.18
+
+Class SIRA :
+32.6 + 
+[Area] * -212.46 +
+[Perimeter] * -29.39 +
+[EquivDiameter] * -27.17 +
+[ShapeFactor2] * -12.51
+
+Class DERMASON :
+27.72 + 
+[Area] * 226.92 +
+[Perimeter] * -211.41 +
+[EquivDiameter] * -41.58 +
+[ShapeFactor2] * -13.61
+
+LM_6:
+Class SEKER :
+-186.59 + 
+[Area] * 230.31 +
+[Perimeter] * -745.43 +
+[EquivDiameter] * 704.45 +
+[ShapeFactor2] * -24.98
+
+Class BARBUNYA :
+-216.9 + 
+[Area] * -210.33 +
+[Perimeter] * 158.69 +
+[EquivDiameter] * 194.83 +
+[ShapeFactor2] * 2.73
+
+Class BOMBAY :
+-537.79 + 
+[Area] * 204.92 +
+[Perimeter] * -132.66 +
+[EquivDiameter] * 120.36 +
+[ShapeFactor2] * 68.22
+
+Class CALI :
+-371.8 + 
+[Area] * -31.19 +
+[Perimeter] * -6.58 +
+[EquivDiameter] * 83.08 +
+[ShapeFactor2] * 24.98
+
+Class HOROZ :
+-56.51 + 
+[Area] * -111.51 +
+[Perimeter] * 199.11 +
+[EquivDiameter] * -45.42 +
+[ShapeFactor2] * -52.27
+
+Class SIRA :
+21.06 + 
+[Area] * -208.32 +
+[Perimeter] * -137.52 +
+[EquivDiameter] * 161.25 +
+[ShapeFactor2] * -13.51
+
+Class DERMASON :
+24.76 + 
+[Area] * 180.47 +
+[Perimeter] * 8.53 +
+[EquivDiameter] * -244.22 +
+[ShapeFactor2] * -5.35
+
+LM_7:
+Class SEKER :
+1.54 + 
+[Area] * 236.01 +
+[Perimeter] * -735.05 +
+[EquivDiameter] * 604.65 +
+[ShapeFactor2] * -26.64
+
+Class BARBUNYA :
+70.98 + 
+[Area] * -711.3 +
+[Perimeter] * 349.92 +
+[EquivDiameter] * -402.8 +
+[ShapeFactor2] * 3.92
+
+Class BOMBAY :
+-422.93 + 
+[Area] * 204.92 +
+[Perimeter] * -132.66 +
+[EquivDiameter] * 120.36 +
+[ShapeFactor2] * 68.22
+
+Class CALI :
+-256.94 + 
+[Area] * -31.19 +
+[Perimeter] * -6.58 +
+[EquivDiameter] * 83.08 +
+[ShapeFactor2] * 24.98
+
+Class HOROZ :
+58.34 + 
+[Area] * -392.41 +
+[Perimeter] * -305.3 +
+[EquivDiameter] * -60.76 +
+[ShapeFactor2] * 75.03
+
+Class SIRA :
+-29.61 + 
+[Area] * -187.23 +
+[Perimeter] * 245.64 +
+[EquivDiameter] * 51.64 +
+[ShapeFactor2] * -2.9
+
+Class DERMASON :
+37.54 + 
+[Area] * 120.61 +
+[Perimeter] * -160.87 +
+[EquivDiameter] * -45.73 +
+[ShapeFactor2] * -36.68
+
+LM_8:
+Class SEKER :
+-15.75 + 
+[Area] * 89.3 +
+[Perimeter] * -152.81 +
+[EquivDiameter] * 109.65 +
+[ShapeFactor2] * 27.04
+
+Class BARBUNYA :
+-36.78 + 
+[Area] * -232.91 +
+[Perimeter] * 210.67 +
+[EquivDiameter] * 17.76 +
+[ShapeFactor2] * 36.04
+
+Class BOMBAY :
+-250.64 + 
+[Area] * 204.92 +
+[Perimeter] * -132.66 +
+[EquivDiameter] * 120.36 +
+[ShapeFactor2] * 68.22
+
+Class CALI :
+-25.16 + 
+[Area] * -31.08 +
+[Perimeter] * -30.01 +
+[EquivDiameter] * 97.48 +
+[ShapeFactor2] * 24.54
+
+Class HOROZ :
+33.56 + 
+[Area] * -82.91 +
+[Perimeter] * 90.2 +
+[EquivDiameter] * -133.67 +
+[ShapeFactor2] * -64.63
+
+Class SIRA :
+8.99 + 
+[Area] * -40.52 +
+[Perimeter] * 1.21 +
+[EquivDiameter] * -12.49 +
+[ShapeFactor2] * -4.79
+
+Class DERMASON :
+46.85 + 
+[Area] * -24.41 +
+[Perimeter] * -81.93 +
+[EquivDiameter] * -148.08 +
+[ShapeFactor2] * -18.42
+
+
+LM_9:
+Class SEKER :
+-30.29 + 
+[Area] * -22.86 +
+[Perimeter] * -31.94 +
+[EquivDiameter] * 112.43 +
+[ShapeFactor2] * 42.6
+
+Class BARBUNYA :
+-90.98 + 
+[Area] * -74.01 +
+[Perimeter] * 94.86 +
+[EquivDiameter] * 50.67 +
+[ShapeFactor2] * 23.4
+
+Class BOMBAY :
+-250.64 + 
+[Area] * 204.92 +
+[Perimeter] * -132.66 +
+[EquivDiameter] * 120.36 +
+[ShapeFactor2] * 68.22
+
+Class CALI :
+-92.7 + 
+[Area] * -76.49 +
+[Perimeter] * 14.69 +
+[EquivDiameter] * 105.82 +
+[ShapeFactor2] * 32.85
+
+Class HOROZ :
+-78.31 + 
+[Area] * -16.9 +
+[Perimeter] * 26.14 +
+[EquivDiameter] * -123.46 +
+[ShapeFactor2] * -60.88
+
+Class SIRA :
+-4.47 + 
+[Area] * 138.65 +
+[Perimeter] * -13.28 +
+[EquivDiameter] * 4.13 +
+[ShapeFactor2] * 0.76
+
+Class DERMASON :
+30.31 + 
+[Area] * -33.41 +
+[Perimeter] * -58.92 +
+[EquivDiameter] * -99.78 +
+[ShapeFactor2] * -9.89
+
+LM_10:
+Class SEKER :
+-31.21 + 
+[Area] * -33.23 +
+[Perimeter] * -32.75 +
+[EquivDiameter] * 95.25 +
+[ShapeFactor2] * 48.45
+
+Class BARBUNYA :
+-35.03 + 
+[Area] * -93.14 +
+[Perimeter] * 99.06 +
+[EquivDiameter] * 57.49 +
+[ShapeFactor2] * 26.2
+
+Class BOMBAY :
+-250.64 + 
+[Area] * 204.92 +
+[Perimeter] * -132.66 +
+[EquivDiameter] * 120.36 +
+[ShapeFactor2] * 68.22
+
+Class CALI :
+-37.74 + 
+[Area] * -111.36 +
+[Perimeter] * 18.28 +
+[EquivDiameter] * 124.85 +
+[ShapeFactor2] * 36.44
+
+Class HOROZ :
+-78.31 + 
+[Area] * -16.9 +
+[Perimeter] * 26.14 +
+[EquivDiameter] * -123.46 +
+[ShapeFactor2] * -60.88
+
+Class SIRA :
+10.88 + 
+[Area] * -34.8 +
+[Perimeter] * 5    +
+[EquivDiameter] * -21.53 +
+[ShapeFactor2] * -9.08
+
+Class DERMASON :
+22.72 + 
+[Area] * 1.25 +
+[Perimeter] * -79.37 +
+[EquivDiameter] * -39.48 +
+[ShapeFactor2] * -8.29
+
+LM_11:
+Class SEKER :
+-18.53 + 
+[Area] * 4.02 +
+[Perimeter] * 7.01 +
+[EquivDiameter] * -17.25 +
+[ShapeFactor2] * 52.59
+
+Class BARBUNYA :
+-32.29 + 
+[Area] * -22.4 +
+[Perimeter] * 89.88 +
+[EquivDiameter] * -5.11 +
+[ShapeFactor2] * 39.29
+
+Class BOMBAY :
+-100.84 + 
+[Area] * 400.85 +
+[Perimeter] * -256.42 +
+[EquivDiameter] * 120.36 +
+[ShapeFactor2] * 119.55
+
+Class CALI :
+-4.59 + 
+[Area] * 11.99 +
+[Perimeter] * -67.06 +
+[EquivDiameter] * 93.68 +
+[ShapeFactor2] * -25.66
+
+Class HOROZ :
+31.63 + 
+[Area] * -16.52 +
+[Perimeter] * 32.6 +
+[EquivDiameter] * -81.52 +
+[ShapeFactor2] * -83.35
+
+Class SIRA :
+20.67 + 
+[Area] * -36.77 +
+[Perimeter] * -80.88 +
+[EquivDiameter] * 33.62 +
+[ShapeFactor2] * -18.3
+
+Class DERMASON :
+245.38 + 
+[Area] * -92.31 +
+[Perimeter] * -19.53 +
+[EquivDiameter] * -2009.45 +
+[ShapeFactor2] * 25.88
+
+
+Time taken to build model: 8.26 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       12444               91.4261 %
+Incorrectly Classified Instances      1167                8.5739 %
+Kappa statistic                          0.8962
+Mean absolute error                      0.0357
+Root mean squared error                  0.134 
+Relative absolute error                 15.1054 %
+Root relative squared error             38.9766 %
+Total Number of Instances            13611     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,934    0,010    0,943      0,934    0,939      0,928    0,996     0,983     SEKER
+                 0,877    0,009    0,915      0,877    0,896      0,885    0,992     0,960     BARBUNYA
+                 0,998    0,000    0,998      0,998    0,998      0,998    1,000     0,998     BOMBAY
+                 0,931    0,012    0,912      0,931    0,922      0,911    0,995     0,969     CALI
+                 0,943    0,007    0,956      0,943    0,950      0,941    0,996     0,985     HOROZ
+                 0,851    0,033    0,860      0,851    0,855      0,821    0,983     0,929     SIRA
+                 0,928    0,035    0,904      0,928    0,916      0,886    0,992     0,978     DERMASON
+Weighted Avg.    0,914    0,020    0,914      0,914    0,914      0,895    0,992     0,968     
+
+=== Confusion Matrix ===
+
+    a    b    c    d    e    f    g   <-- classified as
+ 1894   19    0    0    0   75   39 |    a = SEKER
+   11 1160    1  113    8   29    0 |    b = BARBUNYA
+    0    1  521    0    0    0    0 |    c = BOMBAY
+    2   62    0 1518   31   17    0 |    d = CALI
+    0   12    0   25 1818   54   19 |    e = HOROZ
+   44   13    0    8   38 2242  291 |    f = SIRA
+   57    1    0    0    6  191 3291 |    g = DERMASON
+

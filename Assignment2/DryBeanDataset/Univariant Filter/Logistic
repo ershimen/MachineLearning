@@ -1,0 +1,86 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.Logistic -R 1.0E-8 -M -1 -num-decimal-places 4
+Relation:     Dry_Beans_Dataset-weka.filters.unsupervised.attribute.Normalize-S1.0-T0.0-weka.filters.unsupervised.attribute.Remove-V-R2,7,1,8,3,14,13,4,17
+Instances:    13611
+Attributes:   9
+              Perimeter
+              ConvexArea
+              Area
+              EquivDiameter
+              MajorAxisLength
+              ShapeFactor2
+              ShapeFactor1
+              MinorAxisLength
+              Class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Logistic Regression with ridge parameter of 1.0E-8
+Coefficients...
+                                    Class
+Variable                            SEKER                BARBUNYA                  BOMBAY                    CALI                   HOROZ                    SIRA
+=================================================================================================================================================================
+Perimeter                         107.631                131.3352               -417.3754                 -32.581                 91.0051                 59.0659
+ConvexArea                     -1003.9086               1033.1731                826.7755                195.2583               -567.5377               -254.3933
+Area                            2158.7549                -70.8471                -71.1518               1656.8304               2136.2307               1845.1157
+EquivDiameter                   -303.4781                 68.6581                 30.0232              -2786.8298              -2897.9609               -2408.161
+MajorAxisLength                 -269.1131               -348.3932                387.3395                 732.067                891.5146                551.6767
+ShapeFactor2                      32.5557                  20.917                178.4939               -132.8974                -81.5068               -103.1049
+ShapeFactor1                    -281.2067                -77.0095                334.8374               -393.1638               -125.4934                -239.637
+MinorAxisLength                 -570.9005                -426.761                452.1888                 482.601                809.7212                456.0702
+Intercept                        216.3249                  53.896               -526.8154                 334.456                109.0528                 235.156
+
+
+Odds Ratios...
+                                    Class
+Variable                            SEKER                BARBUNYA                  BOMBAY                    CALI                   HOROZ                    SIRA
+=================================================================================================================================================================
+Perimeter            5.540491391488108E46   1.0918542909004563E57                       0                       0   3.3345000680391004E39    4.487459794635013E25
+ConvexArea                              0                Infinity                Infinity    6.303845179902572E84                       0                       0
+Area                             Infinity                       0                       0                Infinity                Infinity                Infinity
+EquivDiameter                           0    6.574222709503135E29    1.093727147161902E13                       0                       0                       0
+MajorAxisLength                         0                       0  1.6573452831108454E168                Infinity                Infinity  3.8917262571143475E239
+ShapeFactor2        1.3764719512326248E14         1213737940.2431    3.302934207885466E77                       0                       0                       0
+ShapeFactor1                            0                       0   2.618382806161988E145                       0                       0                       0
+MinorAxisLength                         0                       0  2.4159484761637882E196    3.89898800906964E209                Infinity  1.1716027671407241E198
+
+
+Time taken to build model: 2.39 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       12542               92.1461 %
+Incorrectly Classified Instances      1069                7.8539 %
+Kappa statistic                          0.905 
+Mean absolute error                      0.0327
+Root mean squared error                  0.1272
+Relative absolute error                 13.8486 %
+Root relative squared error             37.0107 %
+Total Number of Instances            13611     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,949    0,009    0,946      0,949    0,948      0,939    0,997     0,987     SEKER
+                 0,908    0,006    0,943      0,908    0,926      0,918    0,996     0,977     BARBUNYA
+                 0,998    0,000    0,998      0,998    0,998      0,998    1,000     0,998     BOMBAY
+                 0,943    0,011    0,924      0,943    0,933      0,924    0,997     0,983     CALI
+                 0,948    0,007    0,959      0,948    0,953      0,946    0,997     0,987     HOROZ
+                 0,874    0,036    0,853      0,874    0,863      0,830    0,985     0,940     SIRA
+                 0,910    0,028    0,919      0,910    0,915      0,885    0,992     0,978     DERMASON
+Weighted Avg.    0,921    0,019    0,922      0,921    0,922      0,903    0,993     0,975     
+
+=== Confusion Matrix ===
+
+    a    b    c    d    e    f    g   <-- classified as
+ 1924   13    0    2    1   58   29 |    a = SEKER
+    9 1201    1   77    4   30    0 |    b = BARBUNYA
+    0    0  521    1    0    0    0 |    c = BOMBAY
+    4   49    0 1537   26   14    0 |    d = CALI
+    0    3    0   37 1827   43   18 |    e = HOROZ
+   42    5    0   10   37 2304  238 |    f = SIRA
+   54    2    0    0   10  252 3228 |    g = DERMASON
+

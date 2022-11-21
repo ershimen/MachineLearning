@@ -1,0 +1,72 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.bayes.BayesNet -D -Q weka.classifiers.bayes.net.search.local.TAN -- -S BAYES -E weka.classifiers.bayes.net.estimate.SimpleEstimator -- -A 0.5
+Relation:     Dry_Beans_Dataset-weka.filters.unsupervised.attribute.Normalize-S1.0-T0.0-weka.filters.unsupervised.attribute.Remove-V-R1-2,7,9,12,16-17
+Instances:    13611
+Attributes:   7
+              Area
+              Perimeter
+              ConvexArea
+              Extent
+              Compactness
+              ShapeFactor4
+              Class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Bayes Network Classifier
+not using ADTree
+#attributes=7 #classindex=6
+Network structure (nodes followed by parents)
+Area(17): Class 
+Perimeter(20): Class ConvexArea 
+ConvexArea(17): Class Area 
+Extent(11): Class Compactness 
+Compactness(15): Class Perimeter 
+ShapeFactor4(11): Class Compactness 
+Class(7): 
+LogScore Bayes: -139369.12309787108
+LogScore BDeu: -202886.1057741193
+LogScore MDL: -188269.36561080875
+LogScore ENTROPY: -148562.38568051142
+LogScore AIC: -156905.38568051142
+
+
+Time taken to build model: 0.04 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       12308               90.4269 %
+Incorrectly Classified Instances      1303                9.5731 %
+Kappa statistic                          0.8841
+Mean absolute error                      0.0365
+Root mean squared error                  0.1413
+Relative absolute error                 15.4246 %
+Root relative squared error             41.109  %
+Total Number of Instances            13611     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,934    0,009    0,947      0,934    0,941      0,930    0,994     0,982     SEKER
+                 0,836    0,012    0,880      0,836    0,857      0,843    0,989     0,926     BARBUNYA
+                 0,996    0,000    0,998      0,996    0,997      0,997    1,000     0,998     BOMBAY
+                 0,890    0,015    0,892      0,890    0,891      0,876    0,992     0,954     CALI
+                 0,945    0,011    0,933      0,945    0,939      0,928    0,994     0,981     HOROZ
+                 0,838    0,031    0,866      0,838    0,852      0,818    0,982     0,926     SIRA
+                 0,933    0,039    0,893      0,933    0,912      0,881    0,992     0,977     DERMASON
+Weighted Avg.    0,904    0,022    0,904      0,904    0,904      0,883    0,991     0,962     
+
+=== Confusion Matrix ===
+
+    a    b    c    d    e    f    g   <-- classified as
+ 1894   11    0    1    4   63   54 |    a = SEKER
+   10 1105    0  140   17   50    0 |    b = BARBUNYA
+    0    2  520    0    0    0    0 |    c = BOMBAY
+    4  122    1 1450   40   13    0 |    d = CALI
+    0    4    0   30 1821   52   21 |    e = HOROZ
+   30   11    0    5   58 2210  322 |    f = SIRA
+   62    1    0    0   12  163 3308 |    g = DERMASON
+

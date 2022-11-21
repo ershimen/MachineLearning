@@ -1,0 +1,126 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.bayes.NaiveBayes 
+Relation:     Dry_Beans_Dataset-weka.filters.unsupervised.attribute.Normalize-S1.0-T0.0-weka.filters.unsupervised.attribute.Remove-V-R2-3,5-9,11,14,16-17
+Instances:    13611
+Attributes:   11
+              Perimeter
+              MajorAxisLength
+              AspectRation
+              Eccentricity
+              ConvexArea
+              EquivDiameter
+              Extent
+              roundness
+              ShapeFactor2
+              ShapeFactor4
+              Class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Naive Bayes Classifier
+
+                     Class
+Attribute            SEKER BARBUNYA   BOMBAY     CALI    HOROZ     SIRA DERMASON
+                    (0.15)    (0.1)   (0.04)   (0.12)   (0.14)   (0.19)   (0.26)
+=================================================================================
+Perimeter
+  mean               0.1389   0.3569   0.7263   0.3648   0.2705    0.186   0.0962
+  std. dev.          0.0327   0.0613   0.0793   0.0463   0.0479   0.0304   0.0345
+  weight sum           2027     1322      522     1630     1928     2636     3546
+  precision          0.0001   0.0001   0.0001   0.0001   0.0001   0.0001   0.0001
+
+MajorAxisLength
+  mean               0.1219   0.3358   0.7376   0.4068   0.3403   0.2085   0.1134
+  std. dev.           0.036   0.0581   0.0957   0.0531   0.0544   0.0374   0.0372
+  weight sum           2027     1322      522     1630     1928     2636     3546
+  precision          0.0001   0.0001   0.0001   0.0001   0.0001   0.0001   0.0001
+
+AspectRation
+  mean               0.1568   0.3697   0.3989   0.5043   0.7124   0.3879   0.3313
+  std. dev.          0.0585   0.0897   0.0845   0.0651   0.0963   0.0687   0.0686
+  weight sum           2027     1322      522     1630     1928     2636     3546
+  precision          0.0001   0.0001   0.0001   0.0001   0.0001   0.0001   0.0001
+
+Eccentricity
+  mean               0.5283   0.7736   0.7965   0.8605   0.9365   0.7918   0.7476
+  std. dev.          0.1029   0.0723   0.0594    0.033   0.0304   0.0473   0.0581
+  weight sum           2027     1322      522     1630     1928     2636     3546
+  precision          0.0001   0.0001   0.0001   0.0001   0.0001   0.0001   0.0001
+
+ConvexArea
+  mean               0.0807   0.2075   0.6395   0.2309   0.1392   0.1014   0.0487
+  std. dev.          0.0199    0.043   0.0981   0.0392   0.0307   0.0189   0.0194
+  weight sum           2027     1322      522     1630     1928     2636     3546
+  precision          0.0001   0.0001   0.0001   0.0001   0.0001   0.0001   0.0001
+
+EquivDiameter
+  mean               0.1561   0.3334   0.7539   0.3633   0.2438   0.1889   0.0991
+  std. dev.          0.0326   0.0539   0.0768   0.0469   0.0443   0.0297   0.0362
+  weight sum           2027     1322      522     1630     1928     2636     3546
+  precision          0.0001   0.0001   0.0001   0.0001   0.0001   0.0001   0.0001
+
+Extent
+  mean                0.696   0.6239   0.7117    0.655    0.486   0.6245   0.6357
+  std. dev.          0.0605     0.13   0.1247    0.135   0.2421   0.1429   0.1206
+  weight sum           2027     1322      522     1630     1928     2636     3546
+  precision          0.0001   0.0001   0.0001   0.0001   0.0001   0.0001   0.0001
+
+roundness
+  mean               0.9078   0.6198    0.748   0.7111   0.6083   0.7884   0.8352
+  std. dev.          0.0642   0.0968   0.0531   0.0469   0.0635   0.0473   0.0587
+  weight sum           2027     1322      522     1630     1928     2636     3546
+  precision          0.0001   0.0001   0.0001   0.0001   0.0001   0.0001   0.0001
+
+ShapeFactor2
+  mean               0.6374   0.2676   0.0903   0.1752   0.1559   0.3607   0.5149
+  std. dev.          0.1051   0.0688   0.0434   0.0417   0.0482   0.0659   0.0915
+  weight sum           2027     1322      522     1630     1928     2636     3546
+  precision          0.0001   0.0001   0.0001   0.0001   0.0001   0.0001   0.0001
+
+ShapeFactor4
+  mean               0.9741   0.9233   0.8484   0.8242     0.85   0.9165   0.9458
+  std. dev.          0.0287   0.0509   0.0855   0.0856   0.1232   0.0509   0.0364
+  weight sum           2027     1322      522     1630     1928     2636     3546
+  precision          0.0001   0.0001   0.0001   0.0001   0.0001   0.0001   0.0001
+
+
+
+Time taken to build model: 0.01 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       12172               89.4277 %
+Incorrectly Classified Instances      1439               10.5723 %
+Kappa statistic                          0.8723
+Mean absolute error                      0.0314
+Root mean squared error                  0.1613
+Relative absolute error                 13.2967 %
+Root relative squared error             46.932  %
+Total Number of Instances            13611     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,934    0,013    0,929      0,934    0,931      0,919    0,989     0,970     SEKER
+                 0,822    0,015    0,856      0,822    0,839      0,822    0,987     0,914     BARBUNYA
+                 0,998    0,000    0,990      0,998    0,994      0,994    1,000     1,000     BOMBAY
+                 0,894    0,016    0,883      0,894    0,888      0,873    0,992     0,958     CALI
+                 0,949    0,009    0,943      0,949    0,946      0,937    0,994     0,978     HOROZ
+                 0,865    0,050    0,807      0,865    0,835      0,795    0,976     0,908     SIRA
+                 0,876    0,026    0,923      0,876    0,899      0,865    0,989     0,970     DERMASON
+Weighted Avg.    0,894    0,023    0,896      0,894    0,895      0,871    0,988     0,954     
+
+=== Confusion Matrix ===
+
+    a    b    c    d    e    f    g   <-- classified as
+ 1893   14    0    0    1   91   28 |    a = SEKER
+    7 1087    1  164    8   55    0 |    b = BARBUNYA
+    0    1  521    0    0    0    0 |    c = BOMBAY
+    1  128    4 1457   32    8    0 |    d = CALI
+    0    5    0   27 1829   57   10 |    e = HOROZ
+   34   32    0    2   67 2280  221 |    f = SIRA
+  103    3    0    0    2  333 3105 |    g = DERMASON
+

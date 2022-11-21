@@ -1,0 +1,317 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.LMT -I -1 -M 15 -W 0.0
+Relation:     Dry_Beans_Dataset-weka.filters.unsupervised.attribute.Normalize-S1.0-T0.0-weka.filters.unsupervised.attribute.Remove-V-R2-3,5-9,11,14,16-17
+Instances:    13611
+Attributes:   11
+              Perimeter
+              MajorAxisLength
+              AspectRation
+              Eccentricity
+              ConvexArea
+              EquivDiameter
+              Extent
+              roundness
+              ShapeFactor2
+              ShapeFactor4
+              Class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Logistic model tree 
+------------------
+
+MajorAxisLength <= 0.261576
+|   Eccentricity <= 0.65115: LM_1:51/153 (2091)
+|   Eccentricity > 0.65115: LM_2:51/153 (6207)
+MajorAxisLength > 0.261576: LM_3:51/102 (5313)
+
+Number of Leaves  : 	3
+
+Size of the Tree : 	5
+
+
+LM_1:
+Class SEKER :
+-37.55 + 
+[Perimeter] * 12.19 +
+[AspectRation] * -20.6 +
+[Eccentricity] * -12.41 +
+[ConvexArea] * -9.78 +
+[Extent] * -0.57 +
+[roundness] * -4.07 +
+[ShapeFactor2] * 13.53 +
+[ShapeFactor4] * 49.84
+
+Class BARBUNYA :
+-9.29 + 
+[Perimeter] * 24.64 +
+[MajorAxisLength] * 10.94 +
+[AspectRation] * 5.2  +
+[Eccentricity] * -38.85 +
+[ConvexArea] * 10.09 +
+[EquivDiameter] * 15.59 +
+[Extent] * 3.04 +
+[roundness] * -12.13 +
+[ShapeFactor2] * -5.58 +
+[ShapeFactor4] * 31.59
+
+Class BOMBAY :
+-226.75 + 
+[AspectRation] * -45.81 +
+[ConvexArea] * 24.58 +
+[EquivDiameter] * 202.8 +
+[roundness] * 63.81
+
+Class CALI :
+-110.93 + 
+[Perimeter] * 8.09 +
+[MajorAxisLength] * 14.46 +
+[AspectRation] * -40.08 +
+[Eccentricity] * 4.28 +
+[ConvexArea] * -0.8 +
+[EquivDiameter] * 27.87 +
+[Extent] * -38.1 +
+[roundness] * -7.9 +
+[ShapeFactor2] * 3.11 +
+[ShapeFactor4] * 137.89
+
+Class HOROZ :
+-47.26 + 
+[Perimeter] * -27.69 +
+[MajorAxisLength] * 0.49 +
+[AspectRation] * 43.67 +
+[ConvexArea] * -26.4 +
+[EquivDiameter] * -15.05 +
+[Extent] * -1.51 +
+[roundness] * 0.17 +
+[ShapeFactor2] * 12.8 +
+[ShapeFactor4] * -12.67
+
+Class SIRA :
+4.52 + 
+[Perimeter] * -6.8 +
+[AspectRation] * -2.96 +
+[Eccentricity] * 20.02 +
+[ConvexArea] * -41.56 +
+[Extent] * -4.37 +
+[roundness] * 4.86 +
+[ShapeFactor2] * 5.44 +
+[ShapeFactor4] * -17.91
+
+Class DERMASON :
+5.19 + 
+[Perimeter] * -52.83 +
+[MajorAxisLength] * -1.47 +
+[AspectRation] * 19.03 +
+[Eccentricity] * 5.54 +
+[ConvexArea] * -9.92 +
+[EquivDiameter] * -39.83 +
+[Extent] * -3.17 +
+[roundness] * 0.04 +
+[ShapeFactor2] * 10.67 +
+[ShapeFactor4] * -2.03
+
+LM_2:
+Class SEKER :
+-31.87 + 
+[Perimeter] * 11.21 +
+[MajorAxisLength] * 4.96 +
+[AspectRation] * 6.56 +
+[Eccentricity] * -20.78 +
+[ConvexArea] * 1.41 +
+[Extent] * -1.34 +
+[roundness] * 0.56 +
+[ShapeFactor2] * 22.48 +
+[ShapeFactor4] * 32.58
+
+Class BARBUNYA :
+-2 + 
+[Perimeter] * 30.35 +
+[MajorAxisLength] * 0.77 +
+[AspectRation] * -3.99 +
+[Eccentricity] * -19.12 +
+[ConvexArea] * 9.55 +
+[EquivDiameter] * 6.58 +
+[Extent] * 2.29 +
+[roundness] * -21.66 +
+[ShapeFactor2] * -9.13 +
+[ShapeFactor4] * 25.85
+
+Class BOMBAY :
+-226.75 + 
+[AspectRation] * -45.81 +
+[ConvexArea] * 24.58 +
+[EquivDiameter] * 202.8 +
+[roundness] * 63.81
+
+Class CALI :
+-3.17 + 
+[MajorAxisLength] * -0.33 +
+[AspectRation] * -18.88 +
+[Eccentricity] * -1.86 +
+[ConvexArea] * -3.88 +
+[EquivDiameter] * 25.11 +
+[Extent] * 6.52 +
+[roundness] * -6.42 +
+[ShapeFactor2] * -6.5 +
+[ShapeFactor4] * 3.91
+
+Class HOROZ :
+-4.63 + 
+[Perimeter] * -21.3 +
+[MajorAxisLength] * 0.49 +
+[AspectRation] * 44.16 +
+[Eccentricity] * -0.57 +
+[ConvexArea] * -36.84 +
+[EquivDiameter] * -15.05 +
+[Extent] * -1.61 +
+[roundness] * 1.06 +
+[ShapeFactor2] * 14.26 +
+[ShapeFactor4] * -12.67
+
+Class SIRA :
+-2.99 + 
+[Perimeter] * 2.5  +
+[AspectRation] * -7.13 +
+[Eccentricity] * 19.12 +
+[ConvexArea] * -57.67 +
+[Extent] * -0.03 +
+[roundness] * -0.99 +
+[ShapeFactor2] * -0.36 +
+[ShapeFactor4] * -2.63
+
+Class DERMASON :
+7.41 + 
+[Perimeter] * -52.83 +
+[MajorAxisLength] * -1.47 +
+[AspectRation] * 6.06 +
+[Eccentricity] * 5.09 +
+[ConvexArea] * -55.19 +
+[EquivDiameter] * -39.83 +
+[Extent] * -2.49 +
+[roundness] * 1.22 +
+[ShapeFactor2] * -0.08 +
+[ShapeFactor4] * 7.58
+
+LM_3:
+Class SEKER :
+-63.78 + 
+[Perimeter] * -56 +
+[AspectRation] * -11.87 +
+[Eccentricity] * 7.03 +
+[ConvexArea] * -4.57 +
+[Extent] * -1.34 +
+[roundness] * 42.28 +
+[ShapeFactor2] * -5.32 +
+[ShapeFactor4] * 45.69
+
+Class BARBUNYA :
+1.28 + 
+[Perimeter] * 32.28 +
+[MajorAxisLength] * -2.89 +
+[AspectRation] * -15.22 +
+[Eccentricity] * -10.56 +
+[ConvexArea] * 7.21 +
+[EquivDiameter] * 6.58 +
+[Extent] * 0.79 +
+[roundness] * -21.91 +
+[ShapeFactor2] * 0.61 +
+[ShapeFactor4] * 18
+
+Class BOMBAY :
+-280.73 + 
+[AspectRation] * -95.94 +
+[ConvexArea] * 24.58 +
+[EquivDiameter] * 407.06 +
+[Extent] * -23.38 +
+[roundness] * 149.92
+
+Class CALI :
+-6.39 + 
+[Perimeter] * -0.52 +
+[MajorAxisLength] * 14.31 +
+[AspectRation] * -0.92 +
+[Eccentricity] * -3.74 +
+[ConvexArea] * -1.67 +
+[EquivDiameter] * 24.62 +
+[Extent] * 2.39 +
+[roundness] * 12.68 +
+[ShapeFactor2] * -24.96 +
+[ShapeFactor4] * -7.88
+
+Class HOROZ :
+10.79 + 
+[Perimeter] * 5.12 +
+[MajorAxisLength] * 0.47 +
+[AspectRation] * 53.21 +
+[Eccentricity] * -27.19 +
+[ConvexArea] * -15.03 +
+[EquivDiameter] * -13.51 +
+[Extent] * 0.25 +
+[roundness] * -6.39 +
+[ShapeFactor2] * 11.98 +
+[ShapeFactor4] * -11.95
+
+Class SIRA :
+-26.79 + 
+[Perimeter] * -16.05 +
+[MajorAxisLength] * 3.67 +
+[AspectRation] * -4.09 +
+[Eccentricity] * 34.61 +
+[ConvexArea] * -57.67 +
+[Extent] * -1.01 +
+[roundness] * 17.76 +
+[ShapeFactor2] * -0.36 +
+[ShapeFactor4] * -2.92
+
+Class DERMASON :
+-39.72 + 
+[Perimeter] * -54.13 +
+[AspectRation] * 0.28 +
+[Eccentricity] * 12.46 +
+[ConvexArea] * -53.07 +
+[EquivDiameter] * -39.83 +
+[Extent] * -2.6 +
+[roundness] * 0.69 +
+[ShapeFactor4] * 7.61
+
+
+Time taken to build model: 10.74 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       12578               92.4106 %
+Incorrectly Classified Instances      1033                7.5894 %
+Kappa statistic                          0.9082
+Mean absolute error                      0.0319
+Root mean squared error                  0.1269
+Relative absolute error                 13.4988 %
+Root relative squared error             36.9039 %
+Total Number of Instances            13611     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,946    0,008    0,954      0,946    0,950      0,942    0,995     0,986     SEKER
+                 0,907    0,006    0,940      0,907    0,923      0,915    0,995     0,975     BARBUNYA
+                 0,996    0,000    0,996      0,996    0,996      0,996    1,000     1,000     BOMBAY
+                 0,940    0,009    0,936      0,940    0,938      0,930    0,997     0,982     CALI
+                 0,951    0,007    0,955      0,951    0,953      0,945    0,997     0,986     HOROZ
+                 0,877    0,035    0,859      0,877    0,868      0,836    0,984     0,939     SIRA
+                 0,920    0,029    0,918      0,920    0,919      0,890    0,992     0,972     DERMASON
+Weighted Avg.    0,924    0,018    0,924      0,924    0,924      0,906    0,993     0,972     
+
+=== Confusion Matrix ===
+
+    a    b    c    d    e    f    g   <-- classified as
+ 1918   13    0    1    1   61   33 |    a = SEKER
+   13 1199    1   71    7   31    0 |    b = BARBUNYA
+    0    1  520    1    0    0    0 |    c = BOMBAY
+    3   48    1 1533   31   14    0 |    d = CALI
+    0    6    0   27 1833   45   17 |    e = HOROZ
+   31    8    0    4   38 2312  243 |    f = SIRA
+   45    0    0    0   10  228 3263 |    g = DERMASON
+

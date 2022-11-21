@@ -1,0 +1,74 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.Logistic -R 1.0E-8 -M -1 -num-decimal-places 4
+Relation:     Dry_Beans_Dataset-weka.filters.unsupervised.attribute.Normalize-S1.0-T0.0-weka.filters.unsupervised.attribute.Remove-V-R1-2,8,14,17
+Instances:    13611
+Attributes:   5
+              Area
+              Perimeter
+              EquivDiameter
+              ShapeFactor2
+              Class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Logistic Regression with ridge parameter of 1.0E-8
+Coefficients...
+                                  Class
+Variable                          SEKER                BARBUNYA                  BOMBAY                    CALI                   HOROZ                    SIRA
+===============================================================================================================================================================
+Area                          -238.7104                 13.5105                469.7782                 28.3607                515.8962               -101.1132
+Perimeter                       72.9506                167.5267               -468.1818                 13.8656                 121.456                 65.0074
+EquivDiameter                  264.7468                 43.1001                739.0637                161.1782               -414.8429                 93.7464
+ShapeFactor2                    58.4676                 44.7839                223.3373                -12.2664                -59.5821                  1.7876
+Intercept                      -61.6801                -59.8916               -315.4627                -37.3664                  20.186                -16.4147
+
+
+Odds Ratios...
+                                  Class
+Variable                          SEKER                BARBUNYA                  BOMBAY                    CALI                   HOROZ                    SIRA
+===============================================================================================================================================================
+Area                                  0             737136.8078  1.0521031558876745E204    2.074317147885279E12   1.124317751154845E224                       0
+Perimeter          4.809025609271606E31    5.700859982672821E72                       0            1051367.4071    5.593545199244729E52   1.7075278799221104E28
+EquivDiameter     9.507358627253606E114   5.2255474789485752E18                Infinity     9.97241203948654E69                       0    5.170889505036652E40
+ShapeFactor2      2.4670157946440645E25    2.814628657381675E19    9.866627671095693E96                       0                       0                  5.9749
+
+
+Time taken to build model: 0.97 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       12403               91.1248 %
+Incorrectly Classified Instances      1208                8.8752 %
+Kappa statistic                          0.8927
+Mean absolute error                      0.0379
+Root mean squared error                  0.1366
+Relative absolute error                 16.03   %
+Root relative squared error             39.7269 %
+Total Number of Instances            13611     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,938    0,011    0,940      0,938    0,939      0,928    0,996     0,982     SEKER
+                 0,861    0,007    0,928      0,861    0,893      0,883    0,992     0,954     BARBUNYA
+                 1,000    0,000    0,998      1,000    0,999      0,999    1,000     1,000     BOMBAY
+                 0,937    0,013    0,905      0,937    0,921      0,910    0,995     0,967     CALI
+                 0,946    0,009    0,948      0,946    0,947      0,938    0,996     0,984     HOROZ
+                 0,863    0,040    0,839      0,863    0,851      0,814    0,982     0,927     SIRA
+                 0,906    0,030    0,915      0,906    0,911      0,879    0,991     0,977     DERMASON
+Weighted Avg.    0,911    0,021    0,912      0,911    0,911      0,891    0,992     0,966     
+
+=== Confusion Matrix ===
+
+    a    b    c    d    e    f    g   <-- classified as
+ 1902   18    0    0    0   72   35 |    a = SEKER
+   13 1138    1  119    8   43    0 |    b = BARBUNYA
+    0    0  522    0    0    0    0 |    c = BOMBAY
+    3   53    0 1528   33   13    0 |    d = CALI
+    0   11    0   32 1824   44   17 |    e = HOROZ
+   50    5    0   10   49 2275  247 |    f = SIRA
+   56    1    0    0   10  265 3214 |    g = DERMASON
+

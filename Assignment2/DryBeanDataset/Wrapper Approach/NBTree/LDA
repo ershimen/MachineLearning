@@ -1,0 +1,181 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.LDA -R 1.0E-6
+Relation:     Dry_Beans_Dataset-weka.filters.unsupervised.attribute.Normalize-S1.0-T0.0-weka.filters.unsupervised.attribute.Remove-V-R2,4,10-12,16-17
+Instances:    13611
+Attributes:   7
+              Perimeter
+              MinorAxisLength
+              Solidity
+              roundness
+              Compactness
+              ShapeFactor4
+              Class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+LDA model (multivariate Gaussian for each class)
+
+Pooled estimator
+
+Natural logarithm of normalizing factor: 14.363185968800359
+
+Mean vector:
+
+         6                   6
+         1  2,263040952171e-01
+         2  2,361901224010e-01
+         3  9,001123941665e-01
+         4  7,656929429873e-01
+         5  4,594026028212e-01
+         6  9,102851987363e-01
+
+Inverse of covariance matrix:
+
+  15795,84 -15344,41 -215,64  3137,78  3827,85 -263,42
+ -15344,41  15603,06  14,18 -2944,21 -3858,34  395,82
+ -215,64  14,18  1230,79 -603,94  203,96 -634,00
+  3137,78 -2944,21 -603,94  1251,75  492,43  173,73
+  3827,85 -3858,34  203,96  492,43  1228,92 -186,98
+ -263,42  395,82 -634,00  173,73 -186,98  570,84
+
+
+
+Estimates for class value SEKER
+
+Natural logarithm of class prior probability: -1.9
+Class prior probability: 0.15
+
+Mean vector:
+
+Perimeter: 0.14
+MinorAxisLength: 0.24
+Solidity: 0.94
+roundness: 0.91
+Compactness: 0.74
+ShapeFactor4: 0.97
+
+Estimates for class value BARBUNYA
+
+Natural logarithm of class prior probability: -2.33
+Class prior probability: 0.1
+
+Mean vector:
+
+Perimeter: 0.36
+MinorAxisLength: 0.35
+Solidity: 0.84
+roundness: 0.62
+Compactness: 0.47
+ShapeFactor4: 0.92
+
+Estimates for class value BOMBAY
+
+Natural logarithm of class prior probability: -3.26
+Class prior probability: 0.04
+
+Mean vector:
+
+Perimeter: 0.73
+MinorAxisLength: 0.75
+Solidity: 0.9
+roundness: 0.75
+Compactness: 0.44
+ShapeFactor4: 0.85
+
+Estimates for class value CALI
+
+Natural logarithm of class prior probability: -2.12
+Class prior probability: 0.12
+
+Mean vector:
+
+Perimeter: 0.36
+MinorAxisLength: 0.34
+Solidity: 0.87
+roundness: 0.71
+Compactness: 0.33
+ShapeFactor4: 0.82
+
+Estimates for class value HOROZ
+
+Natural logarithm of class prior probability: -1.95
+Class prior probability: 0.14
+
+Mean vector:
+
+Perimeter: 0.27
+MinorAxisLength: 0.18
+Solidity: 0.88
+roundness: 0.61
+Compactness: 0.17
+ShapeFactor4: 0.85
+
+Estimates for class value SIRA
+
+Natural logarithm of class prior probability: -1.64
+Class prior probability: 0.19
+
+Mean vector:
+
+Perimeter: 0.19
+MinorAxisLength: 0.2
+Solidity: 0.91
+roundness: 0.79
+Compactness: 0.45
+ShapeFactor4: 0.92
+
+Estimates for class value DERMASON
+
+Natural logarithm of class prior probability: -1.35
+Class prior probability: 0.26
+
+Mean vector:
+
+Perimeter: 0.1
+MinorAxisLength: 0.13
+Solidity: 0.91
+roundness: 0.84
+Compactness: 0.51
+ShapeFactor4: 0.95
+
+
+
+Time taken to build model: 0.01 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       12327               90.5665 %
+Incorrectly Classified Instances      1284                9.4335 %
+Kappa statistic                          0.8859
+Mean absolute error                      0.0382
+Root mean squared error                  0.1426
+Relative absolute error                 16.1622 %
+Root relative squared error             41.4886 %
+Total Number of Instances            13611     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,922    0,010    0,942      0,922    0,932      0,920    0,990     0,973     SEKER
+                 0,845    0,005    0,951      0,845    0,895      0,886    0,995     0,951     BARBUNYA
+                 1,000    0,000    0,998      1,000    0,999      0,999    1,000     1,000     BOMBAY
+                 0,946    0,014    0,900      0,946    0,923      0,912    0,996     0,974     CALI
+                 0,942    0,008    0,949      0,942    0,946      0,937    0,995     0,983     HOROZ
+                 0,887    0,053    0,801      0,887    0,842      0,803    0,977     0,905     SIRA
+                 0,880    0,026    0,922      0,880    0,901      0,867    0,989     0,972     DERMASON
+Weighted Avg.    0,906    0,022    0,909      0,906    0,906      0,885    0,990     0,960     
+
+=== Confusion Matrix ===
+
+    a    b    c    d    e    f    g   <-- classified as
+ 1868   29    0    0    0   96   34 |    a = SEKER
+    3 1117    1  121    6   74    0 |    b = BARBUNYA
+    0    0  522    0    0    0    0 |    c = BOMBAY
+    2    8    0 1542   40   38    0 |    d = CALI
+    0    6    0   49 1817   50    6 |    e = HOROZ
+   20    8    0    1   45 2339  223 |    f = SIRA
+   89    7    0    0    6  322 3122 |    g = DERMASON
+

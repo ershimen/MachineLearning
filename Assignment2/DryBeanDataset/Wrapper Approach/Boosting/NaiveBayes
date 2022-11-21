@@ -1,0 +1,84 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.bayes.NaiveBayes 
+Relation:     Dry_Beans_Dataset-weka.filters.unsupervised.attribute.Normalize-S1.0-T0.0-weka.filters.unsupervised.attribute.Remove-V-R1-2,8,14,17
+Instances:    13611
+Attributes:   5
+              Area
+              Perimeter
+              EquivDiameter
+              ShapeFactor2
+              Class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Naive Bayes Classifier
+
+                   Class
+Attribute          SEKER BARBUNYA   BOMBAY     CALI    HOROZ     SIRA DERMASON
+                  (0.15)    (0.1)   (0.04)   (0.12)   (0.14)   (0.19)   (0.26)
+===============================================================================
+Area
+  mean             0.0831   0.2109   0.6536   0.2354   0.1419   0.1038     0.05
+  std. dev.        0.0204   0.0438   0.0995     0.04   0.0313   0.0194     0.02
+  weight sum         2027     1322      522     1630     1928     2636     3546
+  precision        0.0001   0.0001   0.0001   0.0001   0.0001   0.0001   0.0001
+
+Perimeter
+  mean             0.1389   0.3569   0.7263   0.3648   0.2705    0.186   0.0962
+  std. dev.        0.0327   0.0613   0.0793   0.0463   0.0479   0.0304   0.0345
+  weight sum         2027     1322      522     1630     1928     2636     3546
+  precision        0.0001   0.0001   0.0001   0.0001   0.0001   0.0001   0.0001
+
+EquivDiameter
+  mean             0.1561   0.3334   0.7539   0.3633   0.2438   0.1889   0.0991
+  std. dev.        0.0326   0.0539   0.0768   0.0469   0.0443   0.0297   0.0362
+  weight sum         2027     1322      522     1630     1928     2636     3546
+  precision        0.0001   0.0001   0.0001   0.0001   0.0001   0.0001   0.0001
+
+ShapeFactor2
+  mean             0.6374   0.2676   0.0903   0.1752   0.1559   0.3607   0.5149
+  std. dev.        0.1051   0.0688   0.0434   0.0417   0.0482   0.0659   0.0915
+  weight sum         2027     1322      522     1630     1928     2636     3546
+  precision        0.0001   0.0001   0.0001   0.0001   0.0001   0.0001   0.0001
+
+
+
+Time taken to build model: 0 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       11002               80.8317 %
+Incorrectly Classified Instances      2609               19.1683 %
+Kappa statistic                          0.7681
+Mean absolute error                      0.0638
+Root mean squared error                  0.2044
+Relative absolute error                 27.0094 %
+Root relative squared error             59.4534 %
+Total Number of Instances            13611     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,777    0,034    0,798      0,777    0,787      0,751    0,965     0,889     SEKER
+                 0,572    0,013    0,823      0,572    0,675      0,659    0,965     0,799     BARBUNYA
+                 0,998    0,000    0,989      0,998    0,993      0,993    1,000     1,000     BOMBAY
+                 0,847    0,048    0,706      0,847    0,770      0,739    0,975     0,845     CALI
+                 0,810    0,026    0,840      0,810    0,824      0,796    0,977     0,906     HOROZ
+                 0,834    0,073    0,733      0,834    0,780      0,725    0,960     0,840     SIRA
+                 0,849    0,036    0,892      0,849    0,870      0,826    0,980     0,953     DERMASON
+Weighted Avg.    0,808    0,039    0,814      0,808    0,808      0,771    0,972     0,889     
+
+=== Confusion Matrix ===
+
+    a    b    c    d    e    f    g   <-- classified as
+ 1574    8    0    0    3  241  201 |    a = SEKER
+    1  756    1  437   59   68    0 |    b = BARBUNYA
+    0    1  521    0    0    0    0 |    c = BOMBAY
+    0  149    5 1380   89    7    0 |    d = CALI
+    0    2    0  139 1561  203   23 |    e = HOROZ
+  146    3    0    0  147 2199  141 |    f = SIRA
+  251    0    0    0    0  284 3011 |    g = DERMASON
+

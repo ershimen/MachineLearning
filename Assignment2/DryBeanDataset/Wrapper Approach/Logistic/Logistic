@@ -1,0 +1,95 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.Logistic -R 1.0E-8 -M -1 -num-decimal-places 4
+Relation:     Dry_Beans_Dataset-weka.filters.unsupervised.attribute.Normalize-S1.0-T0.0-weka.filters.unsupervised.attribute.Remove-V-R2-4,7-11,13-14,16-17
+Instances:    13611
+Attributes:   12
+              Perimeter
+              MajorAxisLength
+              MinorAxisLength
+              ConvexArea
+              EquivDiameter
+              Extent
+              Solidity
+              roundness
+              ShapeFactor1
+              ShapeFactor2
+              ShapeFactor4
+              Class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Logistic Regression with ridge parameter of 1.0E-8
+Coefficients...
+                                    Class
+Variable                            SEKER                BARBUNYA                  BOMBAY                    CALI                   HOROZ                    SIRA
+=================================================================================================================================================================
+Perimeter                          3.1839               -441.1467                295.0729               -733.8846               -307.4302               -810.2121
+MajorAxisLength                 2034.7654               3143.0614                542.8572               3138.0904               3485.1392               2473.7458
+MinorAxisLength                 1755.4668               2963.8317               1638.8627               2755.0339               3326.1269               2179.4351
+ConvexArea                      4817.2963                7685.254               4108.5174               7523.0443               6991.1308               6008.3727
+EquivDiameter                  -7464.4402             -11940.7674                876.6475             -11271.3847              -11961.578              -8734.6663
+Extent                             1.2099                  4.5893               -549.1242                  5.6251                  2.9065                  2.6705
+Solidity                          58.2091                  80.616               -1631.336                 98.7076                102.1478                 78.8076
+roundness                         -9.1427                -95.7519               3370.0397               -126.3103                -64.0356               -137.1651
+ShapeFactor1                    -552.0129               -968.0273               1776.6498               -953.1794               -731.5436               -734.2369
+ShapeFactor2                     -187.165               -480.9886                722.5373               -415.5574               -414.7851               -330.8328
+ShapeFactor4                       77.477                 105.532               1112.2225                 61.6849                 70.3924                 47.6964
+Intercept                        374.4343                  875.51              -5173.0411                878.8551                625.3418                727.8703
+
+
+Odds Ratios...
+                                    Class
+Variable                            SEKER                BARBUNYA                  BOMBAY                    CALI                   HOROZ                    SIRA
+=================================================================================================================================================================
+Perimeter                           24.14                       0  1.4077828954317789E128                       0                       0                       0
+MajorAxisLength                  Infinity                Infinity   5.753056493250562E235                Infinity                Infinity                Infinity
+MinorAxisLength                  Infinity                Infinity                Infinity                Infinity                Infinity                Infinity
+ConvexArea                       Infinity                Infinity                Infinity                Infinity                Infinity                Infinity
+EquivDiameter                           0                       0                Infinity                       0                       0                       0
+Extent                             3.3532                 98.4248                       0                277.2941                 18.2932                  14.447
+Solidity            1.9050000199167044E25      1.0258113865119E35                       0    7.381511083896434E42    2.302741768496446E44   1.6815440074417628E34
+roundness                          0.0001                       0                Infinity                       0                       0                       0
+ShapeFactor1                            0                       0                Infinity                       0                       0                       0
+ShapeFactor2                            0                       0                Infinity                       0                       0                       0
+ShapeFactor4        4.4445682514075623E33    6.791159012683124E45                Infinity   6.1578516621648025E26    3.724306695995284E30     5.17955602280604E20
+
+
+Time taken to build model: 5.81 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       12618               92.7044 %
+Incorrectly Classified Instances       993                7.2956 %
+Kappa statistic                          0.9117
+Mean absolute error                      0.0306
+Root mean squared error                  0.1233
+Relative absolute error                 12.9437 %
+Root relative squared error             35.8636 %
+Total Number of Instances            13611     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,949    0,008    0,953      0,949    0,951      0,942    0,997     0,988     SEKER
+                 0,920    0,006    0,943      0,920    0,931      0,924    0,997     0,980     BARBUNYA
+                 0,996    0,000    1,000      0,996    0,998      0,998    1,000     1,000     BOMBAY
+                 0,941    0,009    0,935      0,941    0,938      0,929    0,997     0,980     CALI
+                 0,948    0,006    0,964      0,948    0,956      0,948    0,997     0,988     HOROZ
+                 0,880    0,032    0,867      0,880    0,873      0,843    0,986     0,947     SIRA
+                 0,924    0,029    0,918      0,924    0,921      0,893    0,993     0,981     DERMASON
+Weighted Avg.    0,927    0,018    0,927      0,927    0,927      0,910    0,994     0,977     
+
+=== Confusion Matrix ===
+
+    a    b    c    d    e    f    g   <-- classified as
+ 1923   13    0    0    1   56   34 |    a = SEKER
+    9 1216    0   70    4   23    0 |    b = BARBUNYA
+    0    1  520    1    0    0    0 |    c = BOMBAY
+    4   49    0 1534   29   14    0 |    d = CALI
+    1    2    0   32 1827   48   18 |    e = HOROZ
+   33    8    0    4   31 2320  240 |    f = SIRA
+   48    1    0    0    4  215 3278 |    g = DERMASON
+

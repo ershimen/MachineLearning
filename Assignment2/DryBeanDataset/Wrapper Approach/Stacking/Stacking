@@ -1,0 +1,343 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.meta.Stacking -X 10 -M "weka.classifiers.bayes.NaiveBayes " -S 1 -num-slots 1 -B "weka.classifiers.bayes.BayesNet -D -Q weka.classifiers.bayes.net.search.local.TAN -- -S BAYES -E weka.classifiers.bayes.net.estimate.SimpleEstimator -- -A 0.5" -B "weka.classifiers.functions.LDA -R 1.0E-6"
+Relation:     Dry_Beans_Dataset-weka.filters.unsupervised.attribute.Normalize-S1.0-T0.0-weka.filters.unsupervised.attribute.Remove-V-R2-3,5-9,11,14,16-17
+Instances:    13611
+Attributes:   11
+              Perimeter
+              MajorAxisLength
+              AspectRation
+              Eccentricity
+              ConvexArea
+              EquivDiameter
+              Extent
+              roundness
+              ShapeFactor2
+              ShapeFactor4
+              Class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Stacking
+
+Base classifiers
+
+Bayes Network Classifier
+not using ADTree
+#attributes=11 #classindex=10
+Network structure (nodes followed by parents)
+Perimeter(20): Class MajorAxisLength 
+MajorAxisLength(21): Class ShapeFactor2 
+AspectRation(15): Class roundness 
+Eccentricity(15): Class AspectRation 
+ConvexArea(17): Class Perimeter 
+EquivDiameter(17): Class ConvexArea 
+Extent(11): Class AspectRation 
+roundness(18): Class ShapeFactor4 
+ShapeFactor2(19): Class AspectRation 
+ShapeFactor4(11): Class 
+Class(7): 
+LogScore Bayes: -192472.7733416837
+LogScore BDeu: -326490.7990648909
+LogScore MDL: -295328.1128111969
+LogScore ENTROPY: -213677.2740620441
+LogScore AIC: -230833.274062044
+
+
+LDA model (multivariate Gaussian for each class)
+
+Pooled estimator
+
+Natural logarithm of normalizing factor: 27.961983293443062
+
+Mean vector:
+
+        10                  10
+         1  2,263040952171e-01
+         2  2,459045299390e-01
+         3  3,972953896113e-01
+         4  7,681810833150e-01
+         5  1,363863830725e-01
+         6  2,249781242377e-01
+         7  6,253799456322e-01
+         8  7,656929429873e-01
+         9  3,714451834546e-01
+        10  9,102851987363e-01
+
+Inverse of covariance matrix:
+
+  112590,72 -29893,91  6434,12 -855,71  1880,41 -83410,29 -7,68  21379,43 -3651,83 -548,13
+ -29893,91  79913,82 -23478,45 -10606,75  13504,48 -68849,49 -42,46 -5752,41 -14790,49  2580,95
+  6434,12 -23478,45  7882,52  2901,83 -5342,97  24129,72  19,94  1422,96  5176,16 -883,08
+ -855,71 -10606,75  2901,83  5000,52 -7226,29  20580,20  4,39 -272,61  5457,21 -434,45
+  1880,41  13504,48 -5342,97 -7226,29  26404,25 -42749,77 -17,16  587,35 -10287,33  989,12
+ -83410,29 -68849,49  24129,72  20580,20 -42749,77  202292,88  62,30 -15989,54  31300,51 -3189,20
+ -7,68 -42,46  19,94  4,39 -17,16  62,30  50,12 -21,85  6,81 -3,59
+  21379,43 -5752,41  1422,96 -272,61  587,35 -15989,54 -21,85  4456,62 -776,46 -184,33
+ -3651,83 -14790,49  5176,16  5457,21 -10287,33  31300,51  6,81 -776,46  7657,58 -695,04
+ -548,13  2580,95 -883,08 -434,45  989,12 -3189,20 -3,59 -184,33 -695,04  339,73
+
+
+
+Estimates for class value SEKER
+
+Natural logarithm of class prior probability: -1.9
+Class prior probability: 0.15
+
+Mean vector:
+
+Perimeter: 0.14
+MajorAxisLength: 0.12
+AspectRation: 0.16
+Eccentricity: 0.53
+ConvexArea: 0.08
+EquivDiameter: 0.16
+Extent: 0.7
+roundness: 0.91
+ShapeFactor2: 0.64
+ShapeFactor4: 0.97
+
+Estimates for class value BARBUNYA
+
+Natural logarithm of class prior probability: -2.33
+Class prior probability: 0.1
+
+Mean vector:
+
+Perimeter: 0.36
+MajorAxisLength: 0.34
+AspectRation: 0.37
+Eccentricity: 0.77
+ConvexArea: 0.21
+EquivDiameter: 0.33
+Extent: 0.62
+roundness: 0.62
+ShapeFactor2: 0.27
+ShapeFactor4: 0.92
+
+Estimates for class value BOMBAY
+
+Natural logarithm of class prior probability: -3.26
+Class prior probability: 0.04
+
+Mean vector:
+
+Perimeter: 0.73
+MajorAxisLength: 0.74
+AspectRation: 0.4
+Eccentricity: 0.8
+ConvexArea: 0.64
+EquivDiameter: 0.75
+Extent: 0.71
+roundness: 0.75
+ShapeFactor2: 0.09
+ShapeFactor4: 0.85
+
+Estimates for class value CALI
+
+Natural logarithm of class prior probability: -2.12
+Class prior probability: 0.12
+
+Mean vector:
+
+Perimeter: 0.36
+MajorAxisLength: 0.41
+AspectRation: 0.5
+Eccentricity: 0.86
+ConvexArea: 0.23
+EquivDiameter: 0.36
+Extent: 0.66
+roundness: 0.71
+ShapeFactor2: 0.18
+ShapeFactor4: 0.82
+
+Estimates for class value HOROZ
+
+Natural logarithm of class prior probability: -1.95
+Class prior probability: 0.14
+
+Mean vector:
+
+Perimeter: 0.27
+MajorAxisLength: 0.34
+AspectRation: 0.71
+Eccentricity: 0.94
+ConvexArea: 0.14
+EquivDiameter: 0.24
+Extent: 0.49
+roundness: 0.61
+ShapeFactor2: 0.16
+ShapeFactor4: 0.85
+
+Estimates for class value SIRA
+
+Natural logarithm of class prior probability: -1.64
+Class prior probability: 0.19
+
+Mean vector:
+
+Perimeter: 0.19
+MajorAxisLength: 0.21
+AspectRation: 0.39
+Eccentricity: 0.79
+ConvexArea: 0.1
+EquivDiameter: 0.19
+Extent: 0.62
+roundness: 0.79
+ShapeFactor2: 0.36
+ShapeFactor4: 0.92
+
+Estimates for class value DERMASON
+
+Natural logarithm of class prior probability: -1.35
+Class prior probability: 0.26
+
+Mean vector:
+
+Perimeter: 0.1
+MajorAxisLength: 0.11
+AspectRation: 0.33
+Eccentricity: 0.75
+ConvexArea: 0.05
+EquivDiameter: 0.1
+Extent: 0.64
+roundness: 0.84
+ShapeFactor2: 0.51
+ShapeFactor4: 0.95
+
+
+
+
+
+Meta classifier
+
+Naive Bayes Classifier
+
+                                                Class
+Attribute                                       SEKER BARBUNYA   BOMBAY     CALI    HOROZ     SIRA DERMASON
+                                               (0.15)    (0.1)   (0.04)   (0.12)   (0.14)   (0.19)   (0.26)
+============================================================================================================
+weka.classifiers.bayes.BayesNet-1:SEKER
+  mean                                          0.9413   0.0097   0.0002    0.002   0.0001   0.0211     0.02
+  std. dev.                                     0.2064   0.0786   0.0029   0.0428   0.0014   0.1134   0.1214
+  weight sum                                      2027     1322      522     1630     1928     2636     3546
+  precision                                     0.0001   0.0001   0.0001   0.0001   0.0001   0.0001   0.0001
+
+weka.classifiers.bayes.BayesNet-1:BARBUNYA
+  mean                                          0.0086   0.8778   0.0024   0.0363   0.0032   0.0035   0.0006
+  std. dev.                                      0.079   0.2863   0.0444   0.1371   0.0455   0.0453   0.0125
+  weight sum                                      2027     1322      522     1630     1928     2636     3546
+  precision                                     0.0001   0.0001   0.0001   0.0001   0.0001   0.0001   0.0001
+
+weka.classifiers.bayes.BayesNet-1:BOMBAY
+  mean                                          0.0001   0.0003   0.9957   0.0002        0        0   0.0001
+  std. dev.                                      0.003   0.0116   0.0617   0.0057   0.0004   0.0002   0.0041
+  weight sum                                      2027     1322      522     1630     1928     2636     3546
+  precision                                     0.0001   0.0001   0.0001   0.0001   0.0001   0.0001   0.0001
+
+weka.classifiers.bayes.BayesNet-1:CALI
+  mean                                          0.0004   0.0843   0.0014   0.9325   0.0187   0.0025   0.0002
+  std. dev.                                     0.0115   0.2388   0.0306   0.2049   0.1154   0.0382   0.0076
+  weight sum                                      2027     1322      522     1630     1928     2636     3546
+  precision                                     0.0001   0.0001   0.0001   0.0001   0.0001   0.0001   0.0001
+
+weka.classifiers.bayes.BayesNet-1:HOROZ
+  mean                                          0.0003   0.0078        0   0.0184   0.9392   0.0189   0.0036
+  std. dev.                                     0.0057   0.0753   0.0001   0.1132   0.2153   0.1123   0.0451
+  weight sum                                      2027     1322      522     1630     1928     2636     3546
+  precision                                     0.0001   0.0001   0.0001   0.0001   0.0001   0.0001   0.0001
+
+weka.classifiers.bayes.BayesNet-1:SIRA
+  mean                                          0.0315   0.0196        0   0.0107   0.0304   0.8471   0.0783
+  std. dev.                                     0.1481   0.1232   0.0001     0.09   0.1501   0.2901   0.1982
+  weight sum                                      2027     1322      522     1630     1928     2636     3546
+  precision                                     0.0001   0.0001   0.0001   0.0001   0.0001   0.0001   0.0001
+
+weka.classifiers.bayes.BayesNet-1:DERMASON
+  mean                                          0.0177   0.0004   0.0003        0   0.0084   0.1069   0.8972
+  std. dev.                                     0.1035   0.0117   0.0066   0.0006   0.0791   0.2469   0.2351
+  weight sum                                      2027     1322      522     1630     1928     2636     3546
+  precision                                     0.0001   0.0001   0.0001   0.0001   0.0001   0.0001   0.0001
+
+weka.classifiers.functions.LDA-2:SEKER
+  mean                                          0.8667   0.0046        0   0.0008        0   0.0045   0.0119
+  std. dev.                                     0.2951   0.0653        0   0.0253        0   0.0465   0.0851
+  weight sum                                      2027     1322      522     1630     1928     2636     3546
+  precision                                     0.0001   0.0001   0.0001   0.0001   0.0001   0.0001   0.0001
+
+weka.classifiers.functions.LDA-2:BARBUNYA
+  mean                                          0.0095   0.8278   0.0018   0.0099   0.0039   0.0025   0.0012
+  std. dev.                                     0.0897   0.3376   0.0416   0.0653   0.0536   0.0481   0.0333
+  weight sum                                      2027     1322      522     1630     1928     2636     3546
+  precision                                     0.0001   0.0001   0.0001   0.0001   0.0001   0.0001   0.0001
+
+weka.classifiers.functions.LDA-2:BOMBAY
+  mean                                               0        0   0.9981        0        0        0        0
+  std. dev.                                          0        0   0.0437        0        0        0        0
+  weight sum                                      2027     1322      522     1630     1928     2636     3546
+  precision                                     0.0001   0.0001   0.0001   0.0001   0.0001   0.0001   0.0001
+
+weka.classifiers.functions.LDA-2:CALI
+  mean                                          0.0001   0.0898   0.0001   0.9492   0.0376   0.0017        0
+  std. dev.                                     0.0024   0.2452   0.0022   0.1779   0.1576   0.0201        0
+  weight sum                                      2027     1322      522     1630     1928     2636     3546
+  precision                                     0.0001   0.0001   0.0001   0.0001   0.0001   0.0001   0.0001
+
+weka.classifiers.functions.LDA-2:HOROZ
+  mean                                          0.0002   0.0025        0   0.0099   0.9104   0.0072   0.0011
+  std. dev.                                      0.008   0.0395        0   0.0833   0.2563   0.0695    0.032
+  weight sum                                      2027     1322      522     1630     1928     2636     3546
+  precision                                     0.0001   0.0001   0.0001   0.0001   0.0001   0.0001   0.0001
+
+weka.classifiers.functions.LDA-2:SIRA
+  mean                                          0.0849   0.0751        0   0.0302   0.0428   0.8994    0.147
+  std. dev.                                      0.229   0.2292        0   0.1362   0.1739   0.1975   0.2543
+  weight sum                                      2027     1322      522     1630     1928     2636     3546
+  precision                                     0.0001   0.0001   0.0001   0.0001   0.0001   0.0001   0.0001
+
+weka.classifiers.functions.LDA-2:DERMASON
+  mean                                          0.0386   0.0002        0        0   0.0054   0.0846   0.8388
+  std. dev.                                     0.1288   0.0039        0   0.0006   0.0531   0.1744   0.2679
+  weight sum                                      2027     1322      522     1630     1928     2636     3546
+  precision                                     0.0001   0.0001   0.0001   0.0001   0.0001   0.0001   0.0001
+
+
+
+Time taken to build model: 0.92 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       12550               92.2048 %
+Incorrectly Classified Instances      1061                7.7952 %
+Kappa statistic                          0.9057
+Mean absolute error                      0.0223
+Root mean squared error                  0.1469
+Relative absolute error                  9.4318 %
+Root relative squared error             42.746  %
+Total Number of Instances            13611     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,943    0,010    0,944      0,943    0,943      0,934    0,988     0,950     SEKER
+                 0,902    0,007    0,935      0,902    0,918      0,910    0,989     0,937     BARBUNYA
+                 0,996    0,000    1,000      0,996    0,998      0,998    0,999     0,998     BOMBAY
+                 0,949    0,010    0,926      0,949    0,938      0,929    0,994     0,952     CALI
+                 0,951    0,007    0,956      0,951    0,953      0,946    0,989     0,949     HOROZ
+                 0,845    0,026    0,885      0,845    0,865      0,833    0,974     0,893     SIRA
+                 0,935    0,036    0,900      0,935    0,918      0,888    0,987     0,965     DERMASON
+Weighted Avg.    0,922    0,019    0,922      0,922    0,922      0,904    0,987     0,944     
+
+=== Confusion Matrix ===
+
+    a    b    c    d    e    f    g   <-- classified as
+ 1912   18    0    0    1   54   42 |    a = SEKER
+   11 1193    0   87    7   24    0 |    b = BARBUNYA
+    0    1  520    1    0    0    0 |    c = BOMBAY
+    3   43    0 1547   25   12    0 |    d = CALI
+    0    8    0   33 1834   39   14 |    e = HOROZ
+   41   11    0    2   44 2227  311 |    f = SIRA
+   59    2    0    0    8  160 3317 |    g = DERMASON
+

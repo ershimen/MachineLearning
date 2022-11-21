@@ -1,0 +1,358 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.LMT -I -1 -M 15 -W 0.0
+Relation:     Dry_Beans_Dataset-weka.filters.unsupervised.attribute.Normalize-S1.0-T0.0-weka.filters.unsupervised.attribute.Remove-V-R2,11-13,16-17
+Instances:    13611
+Attributes:   6
+              Perimeter
+              roundness
+              Compactness
+              ShapeFactor1
+              ShapeFactor4
+              Class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Logistic model tree 
+------------------
+
+Perimeter <= 0.230099
+|   Compactness <= 0.634907
+|   |   Perimeter <= 0.151023: LM_1:65/260 (3539)
+|   |   Perimeter > 0.151023: LM_2:65/260 (2778)
+|   Compactness > 0.634907: LM_3:65/195 (2047)
+Perimeter > 0.230099
+|   ShapeFactor1 <= 0.431362: LM_4:65/195 (3410)
+|   ShapeFactor1 > 0.431362: LM_5:65/195 (1837)
+
+Number of Leaves  : 	5
+
+Size of the Tree : 	9
+
+
+
+LM_1:
+Class SEKER :
+-93.52 + 
+[Perimeter] * 21.75 +
+[roundness] * 10.34 +
+[Compactness] * 47.93 +
+[ShapeFactor1] * 20.27 +
+[ShapeFactor4] * 44.78
+
+Class BARBUNYA :
+-51.29 + 
+[Perimeter] * 0.11 +
+[roundness] * -25.49 +
+[Compactness] * 3.57 +
+[ShapeFactor1] * -31.95 +
+[ShapeFactor4] * 26.59
+
+Class BOMBAY :
+-190.17 + 
+[Perimeter] * 64.14 +
+[roundness] * 120.68 +
+[Compactness] * -17.01 +
+[ShapeFactor1] * -371.67 +
+[ShapeFactor4] * -20
+
+Class CALI :
+-48.38 + 
+[Perimeter] * -28.82 +
+[roundness] * -9.74 +
+[Compactness] * -3.89 +
+[ShapeFactor1] * -49.45 +
+[ShapeFactor4] * 27.28
+
+Class HOROZ :
+7.34 + 
+[Perimeter] * -32.12 +
+[roundness] * 0.94 +
+[Compactness] * -28.96 +
+[ShapeFactor1] * 20.24 +
+[ShapeFactor4] * -3.9
+
+Class SIRA :
+26.64 + 
+[Perimeter] * -46.34 +
+[roundness] * -11.84 +
+[Compactness] * -7 +
+[ShapeFactor1] * -6.05 +
+[ShapeFactor4] * -1.81
+
+Class DERMASON :
+-22.57 + 
+[Perimeter] * -47.82 +
+[roundness] * 2.48 +
+[Compactness] * 4.32 +
+[ShapeFactor1] * 35.29 +
+[ShapeFactor4] * 8.22
+
+LM_2:
+Class SEKER :
+-64.26 + 
+[Perimeter] * 24.95 +
+[roundness] * 6.12 +
+[Compactness] * 32.39 +
+[ShapeFactor1] * 20.96 +
+[ShapeFactor4] * 26.9
+
+Class BARBUNYA :
+5.55 + 
+[Perimeter] * -3.67 +
+[roundness] * -23.92 +
+[Compactness] * 2.3  +
+[ShapeFactor1] * -34.14 +
+[ShapeFactor4] * 26.7
+
+Class BOMBAY :
+-190.17 + 
+[Perimeter] * 64.14 +
+[roundness] * 120.68 +
+[Compactness] * -17.01 +
+[ShapeFactor1] * -371.67 +
+[ShapeFactor4] * -20
+
+Class CALI :
+10.46 + 
+[Perimeter] * -34.19 +
+[roundness] * -8.5 +
+[Compactness] * -6.02 +
+[ShapeFactor1] * -53 +
+[ShapeFactor4] * 27.03
+
+Class HOROZ :
+-2.31 + 
+[Perimeter] * 4.68 +
+[roundness] * 2.87 +
+[Compactness] * -34.63 +
+[ShapeFactor1] * 33.66 +
+[ShapeFactor4] * -9.67
+
+Class SIRA :
+13.08 + 
+[Perimeter] * -32.94 +
+[roundness] * -1.75 +
+[Compactness] * -6.51 +
+[ShapeFactor1] * 0.04 +
+[ShapeFactor4] * -2.04
+
+Class DERMASON :
+-7.3 + 
+[Perimeter] * -122.08 +
+[roundness] * -2.84 +
+[Compactness] * 4.57 +
+[ShapeFactor1] * 34.4 +
+[ShapeFactor4] * 9.15
+
+LM_3:
+Class SEKER :
+-76.26 + 
+[Perimeter] * -0.26 +
+[roundness] * -0.5 +
+[Compactness] * 44.08 +
+[ShapeFactor1] * 8.41 +
+[ShapeFactor4] * 48.88
+
+Class BARBUNYA :
+1.57 + 
+[Perimeter] * 18.48 +
+[roundness] * -21.36 +
+[Compactness] * 3.1  +
+[ShapeFactor1] * -43.72 +
+[ShapeFactor4] * 28.58
+
+Class BOMBAY :
+-134.45 + 
+[Perimeter] * 64.14 +
+[roundness] * 120.68 +
+[Compactness] * -17.01 +
+[ShapeFactor1] * -371.67 +
+[ShapeFactor4] * -20
+
+Class CALI :
+-14.03 + 
+[Perimeter] * -68.59 +
+[roundness] * -21.72 +
+[Compactness] * 5.04 +
+[ShapeFactor1] * -63.63 +
+[ShapeFactor4] * 69.18
+
+Class HOROZ :
+-50.47 + 
+[Perimeter] * -16.41 +
+[roundness] * 2.8  +
+[Compactness] * -34.02 +
+[ShapeFactor1] * 28.03 +
+[ShapeFactor4] * -9.76
+
+Class SIRA :
+16.83 + 
+[Perimeter] * -26.32 +
+[roundness] * 5.28 +
+[Compactness] * -10.15 +
+[ShapeFactor1] * 5.59 +
+[ShapeFactor4] * -14.4
+
+Class DERMASON :
+-3.19 + 
+[Perimeter] * -70.29 +
+[roundness] * 3.31 +
+[Compactness] * -1.85 +
+[ShapeFactor1] * 28.04 +
+[ShapeFactor4] * -1.75
+
+
+LM_4:
+Class SEKER :
+-66.67 + 
+[Perimeter] * -4.03 +
+[roundness] * -5.24 +
+[Compactness] * 42.72 +
+[ShapeFactor1] * 57.08 +
+[ShapeFactor4] * 26.83
+
+Class BARBUNYA :
+7.5  + 
+[Perimeter] * 5.87 +
+[roundness] * -22.75 +
+[Compactness] * 10.45 +
+[ShapeFactor1] * -34.98 +
+[ShapeFactor4] * 17.64
+
+Class BOMBAY :
+-177.57 + 
+[Perimeter] * 202.62 +
+[roundness] * 458.06 +
+[Compactness] * -17.01 +
+[ShapeFactor1] * -1116.37 +
+[ShapeFactor4] * -67.17
+
+Class CALI :
+18.67 + 
+[Perimeter] * 6.91 +
+[roundness] * 21.19 +
+[Compactness] * -30.78 +
+[ShapeFactor1] * -43.91 +
+[ShapeFactor4] * -7.84
+
+Class HOROZ :
+-3.92 + 
+[Perimeter] * 27.57 +
+[roundness] * -5.13 +
+[Compactness] * -21.04 +
+[ShapeFactor1] * 28.17 +
+[ShapeFactor4] * -9.8
+
+Class SIRA :
+12.13 + 
+[Perimeter] * -81.58 +
+[roundness] * 16.36 +
+[Compactness] * -13.51 +
+[ShapeFactor1] * 9.48 +
+[ShapeFactor4] * -4.67
+
+Class DERMASON :
+28.74 + 
+[Perimeter] * -84.7 +
+[roundness] * -202.7 +
+[Compactness] * 23.45 +
+[ShapeFactor1] * 25.08 +
+[ShapeFactor4] * -92.86
+
+LM_5:
+Class SEKER :
+-78.79 + 
+[Perimeter] * 84.14 +
+[roundness] * 4.25 +
+[Compactness] * 49.1 +
+[ShapeFactor1] * 34.74 +
+[ShapeFactor4] * 14.79
+
+Class BARBUNYA :
+21.84 + 
+[Perimeter] * -14.61 +
+[roundness] * -21.45 +
+[Compactness] * 2.78 +
+[ShapeFactor1] * -45.45 +
+[ShapeFactor4] * 15.57
+
+Class BOMBAY :
+-153.95 + 
+[Perimeter] * 135.07 +
+[roundness] * 286.43 +
+[Compactness] * -17.01 +
+[ShapeFactor1] * -742.73 +
+[ShapeFactor4] * -44.96
+
+Class CALI :
+23.91 + 
+[Perimeter] * -1.21 +
+[roundness] * 4.73 +
+[Compactness] * -25.39 +
+[ShapeFactor1] * -30.09 +
+[ShapeFactor4] * -7.86
+
+Class HOROZ :
+-5.25 + 
+[Perimeter] * 25.51 +
+[roundness] * 2.74 +
+[Compactness] * -35.73 +
+[ShapeFactor1] * 30.87 +
+[ShapeFactor4] * -9.37
+
+Class SIRA :
+11.88 + 
+[Perimeter] * -46.49 +
+[roundness] * 2.27 +
+[Compactness] * -7.37 +
+[ShapeFactor1] * -0.54 +
+[ShapeFactor4] * 0.32
+
+Class DERMASON :
+83.27 + 
+[Perimeter] * -84.7 +
+[roundness] * -305.44 +
+[Compactness] * 41.78 +
+[ShapeFactor1] * 57.39 +
+[ShapeFactor4] * -150.36
+
+
+Time taken to build model: 8.39 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       12544               92.1608 %
+Incorrectly Classified Instances      1067                7.8392 %
+Kappa statistic                          0.9052
+Mean absolute error                      0.0319
+Root mean squared error                  0.1273
+Relative absolute error                 13.5134 %
+Root relative squared error             37.0437 %
+Total Number of Instances            13611     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,944    0,008    0,955      0,944    0,949      0,940    0,996     0,986     SEKER
+                 0,906    0,007    0,931      0,906    0,918      0,910    0,994     0,968     BARBUNYA
+                 0,998    0,000    0,998      0,998    0,998      0,998    1,000     0,998     BOMBAY
+                 0,935    0,010    0,928      0,935    0,931      0,922    0,996     0,982     CALI
+                 0,948    0,008    0,954      0,948    0,951      0,942    0,996     0,986     HOROZ
+                 0,865    0,032    0,866      0,865    0,865      0,833    0,984     0,939     SIRA
+                 0,926    0,032    0,910      0,926    0,918      0,889    0,992     0,972     DERMASON
+Weighted Avg.    0,922    0,019    0,922      0,922    0,922      0,903    0,992     0,971     
+
+=== Confusion Matrix ===
+
+    a    b    c    d    e    f    g   <-- classified as
+ 1913   19    0    0    1   62   32 |    a = SEKER
+   14 1198    1   73    6   30    0 |    b = BARBUNYA
+    0    1  521    0    0    0    0 |    c = BOMBAY
+    3   54    0 1524   34   15    0 |    d = CALI
+    0    3    0   38 1827   42   18 |    e = HOROZ
+   25   11    0    8   39 2279  274 |    f = SIRA
+   49    1    0    0    9  205 3282 |    g = DERMASON
+

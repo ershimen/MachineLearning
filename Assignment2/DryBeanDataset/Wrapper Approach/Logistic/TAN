@@ -1,0 +1,82 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.bayes.BayesNet -D -Q weka.classifiers.bayes.net.search.local.TAN -- -S BAYES -E weka.classifiers.bayes.net.estimate.SimpleEstimator -- -A 0.5
+Relation:     Dry_Beans_Dataset-weka.filters.unsupervised.attribute.Normalize-S1.0-T0.0-weka.filters.unsupervised.attribute.Remove-V-R2-4,7-11,13-14,16-17
+Instances:    13611
+Attributes:   12
+              Perimeter
+              MajorAxisLength
+              MinorAxisLength
+              ConvexArea
+              EquivDiameter
+              Extent
+              Solidity
+              roundness
+              ShapeFactor1
+              ShapeFactor2
+              ShapeFactor4
+              Class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Bayes Network Classifier
+not using ADTree
+#attributes=12 #classindex=11
+Network structure (nodes followed by parents)
+Perimeter(20): Class ConvexArea 
+MajorAxisLength(21): Class Perimeter 
+MinorAxisLength(17): Class 
+ConvexArea(17): Class EquivDiameter 
+EquivDiameter(17): Class ShapeFactor1 
+Extent(11): Class roundness 
+Solidity(12): Class roundness 
+roundness(18): Class ShapeFactor2 
+ShapeFactor1(18): Class MinorAxisLength 
+ShapeFactor2(19): Class MajorAxisLength 
+ShapeFactor4(11): Class Solidity 
+Class(7): 
+LogScore Bayes: -223816.48976284548
+LogScore BDeu: -376661.0542976569
+LogScore MDL: -340329.85132572905
+LogScore ENTROPY: -247451.78428272958
+LogScore AIC: -266966.7842827294
+
+
+Time taken to build model: 0.09 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       12451               91.4775 %
+Incorrectly Classified Instances      1160                8.5225 %
+Kappa statistic                          0.8969
+Mean absolute error                      0.0274
+Root mean squared error                  0.1384
+Relative absolute error                 11.5886 %
+Root relative squared error             40.2743 %
+Total Number of Instances            13611     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,950    0,011    0,935      0,950    0,942      0,932    0,997     0,985     SEKER
+                 0,890    0,006    0,942      0,890    0,915      0,907    0,995     0,971     BARBUNYA
+                 0,998    0,000    0,998      0,998    0,998      0,998    1,000     1,000     BOMBAY
+                 0,941    0,012    0,917      0,941    0,929      0,919    0,996     0,974     CALI
+                 0,948    0,009    0,945      0,948    0,946      0,938    0,995     0,983     HOROZ
+                 0,844    0,033    0,859      0,844    0,852      0,817    0,983     0,936     SIRA
+                 0,914    0,034    0,904      0,914    0,909      0,877    0,991     0,975     DERMASON
+Weighted Avg.    0,915    0,020    0,915      0,915    0,915      0,895    0,992     0,971     
+
+=== Confusion Matrix ===
+
+    a    b    c    d    e    f    g   <-- classified as
+ 1925   11    0    3    1   53   34 |    a = SEKER
+   12 1177    1  101    6   23    2 |    b = BARBUNYA
+    0    1  521    0    0    0    0 |    c = BOMBAY
+    3   46    0 1534   32   15    0 |    d = CALI
+    0    5    0   30 1827   51   15 |    e = HOROZ
+   49   10    0    5   53 2226  293 |    f = SIRA
+   69    0    0    0   14  222 3241 |    g = DERMASON
+
