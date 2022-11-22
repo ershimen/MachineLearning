@@ -6,6 +6,8 @@
 \usepackage{parskip}
 \usepackage{hyperref}
 \usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{fancyvrb}
 
 \setlength{\parindent}{3em}
 
@@ -13,10 +15,10 @@
 	\Large Cerezo Pomykol, Jan\\ \href{mailto:j.cerezo@alumnos.upm.es}{\small\texttt{j.cerezo@alumnos.upm.es}}
 }
 
-\title{\textbf{\Huge Practical Application 1} \\
+\title{\textbf{\Huge Practical Application 2} \\
 		\Large Machine Learning}
 
-\date{\Large October 18, 2022}
+\date{\Large November 22, 2022}
 
 \begin{document}
 \maketitle
@@ -28,14 +30,20 @@
 \section{Introduction}
 \label{sec:introduction}
 
-The goal of this practical application is to study how feature subset selection (FSS) affects different machine learning models. Specifically how they perform with a dataset with all variables and datasets obtained from a univariate filter, a multivariate filter, and a multivariate wrapper. The selected classification models are the following:
+The goal of this practical application is to study how feature subset selection (FSS) affects different machine learning models. Specifically how they perform with a dataset with all variables and datasets obtained from a univariate filter, a multivariate filter, and a multivariate wrapper. The selected classification models and \textit{meta-classifiers} are the following:
 
 \begin{itemize}
-\item k-Nearest Neighbours.
-\item Rule Induction - RIPPER algorithm.
-\item Support Vector Machines.
-\item Neural Network - Multilayer Perceptron.
-\item Classification Trees - C4.5 algorithm.
+\item Logistic Regression.
+\item Naive Bayes.
+\item Tree Augmented Naive Bayes.
+\item Linear Discriminant Analysis.
+\item Fusion.
+\item Stacking.
+\item Bagging.
+\item Random Forest.
+\item Boosting.
+\item Naive Bayes Tree.
+\item Logistic Model Trees.
 \end{itemize}
 
 For this assignment, the dataset chosen \cite{misc_dry_bean_dataset_602}\cite{KOKLU2020105507} contains data about instances of dry beans, which was created from images of 13,611 grains of 7 different varieties.
@@ -131,25 +139,25 @@ For this practical application, Weka \cite{weka} has been used to perform the tr
 \subsection{Evaluation}
 \label{subsec:evaluation}
 
-The evaluation of each model will be conducted with cross validation with 10 folds. Because each class has different weight (different number of instances) the confusion matrix will be discussed as well. Besides the accuracy, training time will also be considered.
+The evaluation of each model will be conducted with cross validation with 10 folds. Because each class has different weight (different number of instances) the confusion matrix will be discussed as well in some cases. Besides the accuracy, training time will also be considered.
 
 \subsection{Classification Algorithms}
 \label{subsec:algorithms}
 
-The following machine learning algorithms have been evaluated. Note that some of them have the option to normalize de input data, which was set to \textit{false} because the data was already normalized in the pre-processing stage.
+The following machine learning algorithms have been evaluated.
 
 \begin{itemize}
 \item \textbf{Logistic Regression}. Default parameters.
 \item \textbf{Naive Bayes}. Default parameters.
-\item \textbf{Tree Augmented Naive Bayes}. The search algorithm is set to \textit{TAN}.
-\item \textbf{Linear Discriminant Analysis}. .
-\item \textbf{Fusion}. With Naive Bayes, TAN and LDA.
-\item \textbf{Stacking}. With (TAN and LDA) and Naive Bayes.
-\item \textbf{Bagging}. With Naive Bayes.
-\item \textbf{Random Forest}. .
-\item \textbf{Boosting}. With Naive Bayes.
-\item \textbf{Naive Bayes Tree}. .
-\item \textbf{Logistic Model Trees}. .
+\item \textbf{Tree Augmented Naive Bayes}. With TAN search algorithm.
+\item \textbf{Linear Discriminant Analysis}. Default parameters.
+\item \textbf{Fusion}. With the following classifiers: Naive Bayes, TAN and LDA. The combination rule used is the Average.
+\item \textbf{Stacking}. The \textit{meta-classifier} is set to Naive Bayes. The classifiers are TAN and LDA.
+\item \textbf{Bagging}. With Naive Bayes classifier.
+\item \textbf{Random Forest}. Default parameters.
+\item \textbf{Boosting}. With Naive Bayes classifier.
+\item \textbf{Naive Bayes Tree}. Default parameters.
+\item \textbf{Logistic Model Trees}. Default parameters.
 \end{itemize}
 
 \autoref{tab:table3} shows the Weka function associated to each algorithm.
@@ -164,13 +172,11 @@ The following machine learning algorithms have been evaluated. Note that some of
 	Naive Bayes & bayes.NaiveBayes\\
 	Tree Augmented Naive Bayes & bayes.BayesNet\\
 	Linear Discriminant Analysis & functions.LDA\\
-	\hline
 	Fusion & meta.Vote \\
 	Stacking & meta.Stacking\\
 	Bagging & meta.Bagging\\
 	Random Forest & trees.RandomForest\\
 	Boosting & meta.AdaBoostM1\\
-	Lazy Bayesian Rules & lazy.LBR\\
 	Naive Bayes Tree & trees.NBTree\\
 	Logistic Model Trees & trees.LMT\\
 	\hline
@@ -261,12 +267,11 @@ This section includes the scores obtained with each classifier (\hyperref[subsec
 
 %Dry_Bean_Dataset_Wrapper_RIPPER.arff
 
-\autoref{tab:table6} shows the score of each classification algorithm with all datasets obtained from each Feature Subset Selection method described, and \autoref{tab:table7} shows the training time of each model. The full version of each result report including the confusion matrices can be found in \cite{repo}.
-
-Note that images of the trees obtained by the C4.5 algorithm, or the neural networks generated are not shown because there are too many nodes to show and the representation is not understandable. All the rules generated from the RIPPER algorithm and the support vectors from the SVMs can be found in the complete result reports. In the same way, a representation of the outputs of the kNN algorithm is not included because it is not possible to visualize a 16-dimensional space.
+\autoref{tab:table6} shows the score of each classification algorithm with all datasets obtained from each Feature Subset Selection method described, and \autoref{tab:table7} shows the training time of each model. Note that full outputs of every model are not listed due to the limited extension of this assignment. The full version of each result report including the confusion matrices can be found in \cite{repo}.
 
 \begin{table}[h]
 \centering
+\resizebox{0.95\textwidth}{!}{
 \begin{tabular}{||l|l|l|l|l|l|l|l|l|l|l|l||}
 	\hline
 	Dataset &
@@ -298,12 +303,14 @@ Note that images of the trees obtained by the C4.5 algorithm, or the neural netw
 	Wr. (LMT) & 92.45 & 84.75 & 91.02 & 90.32 & 91.22 & 91.30 & 84.80 & 92.28 & 84.75 & 89.82 & 92.52\\
     \hline 
 \end{tabular}
+}
 \caption{Scores of all classifiers with all obtained datasets (percentage of correctly classified instances).}
 \label{tab:table6}
 \end{table}
 
 \begin{table}[h]
 \centering
+\resizebox{0.95\textwidth}{!}{
 \begin{tabular}{||l|l|l|l|l|l|l|l|l|l|l|l||}
 	\hline
 	Dataset &
@@ -335,6 +342,7 @@ Note that images of the trees obtained by the C4.5 algorithm, or the neural netw
 	Wr. (LMT) & 7.95 & 0.01 & 0.06 & 0.01 & 0.08 & 0.83 & 0.11 & 3.28 & 0.56 & 8.26 & 16.41\\
     \hline 
 \end{tabular}
+}
 \caption{Training time in seconds.}
 \label{tab:table7}
 \end{table}
@@ -342,84 +350,69 @@ Note that images of the trees obtained by the C4.5 algorithm, or the neural netw
 \section{Discussion}
 \label{sec:discussion}
 
-Generally, the models trained obtained a score of at least 90\% in most cases. However, the results do not differ greatly from each other. The greatest precision obtained is 92.7852\%, which was achieved with the original dataset and a Multilayer Perceptron classification algorithm.
+Generally, the models trained obtained a score of at least 90\% in most cases. However, the results do not differ greatly from each other. The greatest precision obtained is 92.84\%, which was achieved with the dataset obtained from the Wrapper Algorithm (Random Forest), and the Random Forest classifier.
 
-Overall, the best performing models are the Multilayer Perceptron, the Support Vector Machine, and the k-Nearest Neighbour. Note that the latter has a training time hundreds of times faster compared to the first two.
+Overall, the best performing models are the Logistic Regression, the Random Forest, and the Logistic Model Tree. The worst being the Linear Discriminant Analysis classifier, and the Bagging and Boosting \textit{meta-classifiers}.
 
-Regarding the selection of features of this dataset, it is clear that not all variables are needed to obtain models that perform as well as the model generated from all attributes.
+Respecting to training time, the fastest models are the Naive Bayes, Tree Augmented Naive Bayes and Linear Discriminant Analysis classifiers, while the slowest are the Logistic Regression and the Logistic Model Trees.
 
-In the case of the k-Nearest Neighbours, the reduced datasets obtained slightly better scores than the original dataset. This is probably due to some moderate overfitting. With the \textit{k} parameter set to 10 the model could not fit all de dataset information, because with 10 clusters it is not possible to separate all the classes. This model obtained the best results when the training time is considered.
+Regarding the selection of features of this dataset, not all variables are needed to obtain models that perform as well as the model generated from all attributes. \autoref{tab:table5} shows that most Feature Subset Selection methods selected the Perimeter, Extent, Roundness and ShapeFactor4, which resembles the importance of these attributes. Similar results were obtained in the previous assignment, where the most selected features were the Perimeter, Roundness, ShapeFactor1 and ShapeFactor4.
 
-The Rule Induction classifier did not perform as well as the k-Nearest Neighbours. It obtained slightly poorer results than the kNN implementation, while spending more computational resources.
+In the case of the Logistic Regression classifier, the scores achieved are amongst the highest, the best one obtained with the dataset from the Wrapper with Logistic Regression classifier. This score is better than the one obtained from the original dataset, which suggests that the most relevant features for this classifier are the Perimeter, MajorAxisLength, MinorAxisLength, ConvexArea, EquivDiameter, Extent, Solidity, Roundness, ShapeFactor1, ShapeFactor2 and ShapeFactor4. \autoref{fig:logistic} displays the output of the coefficients and odds ratios for the dataset obtained with the Wrapper approach (with Naive Bayes). As we can see there are some variables that are more explanatory than others. For instance, in the class BARBUNYA the most relevant attribute is the perimeter.
 
-Both the Support Vector Machine and the Multilayer Perceptron obtained the best results. This is because both models can fit more complex data distributions than the other methods. The SVM calculated more than 1,200 support vectors for each dataset, while the MLP used between 20 and 29 neurons (\autoref{fig:nn}). The complexity of this models is reflected in the training times, which are significantly higher than the other algorithms.
-
-%\begin{figure}[h]
-%\centering
-%\includegraphics[width=0.85\textwidth]{nn}
-%\caption{Neural network obtained from the original dataset.}
-%\label{fig:nn}
-%\end{figure}
-
-Lastly the tree algorithm performed the same as the RIPPER algorithm, while spending approximately 10 times less computational time to train the models. A representation of the tree is shown in \autoref{fig:tree}. However, it is hardly understandable since Weka does not allow to rescale the size of the graph representation.
-
-%\begin{figure}[h]
-%\centering
-%\includegraphics[width=0.9\textwidth]{tree}
-%\caption{Tree obtained from the original dataset.}
-%\label{fig:tree}
-%\end{figure}
-
-Inspecting \autoref{tab:table6} we can deduce that in most cases the reduced datasets obtain similar scores to the original dataset. This is because there are variables that provide no additional information, in other words, there are dependent or irrelevant variables in the dataset. As stated in the \hyperref[sec:problem]{Problem Description section}, there are some variables that are calculated from others. For instance, the \textit{Roundness} is obtained from the \textit{Area} and the \textit{Perimeter}, and the \textit{Compactness} from the \textit{Equivalent diameter} and the \textit{Major axis length}. Additionally, there are some attributes that are fundamentally related, such as the \textit{Area} and the \textit{Perimeter}. The most selected variables are the \textit{Perimeter}, the \textit{Roundness}, and the \textit{Shape Factor 1}.
-
-Looking at \autoref{tab:table5}, both the Univariant Filter and the Wrapper approach with the RIPPER classifier selected 8 features. However, as \autoref{tab:table6} shows, the scores are better in the latter. This means that there are some features selected by the Wrapper that have not been selected by the Univariant Filter that are \textit{significant}. For example, the Wrapper selected \textit{Shape Factor 3 and 4} and \textit{Solidity, Compactness and Roundness}, which were not selected by the Filter. This means that these attributes provide relevant information.
-
-The rest of the reduced datasets obtained similar scores compared to the original dataset. The cause of this is the redundancy of some variables. However, the scores are not close to 100\%, probably because the dataset contains multiple irrelevant attributes, and the isolated \textit{important} features need more complex models to fit the distribution.
-
-\autoref{tab:table8} shows the confusion matrix obtained by the Multilayer Perceptron with the original dataset (the best precision achieved). In this scenario, all instances of the class \textit{BOMBAY} are classified correctly, this is probably due to the fact that the class has a well-defined boundary that could be fitted perfectly by this classification model. In contrast, the other classes had some instances wrongly classified because the algorithm could not fit to the boundaries between each other.
-
-\begin{table}[h]
+\begin{figure}[h]
 \centering
-\begin{tabular}{||c||c|c|c|c|c|c|c||}
-	\hline
-	Classified as $\rightarrow$ & a & b & c & d & e & f & g\\
-	\hline
-	\hline
-	a = SEKER & 1929 & 8 & 0 & 0 & 0 & 55 & 35\\
-	\hline
-	b = BARBUNYA & 10 & 1207 & 0 & 74 & 5 & 25 & 1\\
-	\hline
-	c = BOMBAY & 0 & 0 & 522 & 0 & 0 & 0 & 0\\
-	\hline	
-	d = CALI & 3 & 47 & 0 & 1535 & 29 & 16 & 0\\
-	\hline
-	e = HOROZ & 0 & 3 & 0 & 25 & 1843 & 44 & 13\\
-	\hline
-	f = SIRA & 31 & 12 & 0 & 7 & 34 & 2291 & 261\\
-	\hline
-	g = DERMASON & 44 & 1 & 0 & 0 & 8 & 191 & 3302\\
-    \hline 
-\end{tabular}
-\caption{Confusion matrix of the MLP trained with the original dataset.}
-\label{tab:table8}
-\end{table}
+\includegraphics[width=0.95\textwidth]{logistic}
+\caption{Coefficients and odds ratios of the Logistic Regression model.}
+\label{fig:logistic}
+\end{figure}
+
+The Naive Bayes classifier trained the model significantly faster than the others, while reducing slightly the score. \autoref{fig:naivebayes} shows a simplified output of the model obtained with the reduced dataset, and the confusion matrix.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth]{naivebayes}
+\caption{Model and confusion matrix of the Naive Bayes classifier.}
+\label{fig:naivebayes}
+\end{figure}
+
+In this case, most misclassified instances are from the classes SIRA and DERMASON. This is because both classes have similar mean values in all attributes. From this output we can also deduce what types of beans have higher perimeter (the largest are from the class BOMBAY). Additionally, most classes have high roundness (above 0.7), except BARBUNYA and HOROZ, which suggests that these two varieties have longer shapes. Overall the most discriminant attributes are the Perimeter, Compactness and ShapeFactor1.
+
+The Tree Augmented Naive Bayes classifier obtained better scores than the standard Naive Bayes classifier, while slightly increasing the training times. \autoref{fig:tan} shows the tree obtained from the reduced dataset with the Wrapper approach (Naive Bayes), and tables containing probability distributions of each class for the attributes Class and ShapeFactor1.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.95\textwidth]{TAN}
+\caption{Tree obtained from the Tree Augmented Naive Bayes classifier.}
+\label{fig:tan}
+\end{figure}
+
+The Linear Discriminant Analysis obtained better scores than the standard Naive Bayes, while taking the same amount of time to train the models. \autoref{fig:lda} shows the mean vectors of some classes of the model obtained from the original dataset. In this case we can see that the least explanatory attributes are the Extent, Solidity and ShapeFactor4.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth]{LDA}
+\caption{Mean vectors of classes SEKER, BARBUNYA and BOMBAY (LDA model).}
+\label{fig:lda}
+\end{figure}
+
+In the case of the meta-classifiers, the scores are diverse. The best performing models are the Fusion, Stacking, Random Forest and Logistic Model Trees. Note that the last two are significantly slower to train.
+
+Inspecting \autoref{tab:table6} we can deduce that in most cases the reduced datasets obtain similar or better scores when compared to the original dataset. This is because there are variables that provide no additional information, in other words, there are dependent or irrelevant variables in the dataset. As stated in the \hyperref[sec:problem]{Problem Description section}, there are some variables that are calculated from others. For instance, the \textit{Roundness} is obtained from the \textit{Area} and the \textit{Perimeter}, and the \textit{Compactness} from the \textit{Equivalent diameter} and the \textit{Major axis length}. Additionally, there are some attributes that are fundamentally related, such as the \textit{Area} and the \textit{Perimeter}.
+
+Overall, all the reduced datasets obtained similar scores compared to the original dataset. The cause of this is the redundancy of some variables. However, the scores are not close to 100\%, probably because the dataset contains multiple irrelevant attributes, and the isolated \textit{important} features need more complex models to fit the distribution. This conclusion is also achieved in the previous assignment.
 
 \section{Conclusion}
 \label{sec:conclusion}
 
-In this practical application, a dataset of dry beans with 13,611 instances and 17 features (including the class) was analysed with different attribute selection methods and different classifiers with a 10-fold cross-validation test approach. The dataset contains instances of seven different classes. The only pre-processing needed was the normalization of the dataset, since there are no missing values or nominal variables (except the class column).
+In this practical application, a dataset of dry beans with 13,611 instances and 17 features (Including the class) was analysed with different attribute selection methods and different classifiers with a 10-fold cross-validation test approach. The dataset contains instances of seven different classes. The only pre-processing needed was the normalization of the dataset, since there are no missing values or nominal variables (except the class column).
 
-Different datasets were obtained from the original by extracting features with a Univariate Filter, Multivariate Filter, and different Wrapper approaches. All of which were tested with the following classifiers: k-Nearest Neighbour, RIPPER, Support Vector Machine, Multilayer Perceptron and C4.5.
+Different datasets were obtained from the original by extracting features with a Univariate Filter, Multivariate Filter, and different Wrapper approaches. All of which were tested with the following classifiers: Logistic Regression, Naive Bayes, Tree Augmented Naive Bayes and Linear Discriminant Analysis. Additionally, the following \textit{meta-classifiers} were used as well: Fusion, Stacking, Bagging, Random Forest, Boosting, Naive Bayes Tree and Logistic Model Trees.
 
-Overall, the precision obtained is similar in most cases, the best ones obtained by the MLP, SVM, and kNN with the original dataset. Generally, both SVM and MLP obtained better scores than RIPPER and C4.5 due to the ability to fit more complex data distributions. However, the impact of the complexity of the models is reflected in the training time.
+Overall, the precision obtained is similar in most cases, the best ones obtained by the Logistic Regression, Random Forest and Logistic Model Trees. For the most part, the reduced datasets obtained the same or better scores than the original dataset. Contrary to the first assignment, were the reduced dataset performed slightly worse, this assignment shows that some models can fit a reduced dataset to obtain better scores. Both Naive Bayes and Linear Discriminant Analysis performed the best when the execution time is taken into consideration. Note that the optimization of each model (finding the best combination of hyperparameters) is not part of this assignment, but it could be an interesting subsequent work.
 
-The k-Nearest Neighbour classifier performed the best when the execution time is taken into consideration. It obtained better scores than the RIPPER and C4.5 algorithms, while consuming less computational time. Note that the optimization of each model (finding the best combination of hyperparameters) is not part of this assignment, but it could be an interesting subsequent work.
+In summary, the dataset used in this practical application contains variables that are not needed to achieve similar scores to the original dataset. The best precision was obtained by the Random Forest. However, the standard Naive Bayes and the Linear Discriminant Analysis  achieved similar scores while spending significantly less computational time to train the model.
 
-On the other side, in most cases the datasets obtained by selecting features did not obtain better precision than the original dataset. Nevertheless, the reduction of attributes did reduce the training time approximately by half in the Multilayer Perceptron and C4.5 classifiers. Some attributes, for instance the \textit{Perimeter} and the \textit{Roundness} were selected by most feature selection methods, which denotes the importance of these.
-
-In summary, the dataset used in this practical application contains variables that are not needed to achieve similar scores to the original dataset. The best precision was obtained by the Multilayer Perceptron, which can fit more complex data compared to other classification algorithms. However, the k-Nearest Neighbour algorithm achieved similar scores while spending significantly less computational time to train the model.
-
-\newpage
 \bibliography{references}
 \bibliographystyle{ieeetr}
 
